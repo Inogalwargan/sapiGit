@@ -21,3 +21,5 @@ Route::get('homeInti', 'c_inti@homeInti');
 Route::get('tambahPengajuan', 'c_inti@tambahPengajuan');
 
 Route::get('tambahSapi', 'c_inti@tambahSapi');
+
+Route::get('homePeternak', 'c_peternak@homePeternak');

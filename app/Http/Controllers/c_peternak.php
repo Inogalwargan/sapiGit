@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 
-class c_inti extends Controller
+class c_peternak extends Controller
 {
 	
-	function homeInti() {
-		return view("inti.v_home");
+	function homePeternak() {
+		return view("peternak.peternak");
 	}
 }
 
