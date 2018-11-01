@@ -32,6 +32,13 @@
 
             <li>
                 <a href="homeInti">
+                    <span class="icon-thumbnail"><i class="fi-social-github"></i></span>
+                    <span class="title">Sapi</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="homeInti">
                     <span class="icon-thumbnail"><i class="fi-dollar"></i></span>
                     <span class="title">Pelunasan</span>
                 </a>
