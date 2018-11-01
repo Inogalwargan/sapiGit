@@ -4,59 +4,45 @@
             <li>
                 <a href="homeInti">
                     <span class="icon-thumbnail"><i class="dripicons-browser"></i></span>
-                    <span class="title">Dashboard</span>
+                    <span class="title">Beranda</span>
                 </a>
             </li>
-            <li>
-                <a href="apps_calendar.html">
-                    <span class="icon-thumbnail"><i class="fi-clipboard-pencil"></i></span>
-                    <span class="title">Validasi</span>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:void(0);" class="have-submenu">
-                    <span class="icon-thumbnail"><i class="dripicons-document-new"></i></span>
-                    <span class="title">Data Pengajuan</span>
-                </a>
-                <!--Submenu-->
-                <ul class="sub-menu">
-                    <li>
-                        <a href="tambahPengajuan">
-                            <span class="icon-thumbnail"><i class="fi-plus"></i></span>
-                            <span class="title">Pengajuan</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="pages_login.html">
-                            <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
-                            <span class="title">Lihat Pengajuan</span>
-                        </a>
-                    </li>
-                   
-                </ul>
-            </li>
-
              <li>
                 <a href="javascript:void(0);" class="have-submenu">
                     <span class="icon-thumbnail"><i class="fi-paw"></i></span>
-                    <span class="title">Data Sapi</span>
+                    <span class="title">Pengajuan</span>
                 </a>
                 <!--Submenu-->
                 <ul class="sub-menu">
                     <li>
                         <a href="tambahSapi">
                             <span class="icon-thumbnail"><i class="fi-plus"></i></span>
-                            <span class="title">Sapi</span>
+                            <span class="title">Tambah</span>
                         </a>
                     </li>
                     <li>
                         <a href="pages_login.html">
                             <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
-                            <span class="title">Lihat Sapi</span>
+                            <span class="title">Lihat</span>
                         </a>
                     </li>
                    
                 </ul>
             </li>
+
+            <li>
+                <a href="homeInti">
+                    <span class="icon-thumbnail"><i class="fi-dollar"></i></span>
+                    <span class="title">Pelunasan</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="homeInti">
+                    <span class="icon-thumbnail"><i class="icon-fork-and-spoon"></i></span>
+                    <span class="title">Pakan</span>
+                </a>
+            </li>
+        
         </ul>
     </div>
