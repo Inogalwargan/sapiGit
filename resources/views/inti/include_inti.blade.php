@@ -21,7 +21,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="pages_login.html">
+                        <a href="">
                             <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
                             <span class="title">Lihat</span>
                         </a>
@@ -31,21 +31,21 @@
             </li>
 
             <li>
-                <a href="homeInti">
+                <a href="">
                     <span class="icon-thumbnail"><i class="fi-social-github"></i></span>
                     <span class="title">Sapi</span>
                 </a>
             </li>
 
             <li>
-                <a href="homeInti">
+                <a href="pelunasan">
                     <span class="icon-thumbnail"><i class="fi-dollar"></i></span>
                     <span class="title">Pelunasan</span>
                 </a>
             </li>
             
             <li>
-                <a href="homeInti">
+                <a href="pakan">
                     <span class="icon-thumbnail"><i class="icon-fork-and-spoon"></i></span>
                     <span class="title">Pakan</span>
                 </a>
