@@ -20,11 +20,23 @@ class c_inti extends Controller
 
 	function tambahSapi(){
 		return view("inti.v_tambah_sapi");
+	}	
+
+	function pelunasan(){
+		return view('inti.v_pelunasan');
+	}
+
+	function addCicilan(){
+		return view('inti.add_cicilan');
 	}
 	function lihatPengajuan(){
 		return view("inti.v_lihat_pengajuan");
 	}
 
+	function pakan(){
+		return view('inti.pakan');
+	}
+	
 	
 }
 
