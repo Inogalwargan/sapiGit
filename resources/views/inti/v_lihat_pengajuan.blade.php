@@ -148,8 +148,8 @@
                                 <h4>SAPI BALURAN</h4>
                             </div>
                         </div>
-                        <div class="col-md-6 ">
-                            <div class="block form-block mb-4 bg-dark">
+                        <div class="col-md-6">
+                            <div class="block form-block mb-4 bg-primary">
                                 <div class="block-heading">
                                     <h5>Tambah Data Pengajuan</h5>
                                 </div>
