@@ -29,5 +29,27 @@
                    
                 </ul>
             </li>
+            <li>
+                <a href="javascript:void(0);" class="have-submenu">
+                    <span class="icon-thumbnail"><i class="dripicons-document-new"></i></span>
+                    <span class="title">Pakan</span>
+                </a>
+                <!--Submenu-->
+                <ul class="sub-menu">
+                    <li>
+                        <a href="/tambahPakan">
+                            <span class="icon-thumbnail"><i class="fi-plus"></i></span>
+                            <span class="title">Tambah Pakan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/lihatPakan">
+                            <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
+                            <span class="title">Lihat Pakan</span>
+                        </a>
+                    </li>
+                   
+                </ul>
+            </li>
         </ul>
     </div>

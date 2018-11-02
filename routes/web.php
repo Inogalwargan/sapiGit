@@ -24,7 +24,12 @@ Route::get('sapi', 'c_inti@sapi');
 
 Route::get('tambahSapi', 'c_inti@tambahSapi');
 
+
 Route::get('harga', 'c_inti@harga');
+
+
+Route::get('lihatPengajuan', 'c_inti@lihatPengajuan');
+
 
 
 Route::get('lihatPengajuan', 'c_inti@lihatPengajuan');
@@ -42,4 +47,10 @@ Route::get('pakan', 'c_inti@pakan');
 
 Route::get('addCicilan', 'c_inti@addCicilan');
 
+
+Route::get('/tambahPakan', 'c_pabrik@tambahPakan');
+
+Route::get('/lihatPakan', 'c_pabrik@lihatPakan');
+Route::get('/lihatDetail', 'c_pabrik@lihatDetail');
+Route::get('/ubahDetail', 'c_pabrik@ubahDetail');
 

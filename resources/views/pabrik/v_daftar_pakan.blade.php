@@ -67,7 +67,7 @@
 <!--Navigation-->
 <nav id="navigation" class="navigation-sidebar bg-primary">
     <div class="navigation-header">
-        <a href="index.html"><span class="logo">PABRIK PAKAN</span></a>
+        <a href="index.html"><span class="logo">SAPI BALURAN</span></a>
         <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
     </div>
 
@@ -131,7 +131,7 @@
                     <div class="col-9 col-md-6 d-lg-none">
                         <a id="toggle-navigation" href="javascript:void(0);" class="icon-btn mr-3"><i
                                     class="fa fa-bars"></i></a>
-                        <span class="logo">PABRIK PAKAN</span>
+                        <span class="logo">BALURAN-SAMPI</span>
                     </div>
                     <div class="col-lg-8 d-none d-lg-block">
                         <ol class="breadcrumb">
@@ -146,27 +146,10 @@
         <!--Main Content-->
         <div class="content sm-gutter">
             <div class="container-fluid padding-25 sm-padding-10">
-                <div class="block form-block mb-4 bg-secondary">
-                    <div class="block-heading">
-                        <h5>Daftar Kebutuhan Bahan Baku</h5>
-                    </div>
-
-                    <form action="#">
-                        <div class="form-group">
-                            <label>Tanggal Produksi</label>
-                            <div class="input-group">
-                                <input class="single-date-picker form-control" data-color="primary" type="text"
-                                       placeholder="Masukkan Tanggal Produksi">
-                                <span class="input-group-addon text-primary"><i
-                                            class="ion-ios-calendar-outline"></i></span>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Tampilkan</button>
-                    </form>
-                </div>
+                
                 <div class="block form-block mb-4">
                     <div class="block-heading">
-                        <h5>Daftar Kebutuhan Bahan Baku</h5>
+                        <h5>Daftar Pakan</h5>
                     </div>
                     <div class="tabel table-responsive">
                         <table id="example2"
@@ -175,25 +158,27 @@
                                aria-describedby="example2_info">
                             <thead>
                             <tr>
-                                <th>Bahan Baku</th>
-                                <th>Kebutuhan (kg)</th>
-                                <th>Status</th>
+                                <th>Nama Peternak</th>
+                                <th>Nama Pakan</th>
+                                <th>Tanggal Produksi</th>
+                                <th>Aksi</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td class="name">Rumput Gajah</td>
-                                <td>50</td>
-                                <td>
-                                    <label class="label-success">Terpenuhi</label>
-                                </td>
+                                <td class="name">Rudi</td>
+                                <td>Konsentrat Rumput Gajah</td>
+                                <td>20/10/2018</td>
+                                <td><a href="/lihatDetail" class="btn btn-success">detail</a></td>
+                                
                             </tr>
                             <tr>
-                                <td class="name">Daun Jagung</td>
-                                <td>100</td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-warning">Cukup</a>
-                                </td>
+                                <td class="name">Ino</td>
+                                <td>Konsentrat Daun Jagung</td>
+                                <td>21/10/2018</td>
+                                <td><a href="/lihatDetail" class="btn btn-success">detail</a></td>
+                                
+                                
                             </tr>
                             </tbody>
                         </table>
