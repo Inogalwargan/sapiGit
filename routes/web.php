@@ -37,3 +37,9 @@ Route::get('pakan', 'c_inti@pakan');
 
 Route::get('addCicilan', 'c_inti@addCicilan');
 
+Route::get('/tambahPakan', 'c_pabrik@tambahPakan');
+
+Route::get('/lihatPakan', 'c_pabrik@lihatPakan');
+Route::get('/lihatDetail', 'c_pabrik@lihatDetail');
+Route::get('/ubahDetail', 'c_pabrik@ubahDetail');
+
