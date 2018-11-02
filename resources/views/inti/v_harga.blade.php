@@ -142,52 +142,55 @@
             </div>
             <div class="content sm-gutter">
                 <div class="container-fluid padding-25 sm-padding-10 ">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="section-title">
+                                <h4>Harga Saat ini</h4>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="block counter-block mb-4 bg-warning">
+                                <div class="trending trending-up">
+                                    <span>Rp.</span>
+                                </div>
+                                <div class="value">100.000</div>
+
+                                <p class="label">Harga Satuan Per Kg</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row ">
                         <div class="col-12 ">
                             <div class="section-title">
-                                <h4>SAPI BALURAN</h4>
+                                <h4>UPDATE HARGA</h4>
                             </div>
                         </div>
-                        <div class="col-md-6 ">
+
+                        <div class="col-md-6">
                             <div class="block form-block mb-4">
-                                <div class="block-heading">
-                                    <h5>Tambah Data Pengajuan</h5>
-                                </div>
 
-                                <form action="#">
 
+                                <form action="#" class="horizontal-form">
                                     <div class="form-group">
-                                        <label>Tanggal Pengajuan</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon text-dark"><i class="ion-ios-calendar-outline"></i></span>
-                                            <input class="single-date-picker form-control" type="text" placeholder="Select date of birth">
+                                        <div class="form-row">
+                                            <label class="col-md-3">Harga Terbaru</label>
+                                            <hr>
+                                            <div class="col-md-9">
+                                                <input class="form-control" placeholder="Masukkan Harga Terbaru" type="number">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Peternak</label>
-                                        <select class="custom-select form-control">
-                                            <option selected>Pak Budi</option>
-                                            <option>Pak Eko</option>
-                                            <option>Pak Buas</option>
-                                            <option>Pak Rudy</option>
-                                            <option>Pak andy</option>
-                                            <option>Pak Narto</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Jumlah Sapi</label>
-                                        <input class="form-control"  type="number">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Jumlah Kredit</label>
-                                        <input class="form-control" type="number">
-                                    </div>
-                                   
+
+
                                     <hr>
-                                    <button class="btn btn-primary" type="submit">Submit</button>
+
+                                    <button class="btn btn-primary mr-3" type="submit">Simpan</button>
                                 </form>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>

@@ -11,6 +11,12 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>SAPI-I7</title>
 
+    {{--untuk Modal--}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
     <!--favicon-->
     <link href="assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
 
@@ -148,46 +154,75 @@
                                 <h4>SAPI BALURAN</h4>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="block form-block mb-4 bg-primary">
+
+                        <div class="col-md-12 ">
+                            <div class="block table-block mb-4 bg-warning">
                                 <div class="block-heading">
-                                    <h5>Tambah Data Pengajuan</h5>
+                                    <h5>DATA PENGAJUAN</h5>
                                 </div>
 
-                                <form action="#">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>Peternak</th>
+                                            <th>Validasi</th>
+                                            <th>Tambah</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>John Mayers</td>
+                                            <td>
+                                                <div>
+                                                    <button class="btn btn-success " type="submit" data-toggle="modal" data-target="#validasiModal">Validasi</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah</button>
+                                                </div>
+                                            </td>
+                                            {{--<td class="text-center">12</td>--}}
+                                            {{--<td><img alt="" src="img/flags-icons/us.html" width="25px"></td>--}}
+                                            {{--<td class="status pending">Pending</td>--}}
+                                            {{--<td class="price text-right">$354</td>--}}
+                                        </tr>
+                                        <tr>
+                                            <td>John Mayers</td>
+                                            <td>
+                                                <div>
+                                                    <button class="btn btn-success" type="submit">Validasi</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <button class="btn btn-primary" type="submit">Tambah</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>John Mayers</td>
+                                            <td>
+                                                <div>
+                                                    <button class="btn btn-success" type="submit">Validasi</button>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <button class="btn btn-primary" type="submit">Tambah</button>
+                                                </div>
+                                            </td>
+                                        </tr>
 
-                                    <div class="form-group">
-                                        <label>Tanggal Pengajuan</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon text-dark"><i class="ion-ios-calendar-outline"></i></span>
-                                            <input class="single-date-picker form-control" type="text" placeholder="Select date of birth">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Peternak</label>
-                                        <select class="custom-select form-control">
-                                            <option selected>Select State</option>
-                                            <option>New York</option>
-                                            <option>California</option>
-                                            <option>Boston</option>
-                                            <option>Texas</option>
-                                            <option>Colorado</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Jumlah Sapi</label>
-                                        <input class="form-control" placeholder="Email Address" type="number">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Jumlah Kredit</label>
-                                        <input class="form-control" placeholder="Email Address" type="number">
-                                    </div>
-                                   
-                                    <hr>
-                                    <button class="btn btn-primary" type="submit">Submit</button>
-                                </form>
+                                        </tbody>
+                                    </table>
+                                </div>
+
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </div>
@@ -195,6 +230,98 @@
 
     </section>
 
+    <!-- The Modal -->
+    <div class="modal fade" id="validasiModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header bg-warning">
+                    <h4 class="modal-title">Pilih Status Validasi</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+
+                <div class="modal-body">
+                    <div class="col-md-9">
+                        <div class="custom-controls-stacked">
+                            <label class="custom-control custom-radio">
+                                <input id="radioStacked3" name="radio-stacked" class="custom-control-input" type="radio">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Belum divalidasi</span>
+                            </label>
+                            <label class="custom-control custom-radio primary">
+                                <input name="radio-stacked" class="custom-control-input" type="radio">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Sudah divalidasi</span>
+                            </label>
+                            <label class="custom-control custom-radio dark">
+                                <input name="radio-stacked" class="custom-control-input" type="radio">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">Lunas</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="tambahModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header bg-warning">
+                    <h4 class="modal-title">Tambah Data Sapi</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+
+                        <form action="#">
+
+                            <div class="form-group">
+                                    <label>Berat Awal</label>
+                                    <input class="form-control" placeholder="First name" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Jenis Sapi</label>
+                                <select class="custom-select form-control">
+                                    <option selected>Pilih Jenis Sapi</option>
+                                    <option>Jenis 1</option>
+                                    <option>Jenis 2</option>
+                                    <option>Jenis 3</option>
+                                    <option>Jenis 4</option>
+                                    <option>Jenis 5</option>
+                                </select>
+                            </div>
+
+
+
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+
+                    <button class="btn btn-primary" type="submit">Submit</button>
+
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+                        </form>
+            </div>
+        </div>
+    </div>
 
 
 
