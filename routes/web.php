@@ -22,6 +22,8 @@ Route::get('tambahPengajuan', 'c_inti@tambahPengajuan');
 
 Route::get('tambahSapi', 'c_inti@tambahSapi');
 
+
+Route::get('lihatPengajuan', 'c_inti@lihatPengajuan');
 Route::get('/pabrik/beranda', 'c_pabrik@beranda');
 Route::get('/pabrik/tambah_bahan', 'c_pabrik@tambah_bahan_baku');
 Route::get('/pabrik/lihat_bahan', 'c_pabrik@lihat_bahan_baku');
