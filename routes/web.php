@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 
 Route::get('homeInti', 'c_inti@homeInti');
@@ -25,6 +25,7 @@ Route::get('tambahSapi', 'c_inti@tambahSapi');
 Route::get('/pabrik/beranda', 'c_pabrik@beranda');
 Route::get('/pabrik/tambah_bahan', 'c_pabrik@tambah_bahan_baku');
 Route::get('/pabrik/lihat_bahan', 'c_pabrik@lihat_bahan_baku');
+Route::get('/', 'c_petani@homePetani');
 
 Route::get('homePeternak', 'c_peternak@homePeternak');
 
