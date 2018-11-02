@@ -52,8 +52,10 @@
         <h1 class="ip-logo text-center"><img class="img-fluid" alt="" class="ip-logo text-center"/></h1>
         <div class="ip-loader">
             <svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">
-                <path class="ip-loader-circlebg" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
-                <path id="ip-loader-circle" class="ip-loader-circle" d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                <path class="ip-loader-circlebg"
+                      d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
+                <path id="ip-loader-circle" class="ip-loader-circle"
+                      d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>
             </svg>
         </div>
     </header>
@@ -68,43 +70,45 @@
         <!--Main Content-->
         <div class="content sm-gutter">
             <div class="container-fluid padding-25 sm-padding-10">
-                <div class="row">
-
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="block counter-block bg-warning mb-4">
-                            <div class="value text-center" style="color:antiquewhite;display:inherit">Rp 24.000.000</div>
-                            <p class="label text-center" style="color:#333333">Total Kredit Pengajuan Saat Ini</p>
-                        </div>
+                <div class="block form-block mb-4">
+                    <div class="block-heading">
+                        <h5>Kebutuhan Bahan Baku</h5>
                     </div>
 
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="block counter-block bg-secondary mb-4">
-                            <div class="value text-center" style="color:black;display:inherit">Rp 4.800.000</div>
-                            <p class="label text-center" style="color:darkred">Total kredit yang telah dibayar</p>
+                    <div class="row">
+
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="block counter-block bg-warning mb-4">
+                                <div class="value text-center" style="color:antiquewhite;display:inherit">100 Kg</div>
+                                <p class="label text-center" style="color:#333333">Rumput Gajah</p>
+                                <p class="label text-center" style="color:#333333">Rp. 10.000/Kg</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="block counter-block bg-secondary mb-4">
+                                <div class="value text-center" style="color:black;display:inherit">200 Kg</div>
+                                <p class="label text-center" style="color:darkred">Daun Jagung</p>
+                                <p class="label text-center" style="color:darkred">Rp. 10.000/Kg</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="block counter-block mb-4" style="background-color:darkblue">
+                                <div class="value text-center" style="color:whitesmoke;display:inherit">50 Kg</div>
+                                <p class="label text-center">Daun Padi</p>
+                                <p class="label text-center">Rp. 10.000/Kg</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="block counter-block bg-dark mb-4">
+                                <div class="value text-center" style="color:ghostwhite;display:inherit">2132 kg</div>
+                                <p class="label text-center">Daun Tebu</p>
+                                <p class="label text-center">Rp. 10.000/Kg</p>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="block counter-block mb-4" style="background-color:darkblue">
-                            <div class="value text-center" style="color:whitesmoke;display:inherit">Rp 40.000</div>
-                            <p class="label text-center">Harga daging sapi sekarang (per kg)</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="block counter-block bg-dark mb-4">
-                            <div class="value text-center" style="color:ghostwhite;display:inherit">2132 kg</div>
-                            <p class="label text-center">Berat Total sapi</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="block counter-block bg-light mb-4">
-                            <div class="value text-center" style="color:black;display:inherit">20 ekor</div>
-                            <p class="label text-center" style="color:black">jumlah sapi</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
