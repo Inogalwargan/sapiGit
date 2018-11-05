@@ -37,6 +37,8 @@ Route::get('lihatPengajuan', 'c_inti@lihatPengajuan');
 Route::get('/pabrik/beranda', 'c_pabrik@beranda');
 Route::get('/pabrik/tambah_bahan', 'c_pabrik@tambah_bahan_baku');
 Route::get('/pabrik/lihat_bahan', 'c_pabrik@lihat_bahan_baku');
+Route::get('/pabrik/beli_bahan', 'c_pabrik@beli_bahan_baku');
+
 Route::get('/', 'c_petani@homePetani');
 
 Route::get('homePeternak', 'c_peternak@homePeternak');

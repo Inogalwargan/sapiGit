@@ -146,21 +146,89 @@
         <!--Main Content-->
         <div class="content sm-gutter">
             <div class="container-fluid padding-25 sm-padding-10">
-                <div class="block form-block mb-4">
-                    <div class="block-heading">
-                        <h5>Tambah Bahan Baku</h5>
-                    </div>
 
+                <div class="block form-block mb-4 counter-bg-img"
+                     style="background: url(../assetAdmin/assets/images/pabrik_1.jpg);">
+                    <div class="block-heading">
+                        <h5>Pembelian Bahan Baku</h5>
+                    </div>
                     <form action="#">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label>Nama Bahan Baku</label>
-                                <input class="form-control" placeholder="Masukkan Nama Bahan Baku" type="text">
+                                <label>Bahan Baku</label>
+                                <select class="form-control" style="background: white!important;" id="nama_bahan_baku"
+                                        name="nama_bahan_baku" required>
+                                    <option value="gajah" selected>Rumput Gajah</option>
+                                    <option value="gajah">Daun Jagung</option>
+                                    <option value="jenis_baru">Jenis Baru</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6" style="display: none" id="div_nama">
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Banyak Pembelian (Kg)</label>
+                                <input class="form-control" placeholder="Masukkan Banyak Pembelian (Kg)" type="number"
+                                       style="background: white!important;" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Harga Beli (Rp)</label>
+                                <input class="form-control" placeholder="Masukkan Harga Pembelian (Rp)" type="number"
+                                       style="background: white!important;" required>
                             </div>
                         </div>
                         <hr>
-                        <button class="btn btn-primary" type="submit">Simpan</button>
+                        <input class="btn btn-primary" type="submit" value="simpan" required>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-example-modal-sm" role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Masukkan Jumlah Pembelian</h5>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                                aria-hidden="true"> ×</span></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Jumlah Pembelian (Kg)</label>
+                            <input class="form-control" placeholder="Jumlah Pembelian" value="0" type="number" min="0">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button"> Batal</button>
+                    <button class="btn btn-primary" type="button"> Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-restock-modal-sm" role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Masukkan Jumlah Kebutuhan</h5>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                                aria-hidden="true"> ×</span></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Jumlah Kabutuhan (Kg)</label>
+                            <input class="form-control" placeholder="Jumlah Pembelian" value="0" type="number" min="0">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button"> Batal</button>
+                    <button class="btn btn-primary" type="button"> Simpan</button>
                 </div>
             </div>
         </div>
@@ -238,7 +306,36 @@
         netbro_cache_analytics(requestCfs, function () {
         });
     }
-    ;</script>
+    ;
+
+    $("#nama_bahan_baku").change(function () {
+        if ($("#nama_bahan_baku").val() == "jenis_baru") {
+            document.getElementById("div_nama").style.display="block";
+            document.getElementById("div_nama").innerHTML =
+                "<label>Nama Bahan Baku</label>\n" +
+                "<input class=\"form-control\" placeholder=\"Masukkan Nama Bahan Baku\" type=\"text\"\n" +
+                "style=\"background: white!important;\" required>";
+        } else {
+            document.getElementById("div_nama").style.display="none";
+            document.getElementById("div_nama").innerHTML = "";
+        }
+    });
+
+    $('#example2').DataTable({
+        'paging': true,
+        'lengthChange': false,
+        'searching': true,
+        'ordering': false,
+        'info': false,
+        'autoWidth': false,
+        'pageLength': 10,
+        "dom": '<"pull-left"f>t<"pull-right"p>',
+        "oLanguage": {
+            "sSearch": "Cari : "
+        }
+    });
+
+</script>
 </body>
 
 <!-- Mirrored from wow.designgurus.in/sideNavigationLayout/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 15:44:19 GMT -->

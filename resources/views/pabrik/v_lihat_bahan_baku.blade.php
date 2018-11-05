@@ -146,7 +146,6 @@
         <!--Main Content-->
         <div class="content sm-gutter">
             <div class="container-fluid padding-25 sm-padding-10">
-
                 <div class="block form-block mb-4">
                     <div class="block-heading">
                         <h5>Daftar Kebutuhan Bahan Baku</h5>
@@ -161,7 +160,7 @@
                                 <th>Bahan Baku</th>
                                 <th>Kebutuhan (kg)</th>
                                 <th>Stok Tersedia (Kg)</th>
-								<th>Harga Beli (Rp)</th>
+                                <th>Harga Beli (Rp)</th>
                                 <th colspan="3" style="text-align: center !important;">Aksi</th>
                             </tr>
                             </thead>
@@ -170,7 +169,7 @@
                                 <td class="name">Rumput Gajah</td>
                                 <td>50</td>
                                 <td>50</td>
-								<td>15000</td>
+                                <td>15000</td>
                                 <td>
                                     <button class="btn btn-sm btn-primary" data-target=".bd-example-modal-sm"
                                             data-toggle="modal" type="button"> Beli Bahan
@@ -189,7 +188,7 @@
                                 <td class="name">Daun Jagung</td>
                                 <td>100</td>
                                 <td>10</td>
-								<td>15000</td>
+                                <td>15000</td>
                                 <td>
                                     <button class="btn btn-sm btn-primary" data-target=".bd-example-modal-sm"
                                             data-toggle="modal" type="button"> Beli Bahan

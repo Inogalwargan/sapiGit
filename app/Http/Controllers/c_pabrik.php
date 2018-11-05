@@ -18,6 +18,10 @@ class c_pabrik extends Controller
         return view('pabrik.v_lihat_bahan_baku');
     }
 
+    public function beli_bahan_baku(){
+        return view('pabrik.v_beli_bahan');
+    }
+
     public function tambahPakan(){
 		return view("pabrik.v_tambah_pakan");
 	}

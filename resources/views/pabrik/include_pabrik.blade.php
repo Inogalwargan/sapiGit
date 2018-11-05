@@ -21,6 +21,12 @@
                         </a>
                     </li>
                     <li>
+                        <a href="/pabrik/beli_bahan">
+                            <span class="icon-thumbnail"><i class="fi-dollar"></i></span>
+                            <span class="title">Beli</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="/pabrik/lihat_bahan">
                             <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
                             <span class="title">Lihat</span>
