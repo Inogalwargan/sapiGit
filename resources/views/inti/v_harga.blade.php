@@ -156,7 +156,7 @@
                                 </div>
                                 <div class="value">100.000</div>
 
-                                <p class="label">Harga Satuan Per Kg</p>
+                                <p class="label" style="color:white;">Harga Satuan Per Kg</p>
                             </div>
                         </div>
                     </div>

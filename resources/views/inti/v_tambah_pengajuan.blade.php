@@ -149,7 +149,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 ">
-                            <div class="block form-block mb-4">
+                            <div class="block form-block mb-4 bg-warning">
                                 <div class="block-heading">
                                     <h5>Tambah Data Pengajuan</h5>
                                 </div>
@@ -160,7 +160,7 @@
                                         <label>Tanggal Pengajuan</label>
                                         <div class="input-group">
                                             <span class="input-group-addon text-dark"><i class="ion-ios-calendar-outline"></i></span>
-                                            <input class="single-date-picker form-control" type="text" placeholder="Select date of birth">
+                                            <input class="single-date-picker form-control  bg-white" type="text" placeholder="Select date of birth">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -176,11 +176,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Jumlah Sapi</label>
-                                        <input class="form-control"  type="number">
+                                        <input class="form-control  bg-white"  type="number">
                                     </div>
                                     <div class="form-group">
-                                        <label>Jumlah Kredit</label>
-                                        <input class="form-control" type="number">
+                                        <label>Jumlah Harga Pakan</label>
+                                        <input class="form-control  bg-white" type="number">
                                     </div>
                                    
                                     <hr>

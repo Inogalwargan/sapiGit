@@ -165,14 +165,16 @@
                                     <table class="table table-striped">
                                         <thead>
                                         <tr>
-                                            <th>Peternak</th>
-                                            <th>Validasi</th>
-                                            <th>Tambah</th>
+                                            <th style="color:white;">Peternak</th>
+                                            <th style="color:white;">Status</th>
+                                            <th style="color:white;">Aksi</th>
+                                            <th style="color:white;">Tambah</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
                                             <td>John Mayers</td>
+                                            <td>Lunas</td>
                                             <td>
                                                 <div>
                                                     <button class="btn btn-success " type="submit" data-toggle="modal" data-target="#validasiModal">Validasi</button>
@@ -190,6 +192,7 @@
                                         </tr>
                                         <tr>
                                             <td>John Mayers</td>
+                                            <td>Sudah Tervalidasi</td>
                                             <td>
                                                 <div>
                                                     <button class="btn btn-success" type="submit">Validasi</button>
@@ -203,6 +206,7 @@
                                         </tr>
                                         <tr>
                                             <td>John Mayers</td>
+                                            <td>Belum Tervalidasi</td>
                                             <td>
                                                 <div>
                                                     <button class="btn btn-success" type="submit">Validasi</button>
@@ -294,7 +298,7 @@
 
                             <div class="form-group">
                                     <label>Berat Awal</label>
-                                    <input class="form-control" placeholder="First name" type="text">
+                                    <input class="form-control" placeholder="Satuan Kg" type="text">
                             </div>
                             <div class="form-group">
                                 <label>Jenis Sapi</label>

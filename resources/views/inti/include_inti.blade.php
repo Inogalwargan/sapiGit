@@ -15,13 +15,13 @@
                 <!--Submenu-->
                 <ul class="sub-menu">
                     <li>
-                        <a href="tambahSapi">
+                        <a href="tambahPengajuan">
                             <span class="icon-thumbnail"><i class="fi-plus"></i></span>
                             <span class="title">Tambah</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="lihatPengajuan">
                             <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
                             <span class="title">Lihat</span>
                         </a>
@@ -31,7 +31,7 @@
             </li>
 
             <li>
-                <a href="">
+                <a href="sapi">
                     <span class="icon-thumbnail"><i class="fi-social-github"></i></span>
                     <span class="title">Sapi</span>
                 </a>

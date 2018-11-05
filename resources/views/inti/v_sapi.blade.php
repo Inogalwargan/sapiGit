@@ -165,10 +165,10 @@
                                     <table class="table table-striped">
                                         <thead>
                                         <tr>
-                                            <th>Peternak</th>
-                                            <th>Berat Awal</th>
-                                            <th>Status</th>
-                                            <th>Aksi</th>
+                                            <th style="color:white;">Peternak</th>
+                                            <th style="color:white;">Berat Awal</th>
+                                            <th style="color:white;">Status</th>
+                                            <th style="color:white;">Aksi</th>
                                         </tr>
                                         </thead>
                                         <tbody>
