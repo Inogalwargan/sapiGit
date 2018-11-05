@@ -146,24 +146,7 @@
         <!--Main Content-->
         <div class="content sm-gutter">
             <div class="container-fluid padding-25 sm-padding-10">
-                <div class="block form-block mb-4 bg-secondary">
-                    <div class="block-heading">
-                        <h5>Daftar Kebutuhan Bahan Baku</h5>
-                    </div>
 
-                    <form action="#">
-                        <div class="form-group">
-                            <label>Tanggal Produksi</label>
-                            <div class="input-group">
-                                <input class="single-date-picker form-control" data-color="primary" type="text"
-                                       placeholder="Masukkan Tanggal Produksi">
-                                <span class="input-group-addon text-primary"><i
-                                            class="ion-ios-calendar-outline"></i></span>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Tampilkan</button>
-                    </form>
-                </div>
                 <div class="block form-block mb-4">
                     <div class="block-heading">
                         <h5>Daftar Kebutuhan Bahan Baku</h5>
@@ -177,27 +160,102 @@
                             <tr>
                                 <th>Bahan Baku</th>
                                 <th>Kebutuhan (kg)</th>
-                                <th>Status</th>
+                                <th>Stok Tersedia (Kg)</th>
+								<th>Harga Beli (Rp)</th>
+                                <th colspan="3" style="text-align: center !important;">Aksi</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
                                 <td class="name">Rumput Gajah</td>
                                 <td>50</td>
+                                <td>50</td>
+								<td>15000</td>
                                 <td>
-                                    <label class="label-success">Terpenuhi</label>
+                                    <button class="btn btn-sm btn-primary" data-target=".bd-example-modal-sm"
+                                            data-toggle="modal" type="button"> Beli Bahan
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger" data-target=".bd-restock-modal-sm"
+                                            data-toggle="modal" type="button"> Tambah Kebutuhan
+                                    </button>
+                                </td>
+                                <td>
+                                    <a href="/pabrik/tambah_bahan" class="btn btn-sm btn-warning">Ubah</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="name">Daun Jagung</td>
                                 <td>100</td>
+                                <td>10</td>
+								<td>15000</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-warning">Cukup</a>
+                                    <button class="btn btn-sm btn-primary" data-target=".bd-example-modal-sm"
+                                            data-toggle="modal" type="button"> Beli Bahan
+                                    </button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-sm btn-danger" data-target=".bd-restock-modal-sm"
+                                            data-toggle="modal" type="button"> Tambah Kebutuhan
+                                    </button>
+                                </td>
+                                <td>
+                                    <a href="/pabrik/tambah_bahan" class="btn btn-sm btn-warning">Ubah</a>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-example-modal-sm" role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Masukkan Jumlah Pembelian</h5>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                                aria-hidden="true"> ×</span></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Jumlah Pembelian (Kg)</label>
+                            <input class="form-control" placeholder="Jumlah Pembelian" value="0" type="number" min="0">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button"> Batal</button>
+                    <button class="btn btn-primary" type="button"> Simpan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-restock-modal-sm" role="dialog"
+         tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Masukkan Jumlah Kebutuhan</h5>
+                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
+                                aria-hidden="true"> ×</span></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>Jumlah Kabutuhan (Kg)</label>
+                            <input class="form-control" placeholder="Jumlah Pembelian" value="0" type="number" min="0">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button"> Batal</button>
+                    <button class="btn btn-primary" type="button"> Simpan</button>
                 </div>
             </div>
         </div>
