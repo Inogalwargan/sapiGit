@@ -142,66 +142,82 @@
             </div>
         </div>
 
-
         <!--Main Content-->
         <div class="content sm-gutter">
             <div class="container-fluid padding-25 sm-padding-10">
+                <div class="block form-block mb-4 counter-bg-img"
+                     style="background: url(../assetAdmin/assets/images/pabrik_1.jpg);">
+                    <form action="#">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Pilih Bahan Baku</label>
+                                <select class="form-control" style="background: white!important;" id="nama_bahan_baku"
+                                        name="nama_bahan_baku" required>
+                                    <option value="gajah" selected>Rumput Gajah</option>
+                                    <option value="gajah">Daun Jagung</option>
+                                </select>
+                            </div>
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="Tampilkan" required>
+                    </form>
+                </div>
                 <div class="block form-block mb-4">
                     <div class="block-heading">
-                        <h5>Daftar Kebutuhan Bahan Baku</h5>
+                        <h5>History Pembelian</h5>
+                        <hr>
+                        <small class="label-info">Stok saat ini : </small> <b>150Kg</b>
                     </div>
                     <div class="tabel table-responsive">
                         <table id="example2"
-                               class="table table-striped table-hover dataTable example2"
+                               class="table table-bordered table-striped dataTable example2"
                                role="grid"
                                aria-describedby="example2_info">
                             <thead>
                             <tr>
-                                <th>Bahan Baku</th>
-                                <th>Kebutuhan (kg)</th>
-                                <th>Stok Tersedia (Kg)</th>
-                                <th>Harga Beli (Rp)</th>
-                                <th colspan="3" style="text-align: center !important;">Aksi</th>
+                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">Nama Bahan Baku</th>
+                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">Tanggal Pembelian</th>
+                                <th colspan="2" style="text-align: center!important; vertical-align: middle!important;">Stok Lama</th>
+                                <th colspan="2" style="text-align: center!important; vertical-align: middle!important;">Stok Baru</th>
+                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">Total Stok (Kg)</th>
+                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">Rata-Rata Harga (Rp)</th>
+                            </tr>
+                            <tr>
+                                <th style="text-align: center!important; vertical-align: middle!important;">Stok Tersedia (Kg)</th>
+                                <th style="text-align: center!important; vertical-align: middle!important;">Harga (Rp)</th>
+                                <th style="text-align: center!important; vertical-align: middle!important;">Beli Baru (Kg)</th>
+                                <th style="text-align: center!important; vertical-align: middle!important;">Harga (Rp)</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td class="name">Rumput Gajah</td>
-                                <td>50</td>
-                                <td>50</td>
-                                <td>15000</td>
-                                <td>
-                                    <button class="btn btn-sm btn-primary" data-target=".bd-example-modal-sm"
-                                            data-toggle="modal" type="button"> Beli Bahan
-                                    </button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger" data-target=".bd-restock-modal-sm"
-                                            data-toggle="modal" type="button"> Tambah Kebutuhan
-                                    </button>
-                                </td>
-                                <td>
-                                    <a href="/pabrik/tambah_bahan" class="btn btn-sm btn-warning">Ubah</a>
-                                </td>
+                                <td style="vertical-align: middle!important;">Rumput Gajah</td>
+                                <td style="vertical-align: middle!important;">23 November 2018</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">50</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">150.000</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">30</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">90.000</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">80</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">120.000</td>
                             </tr>
                             <tr>
-                                <td class="name">Daun Jagung</td>
-                                <td>100</td>
-                                <td>10</td>
-                                <td>15000</td>
-                                <td>
-                                    <button class="btn btn-sm btn-primary" data-target=".bd-example-modal-sm"
-                                            data-toggle="modal" type="button"> Beli Bahan
-                                    </button>
-                                </td>
-                                <td>
-                                    <button class="btn btn-sm btn-danger" data-target=".bd-restock-modal-sm"
-                                            data-toggle="modal" type="button"> Tambah Kebutuhan
-                                    </button>
-                                </td>
-                                <td>
-                                    <a href="/pabrik/tambah_bahan" class="btn btn-sm btn-warning">Ubah</a>
-                                </td>
+                                <td style="vertical-align: middle!important;">Rumput Gajah</td>
+                                <td style="vertical-align: middle!important;">25 November 2018</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">60</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">120.000</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">50</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">150.000</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">110</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">135.000</td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle!important;">Rumput Gajah</td>
+                                <td style="vertical-align: middle!important;">30 November 2018</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">100</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">135.000</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">50</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">150.000</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">150</td>
+                                <td style="text-align: center!important; vertical-align: middle!important;">142.500</td>
                             </tr>
                             </tbody>
                         </table>
@@ -210,56 +226,6 @@
             </div>
         </div>
     </div>
-    <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-example-modal-sm" role="dialog"
-         tabindex="-1">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Masukkan Jumlah Pembelian</h5>
-                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-                                aria-hidden="true"> ×</span></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label>Jumlah Pembelian (Kg)</label>
-                            <input class="form-control" placeholder="Jumlah Pembelian" value="0" type="number" min="0">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal" type="button"> Batal</button>
-                    <button class="btn btn-primary" type="button"> Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-restock-modal-sm" role="dialog"
-         tabindex="-1">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Masukkan Jumlah Kebutuhan</h5>
-                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-                                aria-hidden="true"> ×</span></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label>Jumlah Kabutuhan (Kg)</label>
-                            <input class="form-control" placeholder="Jumlah Pembelian" value="0" type="number" min="0">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal" type="button"> Batal</button>
-                    <button class="btn btn-primary" type="button"> Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </section>
 
 
@@ -337,7 +303,7 @@
     $('#example2').DataTable({
         'paging': true,
         'lengthChange': false,
-        'searching': true,
+        'searching': false,
         'ordering': false,
         'info': false,
         'autoWidth': false,
