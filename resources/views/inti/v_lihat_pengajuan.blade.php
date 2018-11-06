@@ -155,7 +155,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-12 ">
+                        <div class="col-md-8 ">
                             <div class="block table-block mb-4 bg-warning">
                                 <div class="block-heading">
                                     <h5>DATA PENGAJUAN</h5>
@@ -166,20 +166,14 @@
                                         <thead>
                                         <tr>
                                             <th style="color:white;">Peternak</th>
-                                            <th style="color:white;">Status</th>
-                                            <th style="color:white;">Aksi</th>
+                                            <th style="color:white;">Jumlah Sapi</th>
                                             <th style="color:white;">Tambah</th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>John Mayers</td>
-                                            <td>Lunas</td>
-                                            <td>
-                                                <div>
-                                                    <button class="btn btn-success " type="submit" data-toggle="modal" data-target="#validasiModal">Validasi</button>
-                                                </div>
-                                            </td>
+                                            <td>Pak John</td>
+                                            <td>20</td>
                                             <td>
                                                 <div>
                                                     <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah</button>
@@ -191,13 +185,8 @@
                                             {{--<td class="price text-right">$354</td>--}}
                                         </tr>
                                         <tr>
-                                            <td>John Mayers</td>
-                                            <td>Sudah Tervalidasi</td>
-                                            <td>
-                                                <div>
-                                                    <button class="btn btn-success" type="submit">Validasi</button>
-                                                </div>
-                                            </td>
+                                            <td>Pak Andre</td>
+                                            <td>30</td>
                                             <td>
                                                 <div>
                                                     <button class="btn btn-primary" type="submit">Tambah</button>
@@ -205,13 +194,8 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>John Mayers</td>
-                                            <td>Belum Tervalidasi</td>
-                                            <td>
-                                                <div>
-                                                    <button class="btn btn-success" type="submit">Validasi</button>
-                                                </div>
-                                            </td>
+                                            <td>Pak To</td>
+                                            <td>32</td>
                                             <td>
                                                 <div>
                                                     <button class="btn btn-primary" type="submit">Tambah</button>
@@ -311,6 +295,25 @@
                                     <option>Jenis 5</option>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                    <div class="form-row">
+                                        <label class="col-md-3">Jenis Kelamin</label>
+                                        <div class="col-md-6">
+                                            <div class="custom-controls-stacked">
+                                                <label class="custom-control custom-radio">
+                                                    <input id="radioStacked3" name="radio-stacked" class="custom-control-input" type="radio">
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">Jantan</span>
+                                                </label>
+                                                <label class="custom-control custom-radio primary">
+                                                    <input name="radio-stacked" class="custom-control-input" type="radio">
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">Betina</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
