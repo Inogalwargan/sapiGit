@@ -72,36 +72,43 @@
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-warning mb-4">
-                            <div class="value text-center" style="color:antiquewhite;display:inherit">Rp 24.000.000</div>
-                            <p class="label text-center" style="color:#333333">Total Kredit Pengajuan Saat Ini</p>
+                            <div class="value text-center" style="color:antiquewhite;display:inherit">300 Kg</div>
+                            <p class="label text-center" style="color:#333333">Pakan yang telah diambil</p>
                         </div>
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-secondary mb-4">
-                            <div class="value text-center" style="color:black;display:inherit">Rp 4.800.000</div>
-                            <p class="label text-center" style="color:darkred">Total kredit yang telah dibayar</p>
+                            <div class="value text-center" style="color:black;display:inherit">2300 Kg</div>
+                            <p class="label text-center" style="color:darkred">Total berat awal sapi</p>
                         </div>
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block mb-4" style="background-color:darkblue">
-                            <div class="value text-center" style="color:whitesmoke;display:inherit">Rp 40.000</div>
-                            <p class="label text-center">Harga daging sapi sekarang (per kg)</p>
+                            <div class="value text-center" style="color:whitesmoke;display:inherit">2450 Kg</div>
+                            <p class="label text-center">Total berat sapi saat ini</p>
                         </div>
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-dark mb-4">
-                            <div class="value text-center" style="color:ghostwhite;display:inherit">2132 kg</div>
-                            <p class="label text-center">Berat Total sapi</p>
+                            <div class="value text-center" style="color:ghostwhite;display:inherit">20 Ekor</div>
+                            <p class="label text-center">Jumlah sapi</p>
                         </div>
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-light mb-4">
-                            <div class="value text-center" style="color:black;display:inherit">20 ekor</div>
-                            <p class="label text-center" style="color:black">jumlah sapi</p>
+                            <div class="value text-center" style="color:black;display:inherit">10 Ekor</div>
+                            <p class="label text-center" style="color:black">jumlah sapi jantan</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="block counter-block bg-primary-trans mb-4">
+                            <div class="value text-center" style="color:black;display:inherit">10 Ekor</div>
+                            <p class="label text-center" style="color:black">jumlah sapi betina</p>
                         </div>
                     </div>
 
