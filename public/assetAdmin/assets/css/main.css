@@ -1634,14 +1634,6 @@ body.top-navigation nav.fixed-header{
     border: 1px solid #e3e8ef;
     min-height: 58px;
     position: relative;
-    cursor: move;
-    cursor: -moz-grab;
-    transition: all 0.25s;
-}
-
-.task:hover{
-    border-color: var(--secondary-color);
-    transition: all 0.3s;
 }
 
 .task .task-desc{
@@ -1656,7 +1648,7 @@ body.top-navigation nav.fixed-header{
 }
 
 .task .task-desc .end-time{
-    color: var(--secondary-color);
+    color: #000;
     font-size: 12px;
     font-weight: 400;
 }

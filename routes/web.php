@@ -30,7 +30,7 @@ Route::get('harga', 'c_inti@harga');
 
 
 Route::get('lihatPengajuan', 'c_inti@lihatPengajuan');
-
+Route::get('cetakPDF','c_inti@cetakPDF');
 
 
 Route::get('lihatPengajuan', 'c_inti@lihatPengajuan');
@@ -50,6 +50,7 @@ Route::get('pakan', 'c_inti@pakan');
 
 Route::get('addCicilan', 'c_inti@addCicilan');
 
+Route::get('cek_data_pengajuan', 'c_inti@lihatDataSebelumPdf');
 
 Route::get('/tambahPakan', 'c_pabrik@tambahPakan');
 

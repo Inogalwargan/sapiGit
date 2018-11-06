@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use PDF;
 
 
 class c_inti extends Controller
@@ -38,6 +39,17 @@ class c_inti extends Controller
 	function lihatPengajuan(){
 		return view("inti.v_lihat_pengajuan");
 	}
+
+	function lihatDataSebelumPdf(){
+	    return view('inti.v_lihat_data_sebelum_pdf');
+    }
+
+    function cetakPDF(){
+        $data = [
+            'tes' => 'Ini cuma buat tes saja'
+        ];
+        return $pdf->stream('document.pdf');
+    }
 
 	function pakan(){
 		return view('inti.pakan');

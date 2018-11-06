@@ -157,76 +157,49 @@
                         </div>
 
                         <div class="col-md-12 ">
-                            <div class="block table-block mb-4" id="grad">
+                            <div class="block task-block mb-4">
                                 <div class="block-heading">
-                                    <h5 style="color: white">DATA PENGAJUAN</h5>
+                                    <h5>DATA PENGAJUAN</h5>
                                 </div>
-                                <div class="table-responsive" id="grad">
-                                    <table class="table">
-                                        <thead>
-                                        <tr>
-                                            <th style="color:white;">Tanggal Pengajuan</th>
-                                            <th style="color:white;">Nama Peternak</th>
-                                            <th style="color:white;">Jumlah Total Sapi</th>
-                                            <th style="color:white;">Peternak</th>
-                                            <th style="color:white;">Jumlah Sapi</th>
-                                            <th style="color:white;"></th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td >29/12/2018</td>
-                                            <td >Pak Budi</td>
-                                            <td >20</td>
-
-                                            <td>Pak John</td>
-                                            <td>20</td>
-                                            <td>
-                                                <div>
-                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
-                                                    <div style="padding-top:5px;padding-bottom:5px;"></div>
-                                                    <a href="cek_data_pengajuan" class="btn btn-dark">Lihat Data Perjanjian</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td >29/12/2018</td>
-                                            <td >Pak Tono</td>
-                                            <td >10</td>
-                                            <td>Pak Andre</td>
-                                            <td>30</td>
-                                            <td>
-                                                <div>
-                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
-                                                    <div style="padding-top:5px;padding-bottom:5px;"></div>
-                                                    <a href="cek_data_pengajuan" class="btn btn-dark">Lihat Data Perjanjian</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td >29/12/2018</td>
-                                            <td >Pak Andri</td>
-                                            <td >3</td>
-                                            <td>Pak To</td>
-                                            <td>32</td>
-                                            <td>
-                                                <div>
-                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
-                                                    <div style="padding-top:5px;padding-bottom:5px;"></div>
-                                                    <a href="cek_data_pengajuan" class="btn btn-dark">Lihat Data Perjanjian</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                       
-                                    
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <ul id="todo">
+                                    <!--Task-->
+                                    <li>
+                                        <div class="task align-items-center">
+                                            <div class="task-desc">
+                                                <p class="task-title text-truncate">Jumlah Sapi</p>
+                                                <span class="end-time text-truncate">20 Ekor</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="task align-items-center">
+                                            <div class="task-desc">
+                                                <p class="task-title text-truncate">Jumlah Betina | Jumlah Jantan</p>
+                                                <span class="end-time text-truncate">10 Ekor | 10 Ekor</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="task align-items-center">
+                                            <div class="task-desc">
+                                                <p class="task-title text-truncate">Jumlah Total Biaya Pakan</p>
+                                                <span class="end-time text-truncate">Rp 20.000.000</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="task align-items-center">
+                                            <div class="task-desc">
+                                                <p class="task-title text-truncate">Total Berat Awal Sapi</p>
+                                                <span class="end-time text-truncate">2231 Kg</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
 
                             </div>
 
+                            <a class="btn btn-xs btn-success" href="cetakPDF">Cetak PDF</a>
 
                 </div>
             </div>
