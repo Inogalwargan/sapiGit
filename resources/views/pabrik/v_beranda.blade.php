@@ -147,16 +147,13 @@
         <div class="content sm-gutter">
             <div class="container-fluid padding-25 sm-padding-10">
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="col-12">
                         <div class="block counter-block counter-bg-img mb-4"
-                             style="background: url(../assetAdmin/assets/images/counter-bg-img.jpg);">
+                             style="background: url(../assetAdmin/assets/images/pabrik_2.jpg);">
                             <div class="fade-color">
-                                <div class="value text-white">109</div>
-                                <div class="trending trending-up">
-                                    <span>12%</span>
-                                    <i class="fa fa-caret-up"></i>
-                                </div>
-                                <p class="label text-white">New Lovers</p>
+                                <div class="value text-white">SELAMAT DATANG ADMIN</div>
+                                <p class="text-white">Anda dapat melakukan pengelolaan bahan baku dan pakan sesuai
+                                    dengan kebutuhan anda :)</p>
                             </div>
                         </div>
                     </div>

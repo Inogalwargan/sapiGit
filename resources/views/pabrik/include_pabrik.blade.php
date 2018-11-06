@@ -23,7 +23,7 @@
                 <li>
                     <a href="/pabrik/lihat_bahan">
                         <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
-                        <span class="title">Lihat</span>
+                        <span class="title">History</span>
                     </a>
                 </li>
 

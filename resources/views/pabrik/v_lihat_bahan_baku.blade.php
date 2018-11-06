@@ -158,7 +158,7 @@
                                 </select>
                             </div>
                         </div>
-                        <input class="btn btn-primary" type="submit" value="Tampilkan" required>
+                        <input class="btn btn-primary" type="submit" value="Tampilkan History Pembelian" required>
                     </form>
                 </div>
                 <div class="block form-block mb-4">
