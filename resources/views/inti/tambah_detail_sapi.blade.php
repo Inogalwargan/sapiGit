@@ -188,7 +188,7 @@
                                     </div>
                                     <div id="sembunyi" style="display:none">
                                         <div class="form-group">
-                                            <input type="text" placeholder="Masukkan jenis sapi baru">
+                                            <input class="form-control bg-white" type="text" placeholder="Masukkan jenis sapi baru">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -268,9 +268,9 @@
     <script>
         $('#jenissapi').change(function(){
             if($(this).val() == 'lain-lain'){
-                $('#sembunyi').removeAttr('style');
+                $('#sembunyi').fadeIn('1000');
             }else{
-                $('#sembunyi').attr('style','display:none');
+                $('#sembunyi').fadeOut('1000');
             }
         })
     </script>

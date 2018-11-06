@@ -158,35 +158,27 @@
 
                         <div class="col-md-12 ">
                             <div class="block table-block mb-4" id="grad">
-                        <div class="col-md-8 ">
-                            <div class="block table-block mb-4 bg-warning">
                                 <div class="block-heading">
                                     <h5 style="color: white">DATA PENGAJUAN</h5>
                                 </div>
-
                                 <div class="table-responsive" id="grad">
                                     <table class="table">
                                         <thead>
                                         <tr>
-                                            <th style="color:white; font-size: 20px;">Tanggal Pengajuan</th>
-                                            <th style="color:white; font-size: 20px;">Nama Peternak</th>
-                                            <th style="color:white; font-size: 20px;">Jumlah Sapi</th>
-                                            <th style="color:white; font-size: 20px;">Aksi</th>
+                                            <th style="color:white;">Tanggal Pengajuan</th>
+                                            <th style="color:white;">Nama Peternak</th>
+                                            <th style="color:white;">Jumlah Total Sapi</th>
                                             <th style="color:white;">Peternak</th>
                                             <th style="color:white;">Jumlah Sapi</th>
-                                            <th style="color:white;">Tambah</th>
+                                            <th style="color:white;"></th>
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td style="color: white; font-size: 17px;">29/12/2018</td>
-                                            <td style="color: white; font-size: 17px;">Pak Budi</td>
-                                            <td style="color: white; font-size: 17px;">20</td>
-                                            
-                                            <td>
-                                                <div hidden="">
-                                                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah Detail Sapi</button>
-                                                </div>
+                                            <td >29/12/2018</td>
+                                            <td >Pak Budi</td>
+                                            <td >20</td>
+
                                             <td>Pak John</td>
                                             <td>20</td>
                                             <td>
@@ -197,14 +189,9 @@
                                         </tr>
 
                                         <tr>
-                                            <td style="color: white; font-size: 17px;">29/12/2018</td>
-                                            <td style="color: white; font-size: 17px;">Pak Tono</td>
-                                            <td style="color: white; font-size: 17px;">10</td>
-                                            
-                                            <td>
-                                                <div hidden="">
-                                                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah Detail Sapi</button>
-                                                </div>
+                                            <td >29/12/2018</td>
+                                            <td >Pak Tono</td>
+                                            <td >10</td>
                                             <td>Pak Andre</td>
                                             <td>30</td>
                                             <td>
@@ -215,14 +202,9 @@
                                         </tr>
 
                                         <tr>
-                                            <td style="color: white; font-size: 17px;">29/12/2018</td>
-                                            <td style="color: white; font-size: 17px;">Pak Andri</td>
-                                            <td style="color: white; font-size: 17px;">3</td>
-                                            
-                                            <td>
-                                                <div hidden="">
-                                                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah Detail Sapi</button>
-                                                </div>
+                                            <td >29/12/2018</td>
+                                            <td >Pak Andri</td>
+                                            <td >3</td>
                                             <td>Pak To</td>
                                             <td>32</td>
                                             <td>
@@ -238,10 +220,8 @@
                                 </div>
 
                             </div>
-                        </div>
 
 
-                    </div>
                 </div>
             </div>
         </div>
