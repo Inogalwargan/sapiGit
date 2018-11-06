@@ -48,6 +48,7 @@ class c_inti extends Controller
         $data = [
             'tes' => 'Ini cuma buat tes saja'
         ];
+        $pdf = PDF::loadView('inti.v_perjanjian', $data);
         return $pdf->stream('document.pdf');
     }
 
