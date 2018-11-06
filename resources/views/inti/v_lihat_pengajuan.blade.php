@@ -156,8 +156,13 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
                         <div class="col-md-12 ">
                             <div class="block table-block mb-4" id="grad">
+=======
+                        <div class="col-md-8 ">
+                            <div class="block table-block mb-4 bg-warning">
+>>>>>>> f5101d049ccf9758e2a6db91ef69f4e31afefb6d
                                 <div class="block-heading">
                                     <h5 style="color: white">DATA PENGAJUAN</h5>
                                 </div>
@@ -166,15 +171,22 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
+<<<<<<< HEAD
                                             <th style="color:white; font-size: 20px;">Tanggal Pengajuan</th>
                                             <th style="color:white; font-size: 20px;">Nama Peternak</th>
                                             <th style="color:white; font-size: 20px;">Jumlah Sapi</th>
                                             <th style="color:white; font-size: 20px;">Aksi</th>
                                           
+=======
+                                            <th style="color:white;">Peternak</th>
+                                            <th style="color:white;">Jumlah Sapi</th>
+                                            <th style="color:white;">Tambah</th>
+>>>>>>> f5101d049ccf9758e2a6db91ef69f4e31afefb6d
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
+<<<<<<< HEAD
                                             <td style="color: white; font-size: 17px;">29/12/2018</td>
                                             <td style="color: white; font-size: 17px;">Pak Budi</td>
                                             <td style="color: white; font-size: 17px;">20</td>
@@ -183,6 +195,11 @@
                                                 <div hidden="">
                                                     <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah Detail Sapi</button>
                                                 </div>
+=======
+                                            <td>Pak John</td>
+                                            <td>20</td>
+                                            <td>
+>>>>>>> f5101d049ccf9758e2a6db91ef69f4e31afefb6d
                                                 <div>
                                                     <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
                                                 </div>
@@ -190,6 +207,7 @@
                                         </tr>
 
                                         <tr>
+<<<<<<< HEAD
                                             <td style="color: white; font-size: 17px;">29/12/2018</td>
                                             <td style="color: white; font-size: 17px;">Pak Tono</td>
                                             <td style="color: white; font-size: 17px;">10</td>
@@ -198,6 +216,11 @@
                                                 <div hidden="">
                                                     <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah Detail Sapi</button>
                                                 </div>
+=======
+                                            <td>Pak Andre</td>
+                                            <td>30</td>
+                                            <td>
+>>>>>>> f5101d049ccf9758e2a6db91ef69f4e31afefb6d
                                                 <div>
                                                     <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
                                                 </div>
@@ -205,6 +228,7 @@
                                         </tr>
 
                                         <tr>
+<<<<<<< HEAD
                                             <td style="color: white; font-size: 17px;">29/12/2018</td>
                                             <td style="color: white; font-size: 17px;">Pak Andri</td>
                                             <td style="color: white; font-size: 17px;">3</td>
@@ -213,6 +237,11 @@
                                                 <div hidden="">
                                                     <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah Detail Sapi</button>
                                                 </div>
+=======
+                                            <td>Pak To</td>
+                                            <td>32</td>
+                                            <td>
+>>>>>>> f5101d049ccf9758e2a6db91ef69f4e31afefb6d
                                                 <div>
                                                     <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
                                                 </div>
@@ -312,6 +341,25 @@
                                     <option>Jenis 5</option>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                    <div class="form-row">
+                                        <label class="col-md-3">Jenis Kelamin</label>
+                                        <div class="col-md-6">
+                                            <div class="custom-controls-stacked">
+                                                <label class="custom-control custom-radio">
+                                                    <input id="radioStacked3" name="radio-stacked" class="custom-control-input" type="radio">
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">Jantan</span>
+                                                </label>
+                                                <label class="custom-control custom-radio primary">
+                                                    <input name="radio-stacked" class="custom-control-input" type="radio">
+                                                    <span class="custom-control-indicator"></span>
+                                                    <span class="custom-control-description">Betina</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
