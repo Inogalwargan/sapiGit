@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="assetAdmin/assets/css/normalize.css">
     <!--Main Css-->
     <link rel="stylesheet" href="assetAdmin/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assetAdmin/gradient.css">
 </head>
 <body>
 
@@ -146,7 +147,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content sm-gutter">
+            <div class="content sm-gutter ">
                 <div class="container-fluid padding-25 sm-padding-10 ">
                     <div class="row ">
                         <div class="col-12 ">
@@ -156,69 +157,69 @@
                         </div>
 
                         <div class="col-md-12 ">
-                            <div class="block table-block mb-4 bg-warning">
+                            <div class="block table-block mb-4" id="grad">
                                 <div class="block-heading">
-                                    <h5>DATA PENGAJUAN</h5>
+                                    <h5 style="color: white">DATA PENGAJUAN</h5>
                                 </div>
 
-                                <div class="table-responsive">
-                                    <table class="table table-striped">
+                                <div class="table-responsive" id="grad">
+                                    <table class="table">
                                         <thead>
                                         <tr>
-                                            <th style="color:white;">Peternak</th>
-                                            <th style="color:white;">Status</th>
-                                            <th style="color:white;">Aksi</th>
-                                            <th style="color:white;">Tambah</th>
+                                            <th style="color:white; font-size: 20px;">Tanggal Pengajuan</th>
+                                            <th style="color:white; font-size: 20px;">Nama Peternak</th>
+                                            <th style="color:white; font-size: 20px;">Jumlah Sapi</th>
+                                            <th style="color:white; font-size: 20px;">Aksi</th>
+                                          
                                         </tr>
                                         </thead>
                                         <tbody>
                                         <tr>
-                                            <td>John Mayers</td>
-                                            <td>Lunas</td>
+                                            <td style="color: white; font-size: 17px;">29/12/2018</td>
+                                            <td style="color: white; font-size: 17px;">Pak Budi</td>
+                                            <td style="color: white; font-size: 17px;">20</td>
+                                            
                                             <td>
-                                                <div>
-                                                    <button class="btn btn-success " type="submit" data-toggle="modal" data-target="#validasiModal">Validasi</button>
+                                                <div hidden="">
+                                                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah Detail Sapi</button>
                                                 </div>
-                                            </td>
-                                            <td>
                                                 <div>
-                                                    <button class="btn btn-primary" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah</button>
-                                                </div>
-                                            </td>
-                                            {{--<td class="text-center">12</td>--}}
-                                            {{--<td><img alt="" src="img/flags-icons/us.html" width="25px"></td>--}}
-                                            {{--<td class="status pending">Pending</td>--}}
-                                            {{--<td class="price text-right">$354</td>--}}
-                                        </tr>
-                                        <tr>
-                                            <td>John Mayers</td>
-                                            <td>Sudah Tervalidasi</td>
-                                            <td>
-                                                <div>
-                                                    <button class="btn btn-success" type="submit">Validasi</button>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <button class="btn btn-primary" type="submit">Tambah</button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>John Mayers</td>
-                                            <td>Belum Tervalidasi</td>
-                                            <td>
-                                                <div>
-                                                    <button class="btn btn-success" type="submit">Validasi</button>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <button class="btn btn-primary" type="submit">Tambah</button>
+                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
                                                 </div>
                                             </td>
                                         </tr>
 
+                                        <tr>
+                                            <td style="color: white; font-size: 17px;">29/12/2018</td>
+                                            <td style="color: white; font-size: 17px;">Pak Tono</td>
+                                            <td style="color: white; font-size: 17px;">10</td>
+                                            
+                                            <td>
+                                                <div hidden="">
+                                                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah Detail Sapi</button>
+                                                </div>
+                                                <div>
+                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="color: white; font-size: 17px;">29/12/2018</td>
+                                            <td style="color: white; font-size: 17px;">Pak Andri</td>
+                                            <td style="color: white; font-size: 17px;">3</td>
+                                            
+                                            <td>
+                                                <div hidden="">
+                                                    <button class="btn btn-danger" type="submit" data-toggle="modal" data-target="#tambahModal">Tambah Detail Sapi</button>
+                                                </div>
+                                                <div>
+                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                       
+                                    
                                         </tbody>
                                     </table>
                                 </div>

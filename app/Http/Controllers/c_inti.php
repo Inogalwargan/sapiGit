@@ -42,6 +42,10 @@ class c_inti extends Controller
 	function pakan(){
 		return view('inti.pakan');
 	}
+
+	public function tambah_detail_sapi(){
+		return view('inti.tambah_detail_sapi');
+	}
 	
 	
 }

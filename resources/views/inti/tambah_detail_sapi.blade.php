@@ -132,9 +132,9 @@
                         </div>
                         <div class="col-lg-8 d-none d-lg-block">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
-                                <li class="breadcrumb-item active">Pengajuan</li>
-                                <li class="breadcrumb-item active">Form Pengajuan</li>
+                                <li class="breadcrumb-item"><a href="index.html">Pengajuan</a></li>
+                                <li class="breadcrumb-item active">Lihat Pengajuan</li>
+                                <li class="breadcrumb-item active">Form Tambah Detail Sapi</li>
                             </ol>
                         </div>
 
@@ -152,30 +152,57 @@
                         <div class="col-md-6" >
                             <div class="block form-block mb-4" id="grad">
                                 <div class="block-heading">
-                                    <h5>Tambah Data Pengajuan</h5>
+                                    <h5 style="color: white">Tambah Data Pengajuan</h5>
                                 </div>
 
                                 <form action="#">
 
+                                     <div class="form-group">
+                                        <label style="color: white;">Nama Peternak</label>
+                                        <div class="">
+                                            <input class="form-control  bg-white"  type="text" placeholder="Pak Budi" disabled="">
+                                        </div>
+                                    </div>
+
                                     <div class="form-group">
-                                        <label>Tanggal Pengajuan</label>
+                                        <label style="color: white;">Jumlah Sapi</label>
+                                        <div class="">
+                                            <input class="form-control  bg-white"  type="text" placeholder="20" disabled="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label style="color: white;">Berat Awal Sapi</label>
                                         <div class="input-group">
-                                            <span class="input-group-addon text-dark"><i class="ion-ios-calendar-outline"></i></span>
-                                            <input class="single-date-picker form-control  bg-white" type="text" placeholder="Select date of birth">
+                                            <input class="form-control  bg-white"  type="number" placeholder="30 kg">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Nama Peternak</label>
-                                        <input class="form-control  bg-white"  type="text" placeholder="Pak Budi">
+                                        <label style="color: white;">Jenis Sapi</label>
+                                        <select class="form-control bg-white">
+                                            <option >Sapi PO</option>
+                                            <option >Lokal</option>
+                                            <option >Bali</option>
+                                            <option >Tambah Jenis</option>
+                                        </select>
                                     </div>
                                     <div class="form-group">
-                                        <label>Jumlah Sapi</label>
-                                        <input class="form-control  bg-white"  type="number" placeholder="20">
+                                        <label style="color: white;">Jenis Kelamin Sapi</label>
+                                        <label class="custom-control custom-radio primary">
+                                            <input name="radio-stacked" class="custom-control-input" type="radio">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Jantan</span>
+                                        </label>
+                                         <label class="custom-control custom-radio primary">
+                                            <input name="radio-stacked" class="custom-control-input" type="radio">
+                                            <span class="custom-control-indicator"></span>
+                                            <span class="custom-control-description">Betina</span>
+                                        </label>
                                     </div>
-                                   {{--  <div  style="text-align:center;">0deg</div><br> --}}
-                                                                    
+                                    
                                     <hr>
-                                    <a href="tambahPengajuan" class="btn btn-primary" type="submit">Simpan</a>
+                                    <a href="tambah_detail_sapi" class="btn btn-primary" type="submit">Simpan</a>
+                                    <a href="tambah_detail_sapi" class="btn btn-danger" type="submit">Selesai</a>
                                 </form>
                             </div>
                         </div>

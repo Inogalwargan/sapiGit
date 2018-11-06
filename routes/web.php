@@ -24,6 +24,7 @@ Route::get('sapi', 'c_inti@sapi');
 
 Route::get('tambahSapi', 'c_inti@tambahSapi');
 
+Route::get('tambah_detail_sapi', 'c_inti@tambah_detail_sapi');
 
 Route::get('harga', 'c_inti@harga');
 
