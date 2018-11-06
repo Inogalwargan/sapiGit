@@ -160,7 +160,7 @@
                                         name="nama_bahan_baku" required>
                                     <option value="gajah" selected>Rumput Gajah</option>
                                     <option value="gajah">Daun Jagung</option>
-                                    <option value="jenis_baru">Jenis Baru</option>
+                                    <option value="jenis_baru">Bahan Baru</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6" style="display: none" id="div_nama">
