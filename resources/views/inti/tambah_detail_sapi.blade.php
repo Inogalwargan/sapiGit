@@ -206,8 +206,8 @@
                                     </div>
                                     
                                     <hr>
-                                    <a href="tambah_detail_sapi" class="btn btn-primary" type="submit">Simpan</a>
-                                    <a href="tambah_detail_sapi" class="btn btn-danger" type="submit">Selesai</a>
+                                    <a href="tambah_detail_sapi" class="btn btn-primary" >Simpan</a>
+                                    <a href="cek_data_pengajuan" class="btn btn-warning">Selesai</a>
                                 </form>
                             </div>
                         </div>

@@ -149,12 +149,12 @@
                             </div>
                         </div>
 
-                        <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                            <div class="block counter-block mb-4 bg-warning">
+                        <div class="col-12 col-sm-6 col-md-3 col-lg-3" \>
+                            <div class="block counter-block mb-4" style="background: url(../assetAdmin/assets/images/counter-bg-img.jpg);">
                                 <div class="trending trending-up">
                                     <span>Rp.</span>
                                 </div>
-                                <div class="value">100.000</div>
+                                <div class="value" style="color:yellow;">100.000</div>
 
                                 <p class="label" style="color:white;">Harga Satuan Per Kg</p>
                             </div>
