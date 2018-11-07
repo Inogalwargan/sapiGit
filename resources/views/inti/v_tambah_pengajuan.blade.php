@@ -176,8 +176,7 @@
                                    {{--  <div  style="text-align:center;">0deg</div><br> --}}
                                                                     
                                     <hr>
-                                    <a href="tambahPengajuan" class="btn btn-success">Simpan</a>
-                                    <a href="cek_data_pengajuan" class="btn btn-danger">Selesai</a>
+                                    <a href="tambah_detail_sapi" class="btn btn-success">Simpan</a>                                    
                                 </form>
                             </div>
                         </div>

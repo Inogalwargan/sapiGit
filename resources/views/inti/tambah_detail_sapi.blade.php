@@ -152,7 +152,7 @@
                         <div class="col-md-6" >
                             <div class="block form-block mb-4" id="grad3">
                                 <div class="block-heading">
-                                    <h5 style="color: white">Tambah Data Pengajuan</h5>
+                                    <h5 style="color: white">Tambah Data Sapi</h5>
                                 </div>
 
                                 <form action="#">
