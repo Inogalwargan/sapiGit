@@ -4,3 +4,19 @@
 #grad2 {
   background-image: linear-gradient();
 }
+#grad3 {
+  background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+#grad_joomla {
+  background-image: linear-gradient(to bottom, #1e3c72, #2a5298);
+}
+#grad_ultraviolet {
+  background-image: linear-gradient(to bottom, #654ea3, #eaafc8);
+}
+#grad_telegram {
+  background-image: linear-gradient(to top, #1c92d2, #f2fcfe);
+}
+#grad_anamnisar {
+  background-image: linear-gradient(to top, #9796f0, #fbc7d4);
+}
+

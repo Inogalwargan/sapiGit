@@ -150,7 +150,8 @@
                             </div>
                         </div>
                         <div class="col-md-6" >
-                            <div class="block form-block mb-4" id="grad">
+                            <!-- <div class="block form-block mb-4" id="grad"> -->
+                            <div class="block form-block mb-4" id="grad_anamnisar">
                                 <div class="block-heading">
                                     <h5>Tambah Data Pengajuan</h5>
                                 </div>
@@ -175,7 +176,7 @@
                                    {{--  <div  style="text-align:center;">0deg</div><br> --}}
                                                                     
                                     <hr>
-                                    <a href="tambahPengajuan" class="btn btn-primary" type="submit">Simpan</a>
+                                    <a href="tambahPengajuan" class="btn btn-dark">Simpan</a>
                                 </form>
                             </div>
                         </div>

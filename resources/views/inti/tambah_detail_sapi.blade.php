@@ -150,7 +150,7 @@
                             </div>
                         </div>
                         <div class="col-md-6" >
-                            <div class="block form-block mb-4" id="grad">
+                            <div class="block form-block mb-4" id="grad3">
                                 <div class="block-heading">
                                     <h5 style="color: white">Tambah Data Pengajuan</h5>
                                 </div>
@@ -207,7 +207,7 @@
                                     
                                     <hr>
                                     <a href="tambah_detail_sapi" class="btn btn-primary" >Simpan</a>
-                                    <a href="cek_data_pengajuan" class="btn btn-warning">Selesai</a>
+                                    <a href="cek_data_pengajuan" class="btn btn-dark">Selesai</a>
                                 </form>
                             </div>
                         </div>
