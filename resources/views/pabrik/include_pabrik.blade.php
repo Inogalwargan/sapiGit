@@ -48,6 +48,12 @@
                         <span class="title">Lihat Pakan</span>
                     </a>
                 </li>
+                <li>
+                    <a href="/lihatPengambilanPakan">
+                        <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
+                        <span class="title">Pengambilan</span>
+                    </a>
+                </li>
 
             </ul>
         </li>

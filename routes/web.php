@@ -58,3 +58,5 @@ Route::get('/lihatPakan', 'c_pabrik@lihatPakan');
 Route::get('/lihatDetail', 'c_pabrik@lihatDetail');
 Route::get('/ubahDetail', 'c_pabrik@ubahDetail');
 
+Route::get('/lihatPengambilanPakan', 'c_pabrik@lihatPengambilanPakan');
+Route::get('/tambahPengambilan', 'c_pabrik@tambahPengambilan');
