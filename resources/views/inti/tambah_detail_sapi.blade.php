@@ -152,7 +152,11 @@
                         <div class="col-md-6" >
                             <div class="block form-block mb-4" id="grad3">
                                 <div class="block-heading">
+<<<<<<< HEAD
                                     <h5 style="color: white">SAPI Ke-2</h5>
+=======
+                                    <h5 style="color: white">Tambah Data Sapi</h5>
+>>>>>>> 060d2ea6fce6d43a8e2383d39ac66a7e845feef9
                                 </div>
 
                                 <form action="#">

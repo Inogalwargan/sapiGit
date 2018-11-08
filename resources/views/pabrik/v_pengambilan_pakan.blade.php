@@ -149,11 +149,7 @@
                 
                 <div class="block form-block mb-4">
                     <div class="block-heading">
-                        <h5>Daftar Pakan</h5>
-                        <hr>
-                        <small class="label-info">Stok Konsentrat : </small> <b>80Kg</b>
-                        <hr>
-                        <small class="label-info">Stok Silase : </small> <b>40Kg</b>
+                        <h5>Daftar Pengambilan Pakan</h5>
                     </div>
                     <div class="tabel table-responsive">
                         <table id="example2"
@@ -162,36 +158,31 @@
                                aria-describedby="example2_info">
                             <thead>
                             <tr>
+                                <th>Nama Peternak</th>
                                 <th>Nama Pakan</th>
-                                <th>Tanggal Produksi</th>
                                 <th>Jumlah (kg)</th>
-                                <th>Harga (rp)</th>
+                                <th>Tanggal Pengambilan</th>
                                 
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td class="name">Konsentrat</td>
+                                <td>Rudi</td>
+                                <td>Konsentrat</td>
+                                <td>10</td>
                                 <td>20/10/2018</td>
-                                <td>50</td>
-                                <td>20.000</td>
                                 
                             </tr>
                             <tr>
-                                <td>Konsentrat</td>
-                                <td>21/10/2018</td>
-                                <td>30</td>
-                                <td>15.000</td>
-                                                                
-                            </tr>
-                            <tr>
-                                <td class="name">Silase</td>
+                                <td>Ino</td>
+                                <td>Silase</td>
+                                <td>15</td>
                                 <td>20/10/2018</td>
-                                <td>40</td>
-                                <td>22.000</td>
+                                                                
                             </tr>
                                 
                             </tbody>
+                            <a href="/tambahPengambilan" class="btn btn-primary" type="submit">Tambah</a>
                         </table>
                     </div>
                 </div>

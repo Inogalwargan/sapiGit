@@ -151,10 +151,20 @@
                     <div class="col-md-12">
                         <div class="block form-block mb-4">
                             <div class="block-heading">
-                                <h5>Tambah Pakan</h5>
+                                <h5>Tambah Pengambilan</h5>
                             </div>
 
                             <form action="#">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                    <label>Nama Peternak</label>
+                                    <select class="custom-select form-control">
+                                        <option selected>Rudi</option>
+                                        <option>Ino</option>
+                                        <option>Christian</option>
+                                    </select>
+                                </div>
+                                
                                 <div class="form-group">
                                     <div class="form-group">
                                     <label>Nama Pakan</label>

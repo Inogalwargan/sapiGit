@@ -165,6 +165,7 @@
                                                 <input class="single-date-picker form-control  bg-white" type="text" placeholder="Select date of birth">
                                             </div>
                                         </div>
+<<<<<<< HEAD
                                         <div class="form-group">
                                             <label>Nama Peternak</label>
                                             <input class="form-control  bg-white"  type="text" placeholder="Pak Budi">
@@ -200,6 +201,22 @@
                                         <a href="tambahPengajuan" class="btn btn-dark">Simpan</a>
                                     </form>
                                 </div>
+=======
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Nama Peternak</label>
+                                        <input class="form-control  bg-white"  type="text" placeholder="Pak Budi">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Jumlah Sapi</label>
+                                        <input class="form-control  bg-white"  type="number" placeholder="20">
+                                    </div>
+                                   {{--  <div  style="text-align:center;">0deg</div><br> --}}
+                                                                    
+                                    <hr>
+                                    <a href="tambah_detail_sapi" class="btn btn-success">Simpan</a>                                    
+                                </form>
+>>>>>>> 060d2ea6fce6d43a8e2383d39ac66a7e845feef9
                             </div>
                         </div>
                     </div>
