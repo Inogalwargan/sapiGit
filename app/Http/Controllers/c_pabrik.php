@@ -29,16 +29,19 @@ class c_pabrik extends Controller
 	public function lihatPakan(){
 		return view("pabrik.v_daftar_pakan");
 	}
+
     public function lihatDetail(){
         return view("pabrik.v_detail_pakan");
     }
-     public function ubahDetail(){
+
+    public function ubahDetail(){
         return view("pabrik.v_ubah_detail");
     }
 
     public function lihatPengambilanPakan(){
         return view("pabrik.v_pengambilan_pakan");
     }
+
     public function tambahPengambilan(){
         return view("pabrik.v_tambah_pengambilan");
     }
