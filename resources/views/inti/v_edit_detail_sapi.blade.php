@@ -152,7 +152,7 @@
                         <div class="col-md-6" >
                             <div class="block form-block mb-4" id="grad3">
                                 <div class="block-heading">
-                                    <h5 style="color: white">SAPI Ke-2</h5>
+                                    <h5 style="color: white">EDIT DATA SAPI Ke-2</h5>
                                 </div>
 
                                 <form action="#">
@@ -160,21 +160,21 @@
                                      <div class="form-group">
                                         <label style="color: white;">Nama Peternak</label>
                                         <div class="">
-                                            <input class="form-control  bg-white"  type="text" placeholder="Pak Budi" disabled="">
+                                            <input class="form-control  bg-white"  type="text" value="Pak Budi" disabled="true">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label style="color: white;">Jumlah Sapi</label>
                                         <div class="">
-                                            <input class="form-control  bg-white"  type="text" placeholder="20" disabled="">
+                                            <input class="form-control  bg-white"  type="text" value="20" disabled="true">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label style="color: white;">Berat Awal Sapi</label>
+                                        <label style="color: white;">Berat Awal Sapi (Kg)</label>
                                         <div class="input-group">
-                                            <input class="form-control  bg-white"  type="number" placeholder="30 kg">
+                                            <input class="form-control  bg-white"  type="number" value="30">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -206,8 +206,8 @@
                                     </div>
                                     
                                     <hr>
-                                    <a href="tambah_detail_sapi" class="btn btn-primary" >Simpan</a>
-                                    <a href="cek_data_pengajuan" class="btn btn-dark">Selesai</a>
+                                    <a href="detailPengajuanPeternak" class="btn btn-primary" >Simpan</a>
+                                    <a href="detailPengajuanPeternak" class="btn btn-dark">Batal</a>
                                 </form>
                             </div>
                         </div>

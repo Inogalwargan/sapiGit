@@ -39,7 +39,12 @@ class c_inti extends Controller
 	function lihatPengajuan(){
 		return view("inti.v_lihat_pengajuan");
 	}
-
+	function detailPengajuanPeternak(){
+		return view("inti.v_detail_pengajuan_peternak");
+	}
+	function editDetailSapi(){
+		return view("inti.v_edit_detail_sapi");
+	}
 	function lihatDataSebelumPdf(){
 	    return view('inti.v_lihat_data_sebelum_pdf');
     }

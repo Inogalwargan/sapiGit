@@ -34,6 +34,9 @@ Route::get('cetakPDF','c_inti@cetakPDF');
 
 
 Route::get('lihatPengajuan', 'c_inti@lihatPengajuan');
+Route::get('detailPengajuanPeternak', 'c_inti@detailPengajuanPeternak');
+Route::get('edit_detail_sapi', 'c_inti@editDetailSapi');
+
 
 Route::get('/pabrik/beranda', 'c_pabrik@beranda');
 Route::get('/pabrik/tambah_bahan', 'c_pabrik@tambah_bahan_baku');

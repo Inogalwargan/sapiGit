@@ -168,8 +168,8 @@
                                             <th style="color:white;">Tanggal Pengajuan</th>
                                             <th style="color:white;">Nama Peternak</th>
                                             <th style="color:white;">Jumlah Total Sapi</th>
-                                            <th style="color:white;">Peternak</th>
                                             <th style="color:white;">Jumlah Sapi</th>
+                                            <th style="color:white;">Detail</th>
                                             <th style="color:white;"></th>
                                         </tr>
                                         </thead>
@@ -178,9 +178,10 @@
                                             <td >29/12/2018</td>
                                             <td >Pak Budi</td>
                                             <td >20</td>
-
-                                            <td>Pak John</td>
                                             <td>20</td>
+                                            <td>
+                                                <a href="detailPengajuanPeternak" class="btn btn-dark">Detail</a>
+                                            </td>
                                             <td>
                                                 <div>
                                                     <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
@@ -194,8 +195,10 @@
                                             <td >29/12/2018</td>
                                             <td >Pak Tono</td>
                                             <td >10</td>
-                                            <td>Pak Andre</td>
                                             <td>30</td>
+                                            <td>
+                                                <a href="detailPengajuanPeternak" class="btn btn-dark">Detail</a>
+                                            </td>
                                             <td>
                                                 <div>
                                                     <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
@@ -209,8 +212,10 @@
                                             <td >29/12/2018</td>
                                             <td >Pak Andri</td>
                                             <td >3</td>
-                                            <td>Pak To</td>
                                             <td>32</td>
+                                            <td>
+                                                <a href="detailPengajuanPeternak" class="btn btn-dark">Detail</a>
+                                            </td>
                                             <td>
                                                 <div>
                                                     <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
