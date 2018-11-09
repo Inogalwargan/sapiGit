@@ -147,14 +147,17 @@
             <div class="container-fluid padding-25 sm-padding-10">
                 <div class="block form-block mb-4 counter-bg-img"
                      style="background: url(../assetAdmin/assets/images/pabrik_1.jpg);">
-                    <form action="#">
+                    <form action="/pabrik/lihat_bahan" method="post">
+                        {{csrf_field()}}
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Pilih Bahan Baku</label>
                                 <select class="form-control" style="background: white!important;" id="nama_bahan_baku"
-                                        name="nama_bahan_baku" required>
-                                    <option value="gajah" selected>Rumput Gajah</option>
-                                    <option value="gajah">Daun Jagung</option>
+                                        name="id_bahan_baku" required>
+                                    @foreach($bahan_baku as $item)
+                                        <option value="{{$item->id_bahan_baku}}"
+                                                @if($bahan_saat_ini == $item->id_bahan_baku) selected @endif>{{$item->nama_bahan_baku}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -165,7 +168,8 @@
                     <div class="block-heading">
                         <h5>History Pembelian</h5>
                         <hr>
-                        <small class="label-info">Stok saat ini : </small> <b>150Kg</b>
+                        <small class="label-info">Stok saat ini :</small>
+                        <b>{{$stok_saat_ini->stok}} Kg/Liter</b>
                     </div>
                     <div class="tabel table-responsive">
                         <table id="example2"
@@ -174,51 +178,56 @@
                                aria-describedby="example2_info">
                             <thead>
                             <tr>
-                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">Nama Bahan Baku</th>
-                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">Tanggal Pembelian</th>
-                                <th colspan="2" style="text-align: center!important; vertical-align: middle!important;">Stok Lama</th>
-                                <th colspan="2" style="text-align: center!important; vertical-align: middle!important;">Stok Baru</th>
-                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">Total Stok (Kg)</th>
-                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">Rata-Rata Harga (Rp)</th>
+                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">
+                                    Nama Bahan Baku
+                                </th>
+                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">
+                                    Tanggal Pembelian
+                                </th>
+                                <th colspan="2" style="text-align: center!important; vertical-align: middle!important;">
+                                    Stok Lama
+                                </th>
+                                <th colspan="2" style="text-align: center!important; vertical-align: middle!important;">
+                                    Stok Baru
+                                </th>
+                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">
+                                    Total Stok (Kg/Liter)
+                                </th>
+                                <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">
+                                    Rata-Rata Harga (Rp)
+                                </th>
                             </tr>
                             <tr>
-                                <th style="text-align: center!important; vertical-align: middle!important;">Stok Tersedia (Kg)</th>
-                                <th style="text-align: center!important; vertical-align: middle!important;">Harga (Rp)</th>
-                                <th style="text-align: center!important; vertical-align: middle!important;">Beli Baru (Kg)</th>
-                                <th style="text-align: center!important; vertical-align: middle!important;">Harga (Rp)</th>
+                                <th style="text-align: center!important; vertical-align: middle!important;">Stok
+                                    Tersedia (Kg/Liter)
+                                </th>
+                                <th style="text-align: center!important; vertical-align: middle!important;">Harga (Rp)
+                                </th>
+                                <th style="text-align: center!important; vertical-align: middle!important;">Beli Baru
+                                    (Kg/Liter)
+                                </th>
+                                <th style="text-align: center!important; vertical-align: middle!important;">Harga (Rp)
+                                </th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td style="vertical-align: middle!important;">Rumput Gajah</td>
-                                <td style="vertical-align: middle!important;">23 November 2018</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">50</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">150.000</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">30</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">90.000</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">80</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">120.000</td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: middle!important;">Rumput Gajah</td>
-                                <td style="vertical-align: middle!important;">25 November 2018</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">60</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">120.000</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">50</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">150.000</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">110</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">135.000</td>
-                            </tr>
-                            <tr>
-                                <td style="vertical-align: middle!important;">Rumput Gajah</td>
-                                <td style="vertical-align: middle!important;">30 November 2018</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">100</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">135.000</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">50</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">150.000</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">150</td>
-                                <td style="text-align: center!important; vertical-align: middle!important;">142.500</td>
-                            </tr>
+                            @foreach($history_pembelian as $item)
+                                <tr>
+                                    <td style="vertical-align: middle!important;">{{$item->join_bahan_baku->nama_bahan_baku}}</td>
+                                    <td style="vertical-align: middle!important;">{{date('d-m-Y', strtotime($item->tanggal_pembelian))}}</td>
+                                    <td style="text-align: center!important; vertical-align: middle!important;">{{$item->stok_lama}}</td>
+                                    <td style="text-align: center!important; vertical-align: middle!important;">
+                                        {{number_format($item->harga_lama,0,",",".") . ",-"}}
+                                    </td>
+                                    <td style="text-align: center!important; vertical-align: middle!important;">{{$item->beli_baru}}</td>
+                                    <td style="text-align: center!important; vertical-align: middle!important;">{{number_format($item->harga_baru,0,",",".") . ",-"}}
+                                    </td>
+                                    <td style="text-align: center!important; vertical-align: middle!important;">{{$item->total_stok}}</td>
+                                    <td style="text-align: center!important; vertical-align: middle!important;">
+                                        {{number_format($item->harga_rata,0,",",".") . ",-"}}
+                                    </td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

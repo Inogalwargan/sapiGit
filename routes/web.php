@@ -41,7 +41,10 @@ Route::get('edit_detail_sapi', 'c_inti@editDetailSapi');
 Route::get('/pabrik/beranda', 'c_pabrik@beranda');
 Route::get('/pabrik/tambah_bahan', 'c_pabrik@tambah_bahan_baku');
 Route::get('/pabrik/lihat_bahan', 'c_pabrik@lihat_bahan_baku');
+Route::post('/pabrik/lihat_bahan', 'c_pabrik@lihat_bahan');
 Route::get('/pabrik/beli_bahan', 'c_pabrik@beli_bahan_baku');
+Route::post('/pabrik/beli_bahan', 'c_pabrik@store_pembelian');
+Route::get('/pabrik/rekap', 'c_pabrik@lihat_rekap');
 
 Route::get('/', 'c_petani@homePetani');
 

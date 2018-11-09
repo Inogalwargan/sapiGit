@@ -152,29 +152,30 @@
                     <div class="block-heading">
                         <h5>Pembelian Bahan Baku</h5>
                     </div>
-                    <form action="#">
+                    <form action="/pabrik/beli_bahan" method="post">
+                        {{csrf_field()}}
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label>Bahan Baku</label>
                                 <select class="form-control" style="background: white!important;" id="nama_bahan_baku"
-                                        name="nama_bahan_baku" required>
-                                    <option value="gajah" selected>Rumput Gajah</option>
-                                    <option value="gajah">Daun Jagung</option>
-                                    <option value="jenis_baru">Bahan Baru</option>
+                                        name="id_bahan_baku" required>
+                                    @foreach($bahan_baku as $item)
+                                        <option value="{{$item->id_bahan_baku}}">{{$item->nama_bahan_baku}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="form-group col-md-6" style="display: none" id="div_nama">
 
                             </div>
                             <div class="form-group col-md-6">
-                                <label>Banyak Pembelian (Kg)</label>
-                                <input class="form-control" placeholder="Masukkan Banyak Pembelian (Kg)" type="number"
-                                       style="background: white!important;" required>
+                                <label>Banyak Pembelian (Kg/Liter)</label>
+                                <input class="form-control" placeholder="Masukkan Banyak Pembelian (Kg/Liter)" type="number"
+                                       style="background: white!important;" required name="banyak_beli">
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Harga Beli (Rp)</label>
                                 <input class="form-control" placeholder="Masukkan Harga Pembelian (Rp)" type="number"
-                                       style="background: white!important;" required>
+                                       style="background: white!important;" required name="harga_beli">
                             </div>
                         </div>
                         <hr>
@@ -310,13 +311,13 @@
 
     $("#nama_bahan_baku").change(function () {
         if ($("#nama_bahan_baku").val() == "jenis_baru") {
-            document.getElementById("div_nama").style.display="block";
+            document.getElementById("div_nama").style.display = "block";
             document.getElementById("div_nama").innerHTML =
                 "<label>Nama Bahan Baku</label>\n" +
                 "<input class=\"form-control\" placeholder=\"Masukkan Nama Bahan Baku\" type=\"text\"\n" +
                 "style=\"background: white!important;\" required>";
         } else {
-            document.getElementById("div_nama").style.display="none";
+            document.getElementById("div_nama").style.display = "none";
             document.getElementById("div_nama").innerHTML = "";
         }
     });
