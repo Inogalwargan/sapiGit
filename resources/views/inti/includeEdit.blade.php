@@ -2,7 +2,7 @@
 
         <ul class="menu-items custom-scroll">
             <li>
-                <a href="homeInti">
+                <a href="../homeInti">
                     <span class="icon-thumbnail"><i class="dripicons-browser"></i></span>
                     <span class="title">Beranda</span>
                 </a>
@@ -15,13 +15,13 @@
                 <!--Submenu-->
                 <ul class="sub-menu">
                     <li>
-                        <a href="tambahPengajuan">
+                        <a href="../tambahPengajuan">
                             <span class="icon-thumbnail"><i class="fi-plus"></i></span>
                             <span class="title">Tambah</span>
                         </a>
                     </li>
                     <li>
-                        <a href="lihatPengajuan">
+                        <a href="../lihatPengajuan">
                             <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
                             <span class="title">Lihat</span>
                         </a>
@@ -30,12 +30,12 @@
                 </ul>
             </li>
 
-            
+           
             
             <li>
-                <a href="">
+                <a href="pakan">
                     <span class="icon-thumbnail"><i class="icon-fork-and-spoon"></i></span>
-                    <span class="title">Lihat Pakan</span>
+                    <span class="title">Pakan</span>
                 </a>
             </li>
         

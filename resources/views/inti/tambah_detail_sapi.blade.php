@@ -15,35 +15,35 @@
     <link href="assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
 
     <!--Preloader-CSS-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/preloader/preloader.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/preloader/preloader.css">
 
     <!--bootstrap-4-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/bootstrap.min.css">
 
     <!--Custom Scroll-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.css">
     <!--Font Icons-->
-    <link rel="stylesheet" href="assetAdmin/assets/icons/simple-line/css/simple-line-icons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/dripicons/dripicons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/eightyshades/eightyshades.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/foundation/foundation-icons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/metrize/metrize.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/typicons/typicons.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/weathericons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/simple-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/dripicons/dripicons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/eightyshades/eightyshades.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/foundation/foundation-icons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/metrize/metrize.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/typicons/typicons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/weathericons/css/weather-icons.min.css">
 
     <!--Date-range-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/date-range/daterangepicker.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/date-range/daterangepicker.css">
     <!--Drop-Zone-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/dropzone/dropzone.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/dropzone/dropzone.css">
     <!--Full Calendar-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/full-calendar/fullcalendar.min.css">
     <!--Normalize Css-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/normalize.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/normalize.css">
     <!--Main Css-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="assetAdmin/gradient.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../../assetAdmin/gradient.css">
 </head>
 <body>
 
@@ -71,7 +71,7 @@
 
         <!--Navigation Profile area-->
         <div class="navigation-profile">
-            <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
+            <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
             <h4 class="name">Admin Inti</h4>
             <span class="designation">SAPI</span>
 
@@ -80,7 +80,7 @@
             <!--logged user hover menu-->
             <div class="logged-user-menu bg-white">
                 <div class="avatar-info">
-                    <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
+                    <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
                     <h4 class="name">Meera</h4>
                     <span class="designation">UI/UX EXPERT</span>
                 </div>
@@ -115,7 +115,7 @@
         </div>
 
         <!--Navigation Menu Links-->
-        @include('inti.include_inti')
+        @include('inti.includeEdit')
     </nav>
 
     <!--Page Container-->
@@ -152,11 +152,10 @@
                         <div class="col-md-6" >
                             <div class="block form-block mb-4" id="grad3">
                                 <div class="block-heading">
-<<<<<<< HEAD
                                     <h5 style="color: white">SAPI Ke-2</h5>
-=======
+
                                     <h5 style="color: white">Tambah Data Sapi</h5>
->>>>>>> 060d2ea6fce6d43a8e2383d39ac66a7e845feef9
+
                                 </div>
 
                                 <form action="#">
@@ -164,14 +163,14 @@
                                      <div class="form-group">
                                         <label style="color: white;">Nama Peternak</label>
                                         <div class="">
-                                            <input class="form-control  bg-white"  type="text" placeholder="Pak Budi" disabled="">
+                                            <input class="form-control  bg-white"  type="text" placeholder="" disabled="" value="">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label style="color: white;">Jumlah Sapi</label>
                                         <div class="">
-                                            <input class="form-control  bg-white"  type="text" placeholder="20" disabled="">
+                                            <input class="form-control  bg-white"  type="text" placeholder="20" disabled="" value="">
                                         </div>
                                     </div>
 
@@ -227,47 +226,47 @@
 
 
     <!--Jquery-->
-    <script type="text/javascript" src="assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
     <!--Bootstrap Js-->
-    <script type="text/javascript" src="assetAdmin/assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/js/bootstrap.min.js"></script>
     <!--Modernizr Js-->
-    <script type="text/javascript" src="assetAdmin/assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/js/modernizr.custom.js"></script>
 
     <!--Morphin Search JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/classie.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/morphin-search/classie.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
     <!--Morphin Search JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
 
     <!--Chart js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/charts/Chart.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/charts/Chart.min.js"></script>
 
     <!--Sparkline Chart Js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
 
     <!--Custom Scroll-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
     <!--Sortable Js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
     <!--DropZone Js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
     <!--Date Range JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/moment.min.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/date-range/moment.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
     <!--CK Editor JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
     <!--Data-Table JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
     <!--Editable JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/editable/editable.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/editable/editable.js"></script>
     <!--Full Calendar JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
 
     <!--- Main JS -->
-    <script src="assetAdmin/assets/js/main.js"></script>
+    <script src="../assetAdmin/assets/js/main.js"></script>
 
     <script>
         $('#jenissapi').change(function(){

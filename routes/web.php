@@ -23,8 +23,12 @@ Route::get('tambahPengajuan', 'c_inti@tambahPengajuan');
 Route::get('sapi', 'c_inti@sapi');
 
 Route::get('tambahSapi', 'c_inti@tambahSapi');
+Route::post('prosesTambahPengajuan', 'c_inti@prosesTambahPengajuan');
 
-Route::get('tambah_detail_sapi', 'c_inti@tambah_detail_sapi');
+
+Route::get('tambah_detail_sapi/{id}', 'c_inti@tambah_detail_sapi');
+Route::get('editPengajuan/{id}', 'c_inti@editPengajuan');
+Route::post('prosesUpdatePengajuan/{id}', 'c_inti@prosesUpdatePengajuan');
 
 Route::get('harga', 'c_inti@harga');
 

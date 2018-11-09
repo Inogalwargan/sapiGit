@@ -134,7 +134,7 @@
                     <div class="row">
                         <div class="col-9 col-md-6 d-lg-none">
                             <a id="toggle-navigation" href="javascript:void(0);" class="icon-btn mr-3"><i class="fa fa-bars"></i></a>
-                            <span class="logo">WOW - Admin</span>
+                            <span class="logo">SAPI BALURAN</span>
                         </div>
                         <div class="col-lg-8 d-none d-lg-block">
                             <ol class="breadcrumb">
@@ -165,78 +165,79 @@
                                     <table class="table">
                                         <thead>
                                         <tr>
-                                            <th style="color:white;">Tanggal Pengajuan</th>
                                             <th style="color:white;">Nama Peternak</th>
-                                            <th style="color:white;">Jumlah Total Sapi</th>
+                                            <th style="color:white;">Alamat</th>
+                                            <th style="color:white;">No KK</th>
                                             <th style="color:white;">Jumlah Sapi</th>
-                                            <th style="color:white;">Detail</th>
+                                            <th style="color:white;">Foto KTP</th>
+                                            <th style="color:white;">No Hp</th>
+                                            <th style="color:white;">Tanggal Pengajuan</th>
+                                            
+                                            
+
+                                            <th style="color:white;">Aksi </th>
                                             <th style="color:white;"></th>
                                         </tr>
                                         </thead>
+                                        @foreach($data as $value)
                                         <tbody>
+                                            
                                         <tr>
-                                            <td >29/12/2018</td>
-                                            <td >Pak Budi</td>
-                                            <td >20</td>
-                                            <td>20</td>
+                                            <td style="color: white;">{{$value->nama_peternak}}</td>
+                                            <td style="color: white;">{{$value->alamat}}</td>
+                                            <td style="color: white;">{{$value->no_kk}}</td>
+                                            <td style="color: white;">{{$value->jumlah_sapi}}</td>
+                                            <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal{{$value->id_pengajuan}}">Lihat Foto</button></td>
+                                            <td style="color: white;">{{$value->no_hp}}</td>
+                                            <td style="color: white;">{{date('d-m-Y', strtotime($value->tanggal_pengajuan))}}</td>
+                                           
                                             <td>
-                                                <a href="detailPengajuanPeternak" class="btn btn-dark">Detail</a>
+                                                <a href="detailPengajuanPeternak" class="btn btn-warning">Detail</a><br><br>
+                                                 <a href="editPengajuan/{{$value->id_pengajuan}}" class="btn btn-primary">Edit</a>
                                             </td>
                                             <td>
                                                 <div>
-                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
+                                                    <a href="tambah_detail_sapi/{{$value->id_pengajuan}}" class="btn btn-danger">Tambah Detail Sapi</a>
                                                     <div style="padding-top:5px;padding-bottom:5px;"></div>
                                                     <a href="cek_data_pengajuan" class="btn btn-dark">Lihat Data Perjanjian</a>
                                                 </div>
                                             </td>
                                         </tr>
-
-                                        <tr>
-                                            <td >29/12/2018</td>
-                                            <td >Pak Tono</td>
-                                            <td >10</td>
-                                            <td>30</td>
-                                            <td>
-                                                <a href="detailPengajuanPeternak" class="btn btn-dark">Detail</a>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
-                                                    <div style="padding-top:5px;padding-bottom:5px;"></div>
-                                                    <a href="cek_data_pengajuan" class="btn btn-dark">Lihat Data Perjanjian</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td >29/12/2018</td>
-                                            <td >Pak Andri</td>
-                                            <td >3</td>
-                                            <td>32</td>
-                                            <td>
-                                                <a href="detailPengajuanPeternak" class="btn btn-dark">Detail</a>
-                                            </td>
-                                            <td>
-                                                <div>
-                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Tambah Detail Sapi</a>
-                                                    <div style="padding-top:5px;padding-bottom:5px;"></div>
-                                                    <a href="cek_data_pengajuan" class="btn btn-dark">Lihat Data Perjanjian</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                       
-                                    
+                                        @endforeach
                                         </tbody>
                                     </table>
                                 </div>
+                               
+
 
                             </div>
 
-
-                </div>
             </div>
         </div>
+        @foreach($data as $value)
+        <div id="myModal{{$value->id_pengajuan}}" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- konten modal-->
+                <div class="modal-content">
+                    <!-- heading modal -->
+                    <div class="modal-header">
 
+                        <h4 class="modal-title">Foto KTP  </h4>
+                    </div>
+                    <!-- body modal -->
+                    <div class="modal-body">
+                        <td><img src="{{ asset('image/'.$value->foto_ktp)  }}" class="img-thumbnail" style="max-height:300px;max-width:300px;">
+                        </div>
+                        <!-- footer modal -->   
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            @endforeach
+            <!-- Modal -->
     </section>
 
     <!-- The Modal -->
