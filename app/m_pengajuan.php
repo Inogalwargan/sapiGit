@@ -15,4 +15,8 @@ class m_pengajuan extends Model
 	protected $keyType = 'string';
 
 	public $timestamps = false;
+
+    public function join_pengambilan_pakan(){
+        return $this->hasMany(pengambilan_pakan::class, 'id_pengajuan', 'id_pengajuan');
+    }
 }

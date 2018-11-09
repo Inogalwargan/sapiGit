@@ -177,7 +177,7 @@
                                         @php($no++)
                                         <tr>
                                             <td style="vertical-align: middle!important;">{{$no}}</td>
-                                            <td style="vertical-align: middle!important;">{{$item->id_pengajuan}}</td>
+                                            <td style="vertical-align: middle!important;">{{$item->join_pengajuan->nama_peternak}}</td>
                                             <td style="vertical-align: middle!important;">{{date('d-m-Y', strtotime($item->tanggal_pengambilan))}}</td>
                                             <td style="text-align: center!important; vertical-align: middle!important;">{{$item->jumlah_pakan_diambil}}</td>
                                             <td style="text-align: center!important; vertical-align: middle!important;">{{number_format($item->harga_jual,0,",",".") . ",-"}}
