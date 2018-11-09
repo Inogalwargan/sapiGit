@@ -5,6 +5,7 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\m_pengajuan;
+use PDF;
 
 
 class c_inti extends Controller
