@@ -46,28 +46,10 @@
 </head>
 <body>
 
-{{--<!---Preloader Starts Here--->--}}
-{{--<div id="ip-container" class="ip-container">--}}
-{{--<header class="ip-header">--}}
-{{--<h1 class="ip-logo text-center"><img class="img-fluid" src="assets/images/logo-c.png" alt=""--}}
-{{--class="ip-logo text-center"/></h1>--}}
-{{--<div class="ip-loader">--}}
-{{--<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">--}}
-{{--<path class="ip-loader-circlebg"--}}
-{{--d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>--}}
-{{--<path id="ip-loader-circle" class="ip-loader-circle"--}}
-{{--d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>--}}
-{{--</svg>--}}
-{{--</div>--}}
-{{--</header>--}}
-{{--</div>--}}
-<!---Preloader Ends Here--->
-
-
 <!--Navigation-->
 <nav id="navigation" class="navigation-sidebar bg-primary">
     <div class="navigation-header">
-        <a href="index.html"><span class="logo">PABRIK PAKAN</span></a>
+        <a><span class="logo">PABRIK PAKAN</span></a>
         <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
     </div>
 
@@ -76,47 +58,7 @@
         <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
         <h4 class="name">Admin Pabrik</h4>
         <span class="designation">SAPI</span>
-
-        <a id="show-user-menu" href="javascript:void(0);" class="circle-white-btn profile-setting"><i
-                    class="fa fa-cog"></i></a>
-
-        <!--logged user hover menu-->
-        <div class="logged-user-menu bg-white">
-            <div class="avatar-info">
-                <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-                <h4 class="name">Meera</h4>
-                <span class="designation">UI/UX EXPERT</span>
-            </div>
-
-            <ul class="list-unstyled">
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-email-outline"></i>
-                        <span>Emails</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-person-outline"></i>
-                        <span>My Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="user_change-password.html">
-                        <i class="ion-ios-locked-outline"></i>
-                        <span>Change Password</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-log-out"></i>
-                        <span>Logout</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
-
     <!--Navigation Menu Links-->
     @include('pabrik.include_pabrik')
 </nav>

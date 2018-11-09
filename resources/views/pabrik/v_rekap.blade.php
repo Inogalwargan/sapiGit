@@ -49,7 +49,7 @@
 <!--Navigation-->
 <nav id="navigation" class="navigation-sidebar bg-primary">
     <div class="navigation-header">
-        <a href="index.html"><span class="logo">PABRIK PAKAN</span></a>
+        <a><span class="logo">PABRIK PAKAN</span></a>
         <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
     </div>
 
@@ -58,47 +58,7 @@
         <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
         <h4 class="name">Admin Pabrik</h4>
         <span class="designation">SAPI</span>
-
-        <a id="show-user-menu" href="javascript:void(0);" class="circle-white-btn profile-setting"><i
-                    class="fa fa-cog"></i></a>
-
-        <!--logged user hover menu-->
-        <div class="logged-user-menu bg-white">
-            <div class="avatar-info">
-                <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-                <h4 class="name">Meera</h4>
-                <span class="designation">UI/UX EXPERT</span>
-            </div>
-
-            <ul class="list-unstyled">
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-email-outline"></i>
-                        <span>Emails</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-person-outline"></i>
-                        <span>My Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="user_change-password.html">
-                        <i class="ion-ios-locked-outline"></i>
-                        <span>Change Password</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-log-out"></i>
-                        <span>Logout</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
-
     <!--Navigation Menu Links-->
     @include('pabrik.include_pabrik')
 </nav>

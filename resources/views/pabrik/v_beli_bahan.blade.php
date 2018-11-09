@@ -45,29 +45,10 @@
     <link rel="stylesheet" href="../assetAdmin/assets/css/main.css">
 </head>
 <body>
-
-{{--<!---Preloader Starts Here--->--}}
-{{--<div id="ip-container" class="ip-container">--}}
-{{--<header class="ip-header">--}}
-{{--<h1 class="ip-logo text-center"><img class="img-fluid" src="assets/images/logo-c.png" alt=""--}}
-{{--class="ip-logo text-center"/></h1>--}}
-{{--<div class="ip-loader">--}}
-{{--<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">--}}
-{{--<path class="ip-loader-circlebg"--}}
-{{--d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>--}}
-{{--<path id="ip-loader-circle" class="ip-loader-circle"--}}
-{{--d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>--}}
-{{--</svg>--}}
-{{--</div>--}}
-{{--</header>--}}
-{{--</div>--}}
-<!---Preloader Ends Here--->
-
-
 <!--Navigation-->
 <nav id="navigation" class="navigation-sidebar bg-primary">
     <div class="navigation-header">
-        <a href="index.html"><span class="logo">PABRIK PAKAN</span></a>
+        <a><span class="logo">PABRIK PAKAN</span></a>
         <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
     </div>
 
@@ -76,45 +57,6 @@
         <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
         <h4 class="name">Admin Pabrik</h4>
         <span class="designation">SAPI</span>
-
-        <a id="show-user-menu" href="javascript:void(0);" class="circle-white-btn profile-setting"><i
-                    class="fa fa-cog"></i></a>
-
-        <!--logged user hover menu-->
-        <div class="logged-user-menu bg-white">
-            <div class="avatar-info">
-                <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-                <h4 class="name">Meera</h4>
-                <span class="designation">UI/UX EXPERT</span>
-            </div>
-
-            <ul class="list-unstyled">
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-email-outline"></i>
-                        <span>Emails</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-person-outline"></i>
-                        <span>My Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="user_change-password.html">
-                        <i class="ion-ios-locked-outline"></i>
-                        <span>Change Password</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-log-out"></i>
-                        <span>Logout</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
 
     <!--Navigation Menu Links-->
@@ -169,7 +111,8 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label>Banyak Pembelian (Kg/Liter)</label>
-                                <input class="form-control" placeholder="Masukkan Banyak Pembelian (Kg/Liter)" type="number"
+                                <input class="form-control" placeholder="Masukkan Banyak Pembelian (Kg/Liter)"
+                                       type="number"
                                        style="background: white!important;" required name="banyak_beli">
                             </div>
                             <div class="form-group col-md-6">
@@ -185,56 +128,6 @@
             </div>
         </div>
     </div>
-    <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-example-modal-sm" role="dialog"
-         tabindex="-1">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Masukkan Jumlah Pembelian</h5>
-                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-                                aria-hidden="true"> ×</span></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label>Jumlah Pembelian (Kg)</label>
-                            <input class="form-control" placeholder="Jumlah Pembelian" value="0" type="number" min="0">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal" type="button"> Batal</button>
-                    <button class="btn btn-primary" type="button"> Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div aria-hidden="true" aria-labelledby="mySmallModalLabel" class="modal fade bd-restock-modal-sm" role="dialog"
-         tabindex="-1">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Masukkan Jumlah Kebutuhan</h5>
-                    <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span
-                                aria-hidden="true"> ×</span></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label>Jumlah Kabutuhan (Kg)</label>
-                            <input class="form-control" placeholder="Jumlah Pembelian" value="0" type="number" min="0">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" data-dismiss="modal" type="button"> Batal</button>
-                    <button class="btn btn-primary" type="button"> Simpan</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </section>
 
 
