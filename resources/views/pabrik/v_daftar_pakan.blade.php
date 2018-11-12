@@ -49,14 +49,14 @@
 <!--Navigation-->
 <nav id="navigation" class="navigation-sidebar bg-primary">
     <div class="navigation-header">
-        <a><span class="logo">PABRIK PAKAN</span></a>
+        <a><span class="logo">GUDANG PAKAN</span></a>
         <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
     </div>
 
     <!--Navigation Profile area-->
     <div class="navigation-profile">
         <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-        <h4 class="name">Admin Pabrik</h4>
+        <h4 class="name">Admin Gudang</h4>
         <span class="designation">SAPI</span>
     </div>
 

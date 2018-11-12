@@ -56,7 +56,7 @@
     <!--Navigation Profile area-->
     <div class="navigation-profile">
         <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-        <h4 class="name">Admin Pabrik</h4>
+        <h4 class="name">Admin Gudang</h4>
         <span class="designation">SAPI</span>
     </div>
     <!--Navigation Menu Links-->
@@ -73,7 +73,7 @@
                     <div class="col-9 col-md-6 d-lg-none">
                         <a id="toggle-navigation" href="javascript:void(0);" class="icon-btn mr-3"><i
                                     class="fa fa-bars"></i></a>
-                        <span class="logo">PABRIK PAKAN</span>
+                        <span class="logo">GUDANG PAKAN</span>
                     </div>
                     <div class="col-lg-8 d-none d-lg-block">
                         <ol class="breadcrumb">
