@@ -46,28 +46,10 @@
 </head>
 <body>
 
-{{--<!---Preloader Starts Here--->--}}
-{{--<div id="ip-container" class="ip-container">--}}
-{{--<header class="ip-header">--}}
-{{--<h1 class="ip-logo text-center"><img class="img-fluid" src="assets/images/logo-c.png" alt=""--}}
-{{--class="ip-logo text-center"/></h1>--}}
-{{--<div class="ip-loader">--}}
-{{--<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">--}}
-{{--<path class="ip-loader-circlebg"--}}
-{{--d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>--}}
-{{--<path id="ip-loader-circle" class="ip-loader-circle"--}}
-{{--d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>--}}
-{{--</svg>--}}
-{{--</div>--}}
-{{--</header>--}}
-{{--</div>--}}
-<!---Preloader Ends Here--->
-
-
 <!--Navigation-->
 <nav id="navigation" class="navigation-sidebar bg-primary">
     <div class="navigation-header">
-        <a href="index.html"><span class="logo">SAPI BALURAN</span></a>
+        <a><span class="logo">PABRIK PAKAN</span></a>
         <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
     </div>
 
@@ -76,45 +58,6 @@
         <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
         <h4 class="name">Admin Pabrik</h4>
         <span class="designation">SAPI</span>
-
-        <a id="show-user-menu" href="javascript:void(0);" class="circle-white-btn profile-setting"><i
-                    class="fa fa-cog"></i></a>
-
-        <!--logged user hover menu-->
-        <div class="logged-user-menu bg-white">
-            <div class="avatar-info">
-                <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-                <h4 class="name">Meera</h4>
-                <span class="designation">UI/UX EXPERT</span>
-            </div>
-
-            <ul class="list-unstyled">
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-email-outline"></i>
-                        <span>Emails</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-person-outline"></i>
-                        <span>My Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="user_change-password.html">
-                        <i class="ion-ios-locked-outline"></i>
-                        <span>Change Password</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-log-out"></i>
-                        <span>Logout</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
 
     <!--Navigation Menu Links-->
@@ -131,7 +74,7 @@
                     <div class="col-9 col-md-6 d-lg-none">
                         <a id="toggle-navigation" href="javascript:void(0);" class="icon-btn mr-3"><i
                                     class="fa fa-bars"></i></a>
-                        <span class="logo">BALURAN-SAMPI</span>
+                        <span class="logo">PABRIK PAKAN</span>
                     </div>
                     <div class="col-lg-8 d-none d-lg-block">
                         <ol class="breadcrumb">
@@ -151,9 +94,9 @@
                     <div class="block-heading">
                         <h5>Daftar Pakan</h5>
                         <hr>
-                        <small class="label-info">Stok Konsentrat : </small> <b>80Kg</b>
+                        <small class="label-info">Stok Konsentrat : </small> <b>{{$stok_pakan[1]->stok_pakan}}Kg</b>
                         <hr>
-                        <small class="label-info">Stok Silase : </small> <b>40Kg</b>
+                        <small class="label-info">Stok Silase : </small> <b>{{$stok_pakan[0]->stok_pakan}}Kg</b>
                     </div>
                     <div class="tabel table-responsive">
                         <table id="example2"
@@ -161,6 +104,7 @@
                                role="grid"
                                aria-describedby="example2_info">
                             <thead>
+                                
                             <tr>
                                 <th>Nama Pakan</th>
                                 <th>Tanggal Produksi</th>
@@ -170,27 +114,16 @@
                             </tr>
                             </thead>
                             <tbody>
+                                @foreach($produksi_pakan as $item)
                             <tr>
-                                <td class="name">Konsentrat</td>
-                                <td>20/10/2018</td>
-                                <td>50</td>
-                                <td>20.000</td>
+                                <td class="name">{{$item->join_pakan->nama_pakan}}</td>
+                                <td>{{date('d-m-Y', strtotime($item->tanggal_produksi))}}</td>
+                                <td>{{$item->jumlah_produksi}}</td>
+                                <td>{{$item->harga_jual}}</td>
                                 
                             </tr>
-                            <tr>
-                                <td>Konsentrat</td>
-                                <td>21/10/2018</td>
-                                <td>30</td>
-                                <td>15.000</td>
-                                                                
-                            </tr>
-                            <tr>
-                                <td class="name">Silase</td>
-                                <td>20/10/2018</td>
-                                <td>40</td>
-                                <td>22.000</td>
-                            </tr>
-                                
+                            
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
