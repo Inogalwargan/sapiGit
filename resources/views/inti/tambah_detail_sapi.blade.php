@@ -12,7 +12,7 @@
     <title>SAPI-I7</title>
 
     <!--favicon-->
-    <link href="assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
+    <link href="../assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
 
     <!--Preloader-CSS-->
     <link rel="stylesheet" href="../assetAdmin/assets/plugins/preloader/preloader.css">
@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="../assetAdmin/assets/css/normalize.css">
     <!--Main Css-->
     <link rel="stylesheet" href="../assetAdmin/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="../../assetAdmin/gradient.css">
+    <link rel="stylesheet" type="text/css" href="../assetAdmin/gradient.css">
 </head>
 <body>
 
@@ -80,7 +80,7 @@
             <!--logged user hover menu-->
             <div class="logged-user-menu bg-white">
                 <div class="avatar-info">
-                    <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
+                    <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
                     <h4 class="name">Meera</h4>
                     <span class="designation">UI/UX EXPERT</span>
                 </div>
@@ -115,7 +115,7 @@
         </div>
 
         <!--Navigation Menu Links-->
-        @include('inti.includeEdit')
+        @include('inti.include_inti')
     </nav>
 
     <!--Page Container-->
@@ -152,40 +152,47 @@
                         <div class="col-md-6" >
                             <div class="block form-block mb-4" id="grad3">
                                 <div class="block-heading">
-                                    <h5 style="color: white">SAPI Ke-2</h5>
-
+                                    <h5 style="color: white">SAPI Ke-{{$no_sapi}}</h5>
                                     <h5 style="color: white">Tambah Data Sapi</h5>
-
                                 </div>
 
-                                <form action="#">
+                                <form method="POST" action="../proses_tambah_detail_sapi" enctype="multipart/form-data">
+                                    {{csrf_field()}}
 
+                                    @foreach($pengajuan as $pengajuan)
                                      <div class="form-group">
                                         <label style="color: white;">Nama Peternak</label>
-                                        <div class="">
-                                            <input class="form-control  bg-white"  type="text" placeholder="" disabled="" value="">
+                                        <div class="" >
+                                            <input class="form-control  bg-white" name="nama_peternak" type="text" value="{{$pengajuan->nama_peternak}}" disabled="true">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" hidden="">
+                                        <label style="color: white;"></label>
+                                        <div class="" >
+                                            <input class="form-control  bg-white" name="no_kk" type="hidden" value="{{$pengajuan->no_kk}}" disabled="true">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
                                         <label style="color: white;">Jumlah Sapi</label>
                                         <div class="">
-                                            <input class="form-control  bg-white"  type="text" placeholder="20" disabled="" value="">
+                                            <input class="form-control  bg-white" type="text" value="{{$pengajuan->jumlah_sapi}}" disabled="true">
                                         </div>
                                     </div>
-
+                                    
                                     <div class="form-group">
                                         <label style="color: white;">Berat Awal Sapi</label>
                                         <div class="input-group">
-                                            <input class="form-control  bg-white"  type="number" placeholder="30 kg">
+                                            <input class="form-control  bg-white" name="berat_awal"  type="number" placeholder="30 kg">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label style="color: white;">Jenis Sapi</label>
-                                        <select id="jenissapi" class="form-control bg-white">
-                                            <option >Sapi PO</option>
-                                            <option >Lokal</option>
-                                            <option >Bali</option>
+                                        <select id="jenissapi" class="form-control bg-white" name="jenis_sapi">
+                                            <option value="Sapi PO">Sapi PO</option>
+                                            <option value="Lokal">Lokal</option>
+                                            <option value="Bali">Bali</option>
                                             <option value="lain-lain">Lain-lain</option>
                                         </select>
                                     </div>
@@ -197,20 +204,21 @@
                                     <div class="form-group">
                                         <label style="color: white;">Jenis Kelamin Sapi</label>
                                         <label class="custom-control custom-radio primary">
-                                            <input name="radio-stacked" class="custom-control-input" type="radio">
+                                            <input name="jenis_kelamin" value="j" class="custom-control-input" type="radio">
                                             <span class="custom-control-indicator"></span>
                                             <span class="custom-control-description">Jantan</span>
                                         </label>
                                          <label class="custom-control custom-radio primary">
-                                            <input name="radio-stacked" class="custom-control-input" type="radio">
+                                            <input name="jenis_kelamin" value="b" class="custom-control-input" type="radio">
                                             <span class="custom-control-indicator"></span>
                                             <span class="custom-control-description">Betina</span>
                                         </label>
                                     </div>
                                     
                                     <hr>
-                                    <a href="tambah_detail_sapi" class="btn btn-primary" >Simpan</a>
+                                    <button class="btn btn-primary" type="submit" name="id_pengajuan" value="{{$pengajuan->id_pengajuan}}">Simpan</button>
                                     <a href="cek_data_pengajuan" class="btn btn-dark">Selesai</a>
+                                    @endforeach
                                 </form>
                             </div>
                         </div>

