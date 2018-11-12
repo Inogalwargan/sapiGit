@@ -2,10 +2,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\pengambilan_pakan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\m_pengajuan;
 use App\m_sapi;
+use App\pakan;
+use App\produksi_pakan;
 use PDF;
 
 
@@ -15,7 +18,14 @@ class c_inti extends Controller
 	function homeInti() {
 		return view("inti.v_home");
 	}
+    function lihat_pakan_inti(){
+        $stok_pakan = pakan::all();
+        $produksi_pakan = produksi_pakan::all();
 
+
+        return view("inti.lihat_stok", compact('stok_pakan', 'produksi_pakan'));
+
+    }
 	function tambahPengajuan(){
 		return view("inti.v_tambah_pengajuan");
 	}
@@ -195,7 +205,7 @@ function lihatDataSebelumPdf($id){
     foreach ($jumlah_berat_sapi as $j) {
         $jbs = (int) $j->jumlahberat;
     }
-    $jmlkredit =(0.1*$jbs*500);
+    $jmlkredit =(0.1*$jbs*3000);
 
     
     

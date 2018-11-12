@@ -15,17 +15,18 @@
                 <!--Submenu-->
                 <ul class="sub-menu">
                     <li>
-                        <a href="tambahPengajuan">
-                            <span class="icon-thumbnail"><i class="fi-plus"></i></span>
-                            <span class="title">Tambah</span>
-                        </a>
-                    </li>
-                    <li>
                         <a href="lihatPengajuan">
                             <span class="icon-thumbnail"><i class="fi-page-filled"></i></span>
                             <span class="title">Lihat</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="tambahPengajuan">
+                            <span class="icon-thumbnail"><i class="fi-plus"></i></span>
+                            <span class="title">Tambah</span>
+                        </a>
+                    </li>
+
                    
                 </ul>
             </li>
@@ -33,7 +34,7 @@
             
             
             <li>
-                <a href="">
+                <a href="lihat_pakan_inti">
                     <span class="icon-thumbnail"><i class="icon-fork-and-spoon"></i></span>
                     <span class="title">Lihat Pakan</span>
                 </a>

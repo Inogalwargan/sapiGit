@@ -36,15 +36,15 @@
             <!--Submenu-->
             <ul class="sub-menu">
                 <li>
-                    <a href="/tambahPakan">
-                        <span class="icon-thumbnail"><i class="fi-plus"></i></span>
-                        <span class="title">Tambah Pakan</span>
+                    <a href="/lihatPakan">
+                        <span class="icon-thumbnail"><i class="icon-eye"></i></span>
+                        <span class="title">Stok Pakan</span>
                     </a>
                 </li>
                 <li>
-                    <a href="/lihatPakan">
-                        <span class="icon-thumbnail"><i class="icon-eye"></i></span>
-                        <span class="title">Lihat Pakan</span>
+                    <a href="/tambahPakan">
+                        <span class="icon-thumbnail"><i class="fi-plus"></i></span>
+                        <span class="title">Produksi Pakan</span>
                     </a>
                 </li>
                 <li>

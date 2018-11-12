@@ -36,6 +36,8 @@ Route::get('hapus_detailPengajuanPeternak/{id}', 'c_inti@hapus_detailPengajuanPe
 Route::get('edit_detailPengajuanPeternak/{id}', 'c_inti@edit_detailPengajuanPeternak');
 Route::post('proses_update_detailPengajuanPeternak/{id}', 'c_inti@proses_update_detailPengajuanPeternak');
 Route::get('cek_data_pengajuan/{id}', 'c_inti@lihatDataSebelumPdf');
+Route::get('lihat_pakan_inti', 'c_inti@lihat_pakan_inti');
+
 
 
 Route::get('harga', 'c_inti@harga');
