@@ -49,7 +49,7 @@
 <!--Navigation-->
 <nav id="navigation" class="navigation-sidebar bg-primary">
     <div class="navigation-header">
-        <a><span class="logo">PABRIK PAKAN</span></a>
+        <a><span class="logo">GUDANG PAKAN</span></a>
         <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
     </div>
 
@@ -73,7 +73,7 @@
                     <div class="col-9 col-md-6 d-lg-none">
                         <a id="toggle-navigation" href="javascript:void(0);" class="icon-btn mr-3"><i
                                     class="fa fa-bars"></i></a>
-                        <span class="logo">PABRIK PAKAN</span>
+                        <span class="logo">GUDANG PAKAN</span>
                     </div>
                     <div class="col-lg-8 d-none d-lg-block">
                         <ol class="breadcrumb">

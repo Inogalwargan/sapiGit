@@ -64,7 +64,7 @@
 <!--Navigation-->
 <nav id="navigation" class="navigation-sidebar bg-primary">
     <div class="navigation-header">
-        <a href="index.html"><span class="logo">SAPI BALURAN</span></a>
+        <a href="index.html"><span class="logo">GUDANG PAKAN</span></a>
         <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
     </div>
 
