@@ -9,7 +9,7 @@
     <meta content="Design_Gurus" name="author">
     <meta content="WOW Admin dashboard html template" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>SAPI-I7</title>
+    <title>FCMS</title>
 
     <!--favicon-->
     <link href="assetAdmin/assets/images/favicon.ico" rel="shortcut icon">

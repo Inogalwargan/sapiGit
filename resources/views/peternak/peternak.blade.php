@@ -91,7 +91,7 @@
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="block counter-block bg-dark mb-4">
+                        <div class="block counter-block bg-dark mb-4">						
                             <div class="value text-center" style="color:ghostwhite;display:inherit">20 Ekor</div>
                             <p class="label text-center">10 Jantan | 10 Betina</p>
                         </div>

@@ -9,7 +9,7 @@
     <meta content="Design_Gurus" name="author">
     <meta content="WOW Admin dashboard html template" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>SAPI-I7</title>
+    <title>FCMS</title>
 
     <!--favicon-->
     <link href="../assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
@@ -102,7 +102,7 @@
                                 <select class="form-control" style="background: white!important;" id="nama_bahan_baku"
                                         name="id_bahan_baku" required>
                                     @foreach($bahan_baku as $item)
-                                        <option value="{{$item->id_bahan_baku}}">{{$item->nama_bahan_baku}}</option>
+                                        <option value="{{$item->id_bahan_baku}}" satuan="{{$item->satuan}}">{{$item->nama_bahan_baku}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -110,7 +110,7 @@
 
                             </div>
                             <div class="form-group col-md-6">
-                                <label>Banyak Pembelian (Kg/Liter)</label>
+                                <label id="satuan">Banyak Pembelian (Kg)</label>
                                 <input class="form-control" placeholder="Masukkan Banyak Pembelian (Kg/Liter)"
                                        type="number"
                                        style="background: white!important;" required name="banyak_beli">
@@ -203,16 +203,18 @@
     ;
 
     $("#nama_bahan_baku").change(function () {
-        if ($("#nama_bahan_baku").val() == "jenis_baru") {
-            document.getElementById("div_nama").style.display = "block";
-            document.getElementById("div_nama").innerHTML =
-                "<label>Nama Bahan Baku</label>\n" +
-                "<input class=\"form-control\" placeholder=\"Masukkan Nama Bahan Baku\" type=\"text\"\n" +
-                "style=\"background: white!important;\" required>";
-        } else {
-            document.getElementById("div_nama").style.display = "none";
-            document.getElementById("div_nama").innerHTML = "";
-        }
+        // if ($("#nama_bahan_baku").val() == "jenis_baru") {
+        //     document.getElementById("div_nama").style.display = "block";
+        //     document.getElementById("div_nama").innerHTML =
+        //         "<label>Nama Bahan Baku</label>\n" +
+        //         "<input class=\"form-control\" placeholder=\"Masukkan Nama Bahan Baku\" type=\"text\"\n" +
+        //         "style=\"background: white!important;\" required>";
+        // } else {
+        //     document.getElementById("div_nama").style.display = "none";
+        //     document.getElementById("div_nama").innerHTML = "";
+        // }
+        document.getElementById('satuan').innerText = "Banyak Pembelian "+$('option:selected', this).attr('satuan');
+        //alert($('option:selected', this).attr('satuan'));
     });
 
     $('#example2').DataTable({

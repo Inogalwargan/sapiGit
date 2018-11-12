@@ -9,7 +9,7 @@
     <meta content="Design_Gurus" name="author">
     <meta content="WOW Admin dashboard html template" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>SAPI-I7</title>
+    <title>FCMS</title>
 
     <!--favicon-->
     <link href="../assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
@@ -98,7 +98,8 @@
                                         name="id_bahan_baku" required>
                                     @foreach($bahan_baku as $item)
                                         <option value="{{$item->id_bahan_baku}}"
-                                                @if($bahan_saat_ini == $item->id_bahan_baku) selected @endif>{{$item->nama_bahan_baku}}</option>
+                                                @if($bahan_saat_ini == $item->id_bahan_baku) selected
+                                                @endif satuan="{{$item->satuan}}">{{$item->nama_bahan_baku}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -111,7 +112,7 @@
                         <h5>History Pembelian</h5>
                         <hr>
                         <small class="label-info">Stok saat ini :</small>
-                        <b>{{$stok_saat_ini->stok}} Kg/Liter</b>
+                        <b>{{$stok_saat_ini->stok}} {{$stok_saat_ini->satuan}}</b>
                     </div>
                     <div class="tabel table-responsive">
                         <table id="example2"
@@ -133,7 +134,7 @@
                                     Stok Baru
                                 </th>
                                 <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">
-                                    Total Stok (Kg/Liter)
+                                    Total Stok
                                 </th>
                                 <th rowspan="2" style="text-align: center!important; vertical-align: middle!important;">
                                     Rata-Rata Harga (Rp)
@@ -141,12 +142,12 @@
                             </tr>
                             <tr>
                                 <th style="text-align: center!important; vertical-align: middle!important;">Stok
-                                    Tersedia (Kg/Liter)
+                                    Tersedia
                                 </th>
                                 <th style="text-align: center!important; vertical-align: middle!important;">Harga (Rp)
                                 </th>
                                 <th style="text-align: center!important; vertical-align: middle!important;">Beli Baru
-                                    (Kg/Liter)
+
                                 </th>
                                 <th style="text-align: center!important; vertical-align: middle!important;">Harga (Rp)
                                 </th>
@@ -157,14 +158,17 @@
                                 <tr>
                                     <td style="vertical-align: middle!important;">{{$item->join_bahan_baku->nama_bahan_baku}}</td>
                                     <td style="vertical-align: middle!important;">{{date('d-m-Y', strtotime($item->tanggal_pembelian))}}</td>
-                                    <td style="text-align: center!important; vertical-align: middle!important;">{{$item->stok_lama}}</td>
+                                    <td style="text-align: center!important; vertical-align: middle!important;">{{$item->stok_lama}}
+                                        &nbsp;{{$item->satuan}}</td>
                                     <td style="text-align: center!important; vertical-align: middle!important;">
                                         {{number_format($item->harga_lama,0,",",".") . ",-"}}
                                     </td>
-                                    <td style="text-align: center!important; vertical-align: middle!important;">{{$item->beli_baru}}</td>
+                                    <td style="text-align: center!important; vertical-align: middle!important;">{{$item->beli_baru}}
+                                        &nbsp;{{$item->satuan}}</td>
                                     <td style="text-align: center!important; vertical-align: middle!important;">{{number_format($item->harga_baru,0,",",".") . ",-"}}
                                     </td>
-                                    <td style="text-align: center!important; vertical-align: middle!important;">{{$item->total_stok}}</td>
+                                    <td style="text-align: center!important; vertical-align: middle!important;">{{$item->total_stok}}
+                                        &nbsp;{{$item->satuan}}</td>
                                     <td style="text-align: center!important; vertical-align: middle!important;">
                                         {{number_format($item->harga_rata,0,",",".") . ",-"}}
                                     </td>
