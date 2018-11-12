@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from wow.designgurus.in/sideNavigationLayout/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 15:42:30 GMT -->
 <head>
     <meta charset="UTF-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
@@ -94,21 +93,7 @@
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-dark mb-4">
                             <div class="value text-center" style="color:ghostwhite;display:inherit">20 Ekor</div>
-                            <p class="label text-center">Jumlah sapi</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="block counter-block bg-light mb-4">
-                            <div class="value text-center" style="color:black;display:inherit">10 Ekor</div>
-                            <p class="label text-center" style="color:black">jumlah sapi jantan</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="block counter-block bg-primary-trans mb-4">
-                            <div class="value text-center" style="color:black;display:inherit">10 Ekor</div>
-                            <p class="label text-center" style="color:black">jumlah sapi betina</p>
+                            <p class="label text-center">10 Jantan | 10 Betina</p>
                         </div>
                     </div>
 
@@ -149,5 +134,4 @@
 <!--- Main JS -->
 <script src="assetAdmin/assets/js/main.js"></script>
 
-<!-- Mirrored from wow.designgurus.in/sideNavigationLayout/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 15:44:19 GMT -->
 </html>

@@ -60,9 +60,6 @@ Route::get('/pabrik/beli_bahan', 'c_pabrik@beli_bahan_baku');
 Route::post('/pabrik/beli_bahan', 'c_pabrik@store_pembelian');
 Route::get('/pabrik/rekap', 'c_pabrik@lihat_rekap');
 
-
-Route::get('/', 'c_petani@homePetani');
-
 Route::get('homePeternak', 'c_peternak@homePeternak');
 
 Route::get('pelunasan', 'c_inti@pelunasan');
@@ -72,15 +69,8 @@ Route::get('pakan', 'c_inti@pakan');
 Route::get('addCicilan', 'c_inti@addCicilan');
 
 
-
-Route::get('/tambahPakan', 'c_pabrik@tambahPakan');
-
-Route::get('/lihatPakan', 'c_pabrik@lihatPakan');
-Route::get('/lihatDetail', 'c_pabrik@lihatDetail');
-Route::get('/ubahDetail', 'c_pabrik@ubahDetail');
-
-Route::get('/lihatPengambilanPakan', 'c_pabrik@lihatPengambilanPakan');
-Route::get('/tambahPengambilan', 'c_pabrik@tambahPengambilan');
+Route::get('/', 'C_login@halaman_login' );
+Route::post('/login', 'C_login@cek_login' );
 
 Route::get('/tambahPakan', 'c_pabrik@viewTambahPakan');
 //------------------------------------------
@@ -92,5 +82,5 @@ Route::get('/lihatPengambilanPakan', 'c_pabrik@lihatPengambilanPakan');
 Route::get('/tambahPengambilan', 'c_pabrik@viewFormTambahPengambilan');
 Route::post('/tambahPengambilan', 'c_pabrik@tambahPengambilan');
 
-//-------------------------------------------------baru
 Route::post('/tambahPakan', 'c_pabrik@tambahPakan');
+
