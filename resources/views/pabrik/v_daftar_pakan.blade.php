@@ -151,9 +151,9 @@
                     <div class="block-heading">
                         <h5>Daftar Pakan</h5>
                         <hr>
-                        <small class="label-info">Stok Konsentrat : </small> <b>80Kg</b>
+                        <small class="label-info">Stok Konsentrat : </small> <b>{{$stok_pakan[1]->stok_pakan}}Kg</b>
                         <hr>
-                        <small class="label-info">Stok Silase : </small> <b>40Kg</b>
+                        <small class="label-info">Stok Silase : </small> <b>{{$stok_pakan[0]->stok_pakan}}Kg</b>
                     </div>
                     <div class="tabel table-responsive">
                         <table id="example2"
@@ -161,6 +161,7 @@
                                role="grid"
                                aria-describedby="example2_info">
                             <thead>
+                                
                             <tr>
                                 <th>Nama Pakan</th>
                                 <th>Tanggal Produksi</th>
@@ -170,27 +171,16 @@
                             </tr>
                             </thead>
                             <tbody>
+                                @foreach($produksi_pakan as $item)
                             <tr>
-                                <td class="name">Konsentrat</td>
-                                <td>20/10/2018</td>
-                                <td>50</td>
-                                <td>20.000</td>
+                                <td class="name">{{$item->join_pakan->nama_pakan}}</td>
+                                <td>{{date('d-m-Y', strtotime($item->tanggal_produksi))}}</td>
+                                <td>{{$item->jumlah_produksi}}</td>
+                                <td>{{$item->harga_jual}}</td>
                                 
                             </tr>
-                            <tr>
-                                <td>Konsentrat</td>
-                                <td>21/10/2018</td>
-                                <td>30</td>
-                                <td>15.000</td>
-                                                                
-                            </tr>
-                            <tr>
-                                <td class="name">Silase</td>
-                                <td>20/10/2018</td>
-                                <td>40</td>
-                                <td>22.000</td>
-                            </tr>
-                                
+                            
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

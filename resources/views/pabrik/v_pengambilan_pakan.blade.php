@@ -159,37 +159,67 @@
                             <thead>
                             <tr>
                                 <th>Nama Peternak</th>
-                                <th>Nama Pakan</th>
+                                <th>Jenis Pakan</th>
                                 <th>Jumlah (kg)</th>
                                 <th>Tanggal Pengambilan</th>
+                                <th>Harga</th>
+                                <th>Aksi</th>
                                 
                             </tr>
                             </thead>
                             <tbody>
+                                @foreach($pengambilan_pakan as $item)
                             <tr>
-                                <td>Rudi</td>
-                                <td>Konsentrat</td>
-                                <td>10</td>
-                                <td>20/10/2018</td>
-                                
+                                <td>{{$item->join_pengajuan->nama_peternak}}</td>
+                                <td>{{$item->join_pakan->nama_pakan}}</td>
+                                <td>{{$item->jumlah_pakan_diambil}}</td>
+                                <td>{{date('d-m-Y', strtotime($item->tanggal_pengambilan))}}</td>
+                                <td>{{$item->harga_pengambilan}}</td>
+                                <td>
+                                <button type="button" class="btn btn-primary btn-detail" data-nama="{{$item->join_pengajuan->nama_peternak}}" data-jumlah="{{$item->total_ambil}}" data-harga="{{$item->harga_ambil}}">Detail</button>
+                                </td>
                             </tr>
-                            <tr>
-                                <td>Ino</td>
-                                <td>Silase</td>
-                                <td>15</td>
-                                <td>20/10/2018</td>
-                                                                
-                            </tr>
+                            @endforeach
                                 
                             </tbody>
-                            <a href="/tambahPengambilan" class="btn btn-primary" type="submit">Tambah</a>
+                            <a href="/tambahPengambilan" class="btn btn-primary" >Tambah</a>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+    <!-- Modal -->
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Detail Total Pengambilan</h4>
+      </div>
+      <form action="" method="post">
+            
+          <div class="modal-body">
+                            <div class="form-group">
+                                <label>Nama</label>
+                                <input class="form-control" placeholder="" type="text" id="nama">
+                            </div>
+                            <div class="form-group">
+                                <label>Jumlah Pakan</label>
+                                <input class="form-control" placeholder="" type="text" id="jumlah_ambil_kg">
+                            </div>
+                            <div class="form-group">
+                                <label>Total Rupiah</label>
+                                <input class="form-control" placeholder="" type="text" id="jumlah_harga_kg">
+                            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
 </section>
 
 
@@ -263,6 +293,13 @@
         });
     }
     ;
+
+    $(".btn-detail").click(function(){
+        $("#jumlah_ambil_kg").val($(this).data('jumlah'));
+        $("#jumlah_harga_kg").val($(this).data('harga'));
+        $("#nama").val($(this).data('nama'));
+        $("#edit").modal("show");
+    });
 
     $('#example2').DataTable({
         'paging': true,

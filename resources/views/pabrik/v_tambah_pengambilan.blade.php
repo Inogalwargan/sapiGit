@@ -154,36 +154,34 @@
                                 <h5>Tambah Pengambilan</h5>
                             </div>
 
-                            <form action="#">
+                            <form action="/tambahPengambilan" method="post">
+                                {{csrf_field()}}
                                 <div class="form-group">
                                     <div class="form-group">
                                     <label>Nama Peternak</label>
-                                    <select class="custom-select form-control">
-                                        <option selected>Rudi</option>
-                                        <option>Ino</option>
-                                        <option>Christian</option>
+                                    <select class="custom-select form-control" name="id_pengajuan" required>
+                                         @foreach($pengajuan as $item)
+                                        <option class="name" value="{{$item->id_pengajuan}}">{{$item->nama_peternak}}</option>
+                                    @endforeach
                                     </select>
                                 </div>
                                 
                                 <div class="form-group">
                                     <div class="form-group">
                                     <label>Nama Pakan</label>
-                                    <select class="custom-select form-control">
-                                        <option selected>Konsentrat</option>
-                                        <option>Silase</option>
+                                    <select class="custom-select form-control" name="id_pakan" required>
+                                        @foreach($pakan as $item)
+                                        <option value="{{$item->id_pakan}}">{{$item->nama_pakan}}</option>
+                                    @endforeach
                                     </select>
                                 </div>
                                     <div class="form-group">
                                         <label>Jumlah (kg)</label>
-                                        <input class="form-control" placeholder="Masukkan jumlah pakan (kg)" type="number" style="background: white!important;" required>
+                                        <input class="form-control" placeholder="Masukkan jumlah pengambilan (kg)" type="number" name="jumlah_pengambilan" style="background: white!important;" required>
                                     </div>
                                 </div>
                             
-                                 <div class="form-group">
-                                    <div class="form-group">
-                                        <input class="form-control" placeholder="First name" type="hidden" >
-                                    </div>
-                                </div>
+                                 
 
                                
                                 <hr>

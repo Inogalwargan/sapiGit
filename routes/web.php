@@ -70,3 +70,16 @@ Route::get('/ubahDetail', 'c_pabrik@ubahDetail');
 
 Route::get('/lihatPengambilanPakan', 'c_pabrik@lihatPengambilanPakan');
 Route::get('/tambahPengambilan', 'c_pabrik@tambahPengambilan');
+
+Route::get('/tambahPakan', 'c_pabrik@viewTambahPakan');
+//------------------------------------------
+Route::get('/lihatPakan', 'c_pabrik@lihatPakan');
+Route::get('/lihatDetail', 'c_pabrik@lihatDetail');
+Route::get('/ubahDetail', 'c_pabrik@ubahDetail');
+
+Route::get('/lihatPengambilanPakan', 'c_pabrik@lihatPengambilanPakan');
+Route::get('/tambahPengambilan', 'c_pabrik@viewFormTambahPengambilan');
+Route::post('/tambahPengambilan', 'c_pabrik@tambahPengambilan');
+
+//-------------------------------------------------baru
+Route::post('/tambahPakan', 'c_pabrik@tambahPakan');

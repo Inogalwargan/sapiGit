@@ -140,7 +140,7 @@
                                             <td style="vertical-align: middle!important;">{{$item->join_pengajuan->nama_peternak}}</td>
                                             <td style="vertical-align: middle!important;">{{date('d-m-Y', strtotime($item->tanggal_pengambilan))}}</td>
                                             <td style="text-align: center!important; vertical-align: middle!important;">{{$item->jumlah_pakan_diambil}}</td>
-                                            <td style="text-align: center!important; vertical-align: middle!important;">{{number_format($item->harga_jual,0,",",".") . ",-"}}
+                                            <td style="text-align: center!important; vertical-align: middle!important;">{{number_format($item->harga_pengambilan,0,",",".") . ",-"}}
                                             </td>
                                         </tr>
                                     @endforeach
