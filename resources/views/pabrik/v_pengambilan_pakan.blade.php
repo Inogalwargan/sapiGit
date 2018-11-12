@@ -46,28 +46,11 @@
 </head>
 <body>
 
-{{--<!---Preloader Starts Here--->--}}
-{{--<div id="ip-container" class="ip-container">--}}
-{{--<header class="ip-header">--}}
-{{--<h1 class="ip-logo text-center"><img class="img-fluid" src="assets/images/logo-c.png" alt=""--}}
-{{--class="ip-logo text-center"/></h1>--}}
-{{--<div class="ip-loader">--}}
-{{--<svg class="ip-inner" width="60px" height="60px" viewBox="0 0 80 80">--}}
-{{--<path class="ip-loader-circlebg"--}}
-{{--d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>--}}
-{{--<path id="ip-loader-circle" class="ip-loader-circle"--}}
-{{--d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z"/>--}}
-{{--</svg>--}}
-{{--</div>--}}
-{{--</header>--}}
-{{--</div>--}}
-<!---Preloader Ends Here--->
-
 
 <!--Navigation-->
 <nav id="navigation" class="navigation-sidebar bg-primary">
     <div class="navigation-header">
-        <a href="index.html"><span class="logo">SAPI BALURAN</span></a>
+        <a><span class="logo">PABRIK PAKAN</span></a>
         <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
     </div>
 
@@ -76,47 +59,7 @@
         <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
         <h4 class="name">Admin Pabrik</h4>
         <span class="designation">SAPI</span>
-
-        <a id="show-user-menu" href="javascript:void(0);" class="circle-white-btn profile-setting"><i
-                    class="fa fa-cog"></i></a>
-
-        <!--logged user hover menu-->
-        <div class="logged-user-menu bg-white">
-            <div class="avatar-info">
-                <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-                <h4 class="name">Meera</h4>
-                <span class="designation">UI/UX EXPERT</span>
-            </div>
-
-            <ul class="list-unstyled">
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-email-outline"></i>
-                        <span>Emails</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-ios-person-outline"></i>
-                        <span>My Profile</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="user_change-password.html">
-                        <i class="ion-ios-locked-outline"></i>
-                        <span>Change Password</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:void(0);">
-                        <i class="ion-log-out"></i>
-                        <span>Logout</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
-
     <!--Navigation Menu Links-->
     @include('pabrik.include_pabrik')
 </nav>
@@ -146,7 +89,7 @@
         <!--Main Content-->
         <div class="content sm-gutter">
             <div class="container-fluid padding-25 sm-padding-10">
-                
+
                 <div class="block form-block mb-4">
                     <div class="block-heading">
                         <h5>Daftar Pengambilan Pakan</h5>
@@ -164,25 +107,29 @@
                                 <th>Tanggal Pengambilan</th>
                                 <th>Harga</th>
                                 <th>Aksi</th>
-                                
+
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach($pengambilan_pakan as $item)
-                            <tr>
-                                <td>{{$item->join_pengajuan->nama_peternak}}</td>
-                                <td>{{$item->join_pakan->nama_pakan}}</td>
-                                <td>{{$item->jumlah_pakan_diambil}}</td>
-                                <td>{{date('d-m-Y', strtotime($item->tanggal_pengambilan))}}</td>
-                                <td>{{$item->harga_pengambilan}}</td>
-                                <td>
-                                <button type="button" class="btn btn-primary btn-detail" data-nama="{{$item->join_pengajuan->nama_peternak}}" data-jumlah="{{$item->total_ambil}}" data-harga="{{$item->harga_ambil}}">Detail</button>
-                                </td>
-                            </tr>
+                            @foreach($pengambilan_pakan as $item)
+                                <tr>
+                                    <td>{{$item->join_pengajuan->nama_peternak}}</td>
+                                    <td>{{$item->join_pakan->nama_pakan}}</td>
+                                    <td>{{$item->jumlah_pakan_diambil}}</td>
+                                    <td>{{date('d-m-Y', strtotime($item->tanggal_pengambilan))}}</td>
+                                    <td>{{$item->harga_pengambilan}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary btn-detail"
+                                                data-nama="{{$item->join_pengajuan->nama_peternak}}"
+                                                data-jumlah="{{$item->total_ambil}}"
+                                                data-harga="{{$item->harga_ambil}}">Detail
+                                        </button>
+                                    </td>
+                                </tr>
                             @endforeach
-                                
+
                             </tbody>
-                            <a href="/tambahPengambilan" class="btn btn-primary" >Tambah</a>
+                            <a href="/tambahPengambilan" class="btn btn-primary">Tambah</a>
                         </table>
                     </div>
                 </div>
@@ -190,36 +137,37 @@
         </div>
     </div>
     <!-- Modal -->
-<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Detail Total Pengambilan</h4>
-      </div>
-      <form action="" method="post">
-            
-          <div class="modal-body">
-                            <div class="form-group">
-                                <label>Nama</label>
-                                <input class="form-control" placeholder="" type="text" id="nama">
-                            </div>
-                            <div class="form-group">
-                                <label>Jumlah Pakan</label>
-                                <input class="form-control" placeholder="" type="text" id="jumlah_ambil_kg">
-                            </div>
-                            <div class="form-group">
-                                <label>Total Rupiah</label>
-                                <input class="form-control" placeholder="" type="text" id="jumlah_harga_kg">
-                            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-      </form>
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Detail Total Pengambilan</h4>
+                </div>
+                <form action="" method="post">
+
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Nama</label>
+                            <input class="form-control" placeholder="" type="text" id="nama">
+                        </div>
+                        <div class="form-group">
+                            <label>Jumlah Pakan</label>
+                            <input class="form-control" placeholder="" type="text" id="jumlah_ambil_kg">
+                        </div>
+                        <div class="form-group">
+                            <label>Total Rupiah</label>
+                            <input class="form-control" placeholder="" type="text" id="jumlah_harga_kg">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 </section>
 
 
@@ -294,7 +242,7 @@
     }
     ;
 
-    $(".btn-detail").click(function(){
+    $(".btn-detail").click(function () {
         $("#jumlah_ambil_kg").val($(this).data('jumlah'));
         $("#jumlah_harga_kg").val($(this).data('harga'));
         $("#nama").val($(this).data('nama'));
