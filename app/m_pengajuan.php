@@ -19,4 +19,8 @@ class m_pengajuan extends Model
     public function join_pengambilan_pakan(){
         return $this->hasMany(pengambilan_pakan::class, 'id_pengajuan', 'id_pengajuan');
     }
+
+    public function join_sapi(){
+        return $this->hasMany(m_sapi::class, 'id_pengajuan', 'id_pengajuan');
+    }
 }

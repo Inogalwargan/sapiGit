@@ -16,4 +16,5 @@ class m_sapi extends Model
 	protected $keyType = 'string';
 
 	public $timestamps = false;
+
 }

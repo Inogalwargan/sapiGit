@@ -63,7 +63,6 @@
 <section class="page-container">
     <div class="page-content-wrapper">
 
-
         <!--Main Content-->
         <div class="content sm-gutter">
             <div class="container-fluid padding-25 sm-padding-10">
@@ -71,7 +70,7 @@
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-warning mb-4">
-                            <div class="value text-center" style="color:antiquewhite;display:inherit">300 Kg</div>
+                            <div class="value text-center" style="color:antiquewhite;display:inherit"><?=$pengambilanpakan?> Kg</div>
                             <p class="label text-center" style="color:#333333">Pakan yang telah diambil</p>
                         </div>
                     </div>
@@ -84,16 +83,9 @@
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="block counter-block mb-4" style="background-color:darkblue">
-                            <div class="value text-center" style="color:whitesmoke;display:inherit">2450 Kg</div>
-                            <p class="label text-center">Total berat sapi saat ini</p>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-dark mb-4">						
-                            <div class="value text-center" style="color:ghostwhite;display:inherit">20 Ekor</div>
-                            <p class="label text-center">10 Jantan | 10 Betina</p>
+                            <div class="value text-center" style="color:ghostwhite;display:inherit"><?php echo intval($jsapibetina)+intval($jsapijantan)?></div>
+                            <p class="label text-center"><?=$jsapijantan?> Jantan | <?=$jsapibetina?> Betina</p>
                         </div>
                     </div>
 

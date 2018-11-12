@@ -9,6 +9,7 @@ use App\m_pengajuan;
 use App\m_sapi;
 use App\pakan;
 use App\produksi_pakan;
+use App\User;
 use PDF;
 
 
@@ -73,7 +74,18 @@ class c_inti extends Controller
 
       $tambah->foto_ktp = $fileName;
       $tambah->save();
+
+      if(User::where('nama',$request['nama_peternak'])->where('no_telp',$request['no_hp'])->count() >= 1){
+      }else{
+          $u = new User;
+          $u->nama = $request['nama_peternak'];
+          $u->no_telp = $request['no_hp'];
+          $u->jabatan = 3;
+          $u->save();
+      }
+
       $request->session()->flash('input','Berhasil Menambahkan Data');
+
       return redirect()->to('/lihatPengajuan');
   }
   function detailPengajuanPeternak($id)  {
