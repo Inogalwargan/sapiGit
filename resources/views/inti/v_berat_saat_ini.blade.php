@@ -115,7 +115,7 @@
         </div>
 
         <!--Navigation Menu Links-->
-        @include('inti.include_inti')
+        @include('inti.includeEdit')
     </nav>
 
     <!--Page Container-->
@@ -152,71 +152,40 @@
                         <div class="col-md-6" >
                             <div class="block form-block mb-4" id="grad3">
                                 <div class="block-heading">
-                                    <h5 style="color: white">SAPI Ke-{{$no_sapi}}</h5>
-                                    <h5 style="color: white">Tambah Data Sapi</h5>
+                                    <h5 style="color: white">UPDATE BERAT SAAT INI</h5>
                                 </div>
 
-                                <form method="POST" action="../proses_tambah_detail_sapi" enctype="multipart/form-data">
+                                <form method="POST" action="../prosesBeratSaatIni" enctype="multipart/form-data">
                                     {{csrf_field()}}
 
-                                    @foreach($pengajuan as $pengajuan)
+                                    @foreach($data as $data)
                                      <div class="form-group">
                                         <label style="color: white;">Nama Peternak</label>
                                         <div class="" >
-                                            <input class="form-control  bg-white" name="nama_peternak" type="text" value="{{$pengajuan->nama_peternak}}" disabled="true">
+                                            <input class="form-control  bg-white" name="nama_peternak" type="text" value="{{$data->nama_peternak}}" disabled="true">
                                         </div>
                                     </div>
-
-                                    <div class="form-group" hidden="">
-                                        <label style="color: white;"></label>
-                                        <div class="" >
-                                            <input class="form-control  bg-white" name="no_kk" type="hidden" value="{{$pengajuan->no_kk}}" disabled="true">
-                                        </div>
-                                    </div>
-
                                     <div class="form-group">
-                                        <label style="color: white;">Jumlah Sapi</label>
-                                        <div class="">
-                                            <input class="form-control  bg-white" type="text" value="{{$pengajuan->jumlah_sapi}}" disabled="true">
+                                        <label style="color: white;">pengajuan</label>
+                                        <div class="" >
+                                            <input class="form-control  bg-white" name="id_pengajuan" type="text" value="{{$data->id_pengajuan}}" disabled="true">
                                         </div>
                                     </div>
                                     
                                     <div class="form-group">
                                         <label style="color: white;">Berat Awal Sapi</label>
                                         <div class="input-group">
-                                            <input class="form-control  bg-white" name="berat_awal"  type="number" placeholder="30 kg">
+                                            <input class="form-control  bg-white" name="berat_awal"  type="number" value="{{$data->berat_awal}}"  disabled="true">
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label style="color: white;">Jenis Sapi</label>
-                                        <select id="jenissapi" class="form-control bg-white" name="jenis_sapi">
-                                            <option value="Sapi PO">Sapi PO</option>
-                                            <option value="Lokal">Lokal</option>
-                                            <option value="Bali">Bali</option>
-                                            <option value="lain-lain">Lain-lain</option>
-                                        </select>
-                                    </div>
-                                    <div id="sembunyi" style="display:none">
-                                        <div class="form-group">
-                                            <input class="form-control bg-white" type="text" placeholder="Masukkan jenis sapi baru">
+                                        <label style="color: white;">Berat Saat Ini</label>
+                                        <div class="input-group">
+                                            <input class="form-control  bg-white" name="berat_saat_ini" type="number" placeholder="dalam satuan kg..">
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label style="color: white;">Jenis Kelamin Sapi</label>
-                                        <label class="custom-control custom-radio primary">
-                                            <input name="jenis_kelamin" value="j" class="custom-control-input" type="radio">
-                                            <span class="custom-control-indicator"></span>
-                                            <span class="custom-control-description">Jantan</span>
-                                        </label>
-                                         <label class="custom-control custom-radio primary">
-                                            <input name="jenis_kelamin" value="b" class="custom-control-input" type="radio">
-                                            <span class="custom-control-indicator"></span>
-                                            <span class="custom-control-description">Betina</span>
-                                        </label>
-                                    </div>
-                                    
                                     <hr>
-                                    <button class="btn btn-primary" type="submit" name="id_pengajuan" value="{{$pengajuan->id_pengajuan}}">Simpan</button>
+                                    <button class="btn btn-primary" name="id_sapi" value="$data->id_sapi" type="submit">Simpan</button>
                                     <a href="cek_data_pengajuan" class="btn btn-dark">Selesai</a>
                                     @endforeach
                                 </form>

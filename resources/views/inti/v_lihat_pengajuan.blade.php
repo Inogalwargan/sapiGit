@@ -9,7 +9,7 @@
     <meta content="Design_Gurus" name="author">
     <meta content="WOW Admin dashboard html template" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>SAPI-I7</title>
+    <title>FCMS</title>
 
     {{--untuk Modal--}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -71,14 +71,14 @@
     <!--Navigation-->
     <nav id="navigation" class="navigation-sidebar bg-primary">
         <div class="navigation-header">
-            <a href="index.html"><span class="logo">SAPI BALURAN</span></a>
+            <a href="index.html"><span class="logo">ADMIN INTI</span></a>
             <!--<img src="logo.png" alt="logo" class="brand" height="50">-->
         </div>
 
         <!--Navigation Profile area-->
         <div class="navigation-profile">
             <img class="profile-img rounded-circle" src="assetAdmin/assets/images/1.jpg" alt="profile image">
-            <h4 class="name">Admin Inti</h4>
+            <h4 class="name">INTI</h4>
             <span class="designation">SAPI</span>
 
             <a id="show-user-menu" href="javascript:void(0);" class="circle-white-btn profile-setting"><i class="fa fa-cog"></i></a>
@@ -121,7 +121,7 @@
         </div>
 
         <!--Navigation Menu Links-->
-        @include('inti.include_inti')
+        @include('inti.includeEdit')
     </nav>
 
     <!--Page Container-->
@@ -134,7 +134,7 @@
                     <div class="row">
                         <div class="col-9 col-md-6 d-lg-none">
                             <a id="toggle-navigation" href="javascript:void(0);" class="icon-btn mr-3"><i class="fa fa-bars"></i></a>
-                            <span class="logo">SAPI BALURAN</span>
+                            <span class="logo">ADMIN INTI</span>
                         </div>
                         <div class="col-lg-8 d-none d-lg-block">
                             <ol class="breadcrumb">
@@ -152,7 +152,7 @@
                     <div class="row ">
                         <div class="col-12 ">
                             <div class="section-title">
-                                <h4>SAPI BALURAN</h4>
+                                <h4>ADMIN INTI</h4>
                             </div>
                         </div>
 
@@ -180,6 +180,10 @@
                                         </tr>
                                         </thead>
                                         @foreach($data as $value)
+                                        <?php
+                                        $jmlP = (int)$value->jumlah_sapi;
+                                        $jmlS = (int)$value->banyak;
+                                        ?>
                                         <tbody>
                                             
                                         <tr>
@@ -192,15 +196,16 @@
                                             <td style="color: white;">{{date('d-m-Y', strtotime($value->tanggal_pengajuan))}}</td>
                                            
                                             <td>
-                                                <a href="detailPengajuanPeternak" class="btn btn-warning">Detail</a><br><br>
+                                                <a href="detailPengajuanPeternak/{{$value->id_pengajuan}}" class="btn btn-warning">Detail</a><br><br>
                                                  <a href="editPengajuan/{{$value->id_pengajuan}}" class="btn btn-primary">Edit</a>
                                             </td>
                                             <td>
-                                                <div>
-                                                    <a href="tambah_detail_sapi/{{$value->id_pengajuan}}" class="btn btn-danger">Tambah Detail Sapi</a>
-                                                    <div style="padding-top:5px;padding-bottom:5px;"></div>
-                                                    <a href="cek_data_pengajuan" class="btn btn-dark">Lihat Data Perjanjian</a>
-                                                </div>
+                                               <div>
+                                                        <a href="tambah_detail_sapi/{{$value->no_kk}}" class="btn btn-danger" <?php if ($jmlS >= $jmlP){echo "hidden";}?>>Tambah Detail Sapi</a>
+                                                        <!-- <div style="padding-top:5px;padding-bottom:5px;"></div> -->
+                                                        <a href="cek_data_pengajuan/{{$value->id_pengajuan}}" class="btn btn-dark" 
+                                                        <?php if ($jmlS < $jmlP){echo "hidden";}?> >Lihat Data Perjanjian</a>
+                                                    </div>
                                             </td>
                                         </tr>
                                         @endforeach
