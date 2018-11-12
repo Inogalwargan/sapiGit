@@ -299,17 +299,23 @@ class c_pabrik extends Controller
     public function tambahPengambilan(request $request)
     {
         $stock_lama = pakan::where('id_pakan', $request->id_pakan)->first();
+        if ($stock_lama->stok_pakan>=$request->jumlah_pengambilan){
+            $pengambilan = new pengambilan_pakan();
+            $pengambilan->id_pakan = $request->id_pakan;
+            $pengambilan->id_pengajuan = $request->id_pengajuan;
+            $pengambilan->jumlah_pakan_diambil = $request->jumlah_pengambilan;
+            $pengambilan->harga_pengambilan = $request->jumlah_pengambilan * $stock_lama->harga;
+            $pengambilan->save();
 
-        $pengambilan = new pengambilan_pakan();
-        $pengambilan->id_pakan = $request->id_pakan;
-        $pengambilan->id_pengajuan = $request->id_pengajuan;
-        $pengambilan->jumlah_pakan_diambil = $request->jumlah_pengambilan;
-        $pengambilan->harga_pengambilan = $request->jumlah_pengambilan * $stock_lama->harga;
-        $pengambilan->save();
+            $stok = pakan::where('id_pakan', $request->id_pakan)->first();
+            $stok->stok_pakan = $stock_lama->stok_pakan - $request->jumlah_pengambilan;
+            $stok->update();
+            return redirect()->back();
+        }else{
+            $pesan="stok pakan tidak cukup, kurang ".($request->jumlah_pengambilan-$stock_lama->stok_pakan)." kg";
+            return redirect()->back()->with('alert', $pesan);
+        }
 
-        $stok = pakan::where('id_pakan', $request->id_pakan)->first();
-        $stok->stok_pakan = $stock_lama->stok_pakan - $request->jumlah_pengambilan;
-        $stok->update();
-        return redirect()->back();
+
     }
 }

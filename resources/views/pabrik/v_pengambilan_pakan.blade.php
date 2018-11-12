@@ -74,7 +74,7 @@
                     <div class="col-9 col-md-6 d-lg-none">
                         <a id="toggle-navigation" href="javascript:void(0);" class="icon-btn mr-3"><i
                                     class="fa fa-bars"></i></a>
-                        <span class="logo">BALURAN-SAMPI</span>
+                        <span class="logo">PABRIK PAKAN</span>
                     </div>
                     <div class="col-lg-8 d-none d-lg-block">
                         <ol class="breadcrumb">
