@@ -57,7 +57,7 @@
     <!--Navigation Profile area-->
     <div class="navigation-profile">
         <img class="profile-img rounded-circle" src="../assetAdmin/assets/images/1.jpg" alt="profile image">
-        <h4 class="name">Admin Pabrik</h4>
+        <h4 class="name">Admin Gudang</h4>
         <span class="designation">SAPI</span>
     </div>
     <!--Navigation Menu Links-->
