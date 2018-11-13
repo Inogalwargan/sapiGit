@@ -11,11 +11,20 @@ use App\pakan;
 use App\produksi_pakan;
 use App\User;
 use PDF;
+use Session;
 
 
 class c_inti extends Controller
 {
-	
+    function __construct(){
+        $this->middleware(function ($request, $next) {
+            if(!session()->has('username')){
+                return redirect('/');
+            }
+            return $next($request);
+        });
+    }
+
 	function homeInti() {
 		return view("inti.v_home");
 	}

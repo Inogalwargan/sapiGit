@@ -77,15 +77,132 @@
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-secondary mb-4">
-                            <div class="value text-center" style="color:black;display:inherit">2300 Kg</div>
-                            <p class="label text-center" style="color:darkred">Total berat awal sapi</p>
+                            <div class="value text-center" style="color:black;display:inherit">Berat Sapi</div>
+                            <?php if(intval($beratsekarang)<intval($beratawal)){$beratsekarang=$beratawal;}?>
+                            <p class="label text-center" style="color:darkred">Awal : <?=$beratawal?> Kg <br>Saat ini : <?=$beratsekarang?> Kg</p>
                         </div>
                     </div>
 
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-dark mb-4">						
-                            <div class="value text-center" style="color:ghostwhite;display:inherit"><?php echo intval($jsapibetina)+intval($jsapijantan)?></div>
-                            <p class="label text-center"><?=$jsapijantan?> Jantan | <?=$jsapibetina?> Betina</p>
+                            <div class="value text-center" style="color:ghostwhite;display:inherit"><?php echo intval($jsapibetina)+intval($jsapijantan)?> Ekor</div>
+                            <p class="label text-center"><a class="btn btn-xs btn-outline-white" id="sapijantan"><?=$jsapijantan?> Jantan </a><a class="btn btn-xs btn-outline-white" id="sapibetina"><?=$jsapibetina?> Betina</a></p>
+                        </div>
+                    </div>
+
+                    <div class="block form-block mb-4" style="display:none" id="jantan">
+                        <div class="block-heading text-center">
+                            <h5>Pertumbuhan Sapi Jantan</h5>
+                        </div>
+                        <div class="tabel table-responsive">
+                            <table id="example2"
+                                   class="table table-bordered table-striped dataTable example2"
+                                   role="grid"
+                                   aria-describedby="example2_info">
+                                <thead>
+                                <tr>
+                                    <th style="text-align: center!important; vertical-align: middle!important;">
+                                        No.
+                                    </th>
+                                    <th style="text-align: center!important; vertical-align: middle!important;">
+                                        Jenis Sapi
+                                    </th>
+                                    <th style="text-align: center!important; vertical-align: middle!important;">
+                                        Jenis Kelamin
+                                    </th>
+                                    <th style="text-align: center!important; vertical-align: middle!important;">
+                                        Pertumbuhan (Kg)
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @php($no =0)
+                                @foreach($pertumbuhanjantan as $item)
+                                    @php($no++)
+                                    @if(is_null($item->berat_saat_ini))
+                                        @php($item->berat_saat_ini=0)
+                                    @endif
+                                    <tr>
+                                        <td style="vertical-align: middle!important;">{{$no}}</td>
+                                        <td style="vertical-align: middle!important;">{{$item->jenis_sapi}}</td>
+                                        <td style="vertical-align: middle!important;">
+                                            <?php if ($item->jenis_kelamin=="j") {
+                                                $jk="Jantan";
+                                            }else{
+                                                $jk="Betina";
+                                            }?>
+                                            {{$jk}}
+                                        </td>
+                                        <td style="text-align: center!important; vertical-align: middle!important;">{{abs(intval($item->berat_awal))-intval($item->berat_saat_ini)}}</td>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="block form-block mb-4" style="display:none" id="betina">
+                        <div class="block-heading text-center">
+                            <h5>Pertumbuhan Sapi Betina</h5>
+                        </div>
+                        <div class="tabel table-responsive">
+                            <table id="example1"
+                                   class="table table-bordered table-striped dataTable example2"
+                                   role="grid"
+                                   aria-describedby="example2_info">
+                                <thead>
+                                <tr>
+                                    <th style="text-align: center!important; vertical-align: middle!important;">
+                                        No.
+                                    </th>
+                                    <th style="text-align: center!important; vertical-align: middle!important;">
+                                        Jenis Sapi
+                                    </th>
+                                    <th style="text-align: center!important; vertical-align: middle!important;">
+                                        Jenis Kelamin
+                                    </th>
+                                    <th style="text-align: center!important; vertical-align: middle!important;">
+                                        Pertumbuhan (Kg)
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @php($no =0)
+                                @foreach($pertumbuhanbetina as $item)
+                                    @php($no++)
+                                    @if(is_null($item->berat_saat_ini))
+                                        @php($item->berat_saat_ini=0)
+                                    @endif
+                                    <tr>
+                                        <td style="vertical-align: middle!important;">{{$no}}</td>
+                                        <td style="vertical-align: middle!important;">{{$item->jenis_sapi}}</td>
+                                        <td style="vertical-align: middle!important;">
+                                            <?php if ($item->jenis_kelamin=="j") {
+                                                $jk="Jantan";
+                                            }else{
+                                                $jk="Betina";
+                                            }?>
+                                            {{$jk}}
+                                        </td>
+                                        <td style="text-align: center!important; vertical-align: middle!important;">{{abs(intval($item->berat_awal))-intval($item->berat_saat_ini)}}</td>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+                        <div class="block counter-block bg-dark mb-4">
+                            <div class="value text-center" style="display:inherit">
+                                <a href="/logout" style="color:white;">
+                                    <span class="icon-thumbnail"><i class="icon-power"></i></span>
+                                    <span class="title">Logout</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -113,7 +230,8 @@
 
 <!--Chart js-->
 <script type="text/javascript" src="assetAdmin/assets/plugins/charts/Chart.min.js"></script>
-
+<!--Data-Table JS-->
+<script type="text/javascript" src="../assetAdmin/assets/plugins/data-tables/datatables.min.js"></script>
 <!--Sparkline Chart Js-->
 <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
 <script type="text/javascript" src="assetAdmin/assets/plugins/sparkline/jquery.charts-sparkline.js"></script>
@@ -125,5 +243,51 @@
 
 <!--- Main JS -->
 <script src="assetAdmin/assets/js/main.js"></script>
+    <script>
 
+        $('#example2').DataTable({
+            'paging': true,
+            'lengthChange': false,
+            'searching': false,
+            'ordering': false,
+            'info': false,
+            'autoWidth': false,
+            'pageLength': 10,
+            "dom": '<"pull-left"f>t<"pull-right"p>',
+            "oLanguage": {
+                "sSearch": "Cari : "
+            }
+        });
+
+        $('#example1').DataTable({
+            'paging': true,
+            'lengthChange': false,
+            'searching': false,
+            'ordering': false,
+            'info': false,
+            'autoWidth': false,
+            'pageLength': 10,
+            "dom": '<"pull-left"f>t<"pull-right"p>',
+            "oLanguage": {
+                "sSearch": "Cari : "
+            }
+        });
+
+        $('#sapijantan').click(function () {
+            if($('#jantan').css('display') == 'none'){
+                $('#jantan').fadeIn();
+            }else{
+                $('#jantan').fadeOut();
+            }
+        });
+
+        $('#sapibetina').click(function () {
+            if($('#betina').css('display') == 'none'){
+                $('#betina').fadeIn();
+            }else{
+                $('#betina').fadeOut();
+            }
+        });
+
+    </script>
 </html>

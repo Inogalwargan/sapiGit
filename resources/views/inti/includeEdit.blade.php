@@ -39,6 +39,12 @@
                     <span class="title">Pakan</span>
                 </a>
             </li>
+            <li>
+                <a href="/logout">
+                    <span class="icon-thumbnail"><i class="icon-power"></i></span>
+                    <span class="title">Logout</span>
+                </a>
+            </li>
         
         </ul>
     </div>

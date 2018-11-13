@@ -9,9 +9,19 @@ use App\pakan;
 use App\pengambilan_pakan;
 use App\produksi_pakan;
 use Illuminate\Http\Request;
+use Session;
 
 class c_pabrik extends Controller
 {
+    function __construct(){
+        $this->middleware(function ($request, $next) {
+            if(!session()->has('username')){
+                return redirect('/');
+            }
+            return $next($request);
+        });
+    }
+
     public function beranda()
     {
         return view('pabrik.v_beranda');

@@ -11,4 +11,5 @@ class User extends Model
     protected $fillable = [
          'nama', 'no_telp', 'jabatan'
     ];
+    public $timestamps = false;
 }

@@ -71,6 +71,7 @@ Route::get('addCicilan', 'c_inti@addCicilan');
 
 Route::get('/', 'C_login@halaman_login' );
 Route::post('/login', 'C_login@cek_login' );
+Route::get('/logout','C_login@logout');
 
 Route::get('/tambahPakan', 'c_pabrik@viewTambahPakan');
 //------------------------------------------
@@ -83,4 +84,6 @@ Route::get('/tambahPengambilan', 'c_pabrik@viewFormTambahPengambilan');
 Route::post('/tambahPengambilan', 'c_pabrik@tambahPengambilan');
 
 Route::post('/tambahPakan', 'c_pabrik@tambahPakan');
+
+
 

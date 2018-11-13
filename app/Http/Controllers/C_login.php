@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
+use Session;
 
 class C_login extends Controller{
 
@@ -19,12 +20,19 @@ class C_login extends Controller{
                 return redirect('/homeInti');
             }elseif($tes->jabatan == "2"){
                 return redirect('/pabrik/beranda');
-            }else{
+            }elseif($tes->jabatan == "3"){
                 return redirect('/homePeternak');
+            }else{
+                return redirect('/');
             }
         }else{
             return redirect('/');
         }
+    }
+
+    public function logout(){
+        Session::flush();
+        return redirect('/');
     }
 
 
