@@ -86,7 +86,7 @@
                     <div class="col-12 col-sm-6 col-md-3 col-lg-3">
                         <div class="block counter-block bg-dark mb-4">						
                             <div class="value text-center" style="color:ghostwhite;display:inherit"><?php echo intval($jsapibetina)+intval($jsapijantan)?> Ekor</div>
-                            <p class="label text-center"><a class="btn btn-xs btn-outline-white" id="sapijantan"><?=$jsapijantan?> Jantan </a><a class="btn btn-xs btn-outline-white" id="sapibetina"><?=$jsapibetina?> Betina</a></p>
+                            <p class="label text-center"><a class="btn btn-xs btn-outline-white" id="sapijantan"><?=$jsapijantan?> Jantan </a> <a class="btn btn-xs btn-outline-white" id="sapibetina"><?=$jsapibetina?> Betina</a></p>
                         </div>
                     </div>
 

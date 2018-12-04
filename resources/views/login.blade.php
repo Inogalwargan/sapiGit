@@ -57,12 +57,15 @@
 {{--</div>--}}
 <!---Preloader Ends Here--->
 
-    <div class="height-100-vh bg-primary-trans">
+    <div class="height-100-vh" style="background-image:url('image/aplikasi 8.jpg');background-repeat: no-repeat;background-size:cover;background-position: center;">
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="login-div">
-                        <p class="logo mb-1">Farm Chain Management System</p>
+                <div class="col-md-12 col-xs-12">
+                    <p class="logo text-center"><img src="image/logo fcms.png" style="width:20%;max-height:450px"></p>
+                </div>
+                <div class="col-12 col-md-12">
+                    <div class="login-div" style="margin:0px auto 30px;background-color:rgba(255,255,255,0.4)">
+                        <p class="logo text-center">Farm Chain Management System</p>
                         <form id="needs-validation" action="/login" method="POST">
                             {{csrf_field()}}
                             <div class="form-group">
@@ -76,6 +79,14 @@
 
                             <button type="submit" class="btn btn-block btn-primary mt-2">Masuk</button>
                         </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                    <p style="margin-top:5px;" class="text-center">Belum punya aplikasi? Download <a href="{{asset('FCMS.apk')}}">disini</a></p>
+                    <div style="margin-top:25px">
+                        <img src="{{asset('image/footerlogin1.png')}}" height="50">
+                    </div>
                     </div>
                 </div>
             </div>

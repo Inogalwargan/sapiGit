@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 use App\m_pengajuan;
 use App\m_sapi;
 use App\pakan;
+use App\m_jenis_sapi;
 use App\produksi_pakan;
 use App\User;
 use PDF;
@@ -18,8 +19,8 @@ class c_inti extends Controller
 {
     function __construct(){
         $this->middleware(function ($request, $next) {
-            if(!session()->has('username')){
-                return redirect('/');
+            if(!session()->has('username') || session('jabatan') != "1"){
+                return redirect()->back();
             }
             return $next($request);
         });
@@ -29,7 +30,7 @@ class c_inti extends Controller
 		return view("inti.v_home");
 	}
     function lihat_pakan_inti(){
-        $stok_pakan = pakan::all();
+        $stok_pakan = pakan::orderBy('nama_pakan', 'ASC')->get();
         $produksi_pakan = produksi_pakan::all();
 
 
@@ -98,8 +99,9 @@ class c_inti extends Controller
       return redirect()->to('/lihatPengajuan');
   }
   function detailPengajuanPeternak($id)  {
-    $detail_pengajuan = DB::select('SELECT * FROM main.sapi WHERE id_pengajuan = \''.$id.'\';');
-    return view("inti.v_detail_pengajuan_peternak")->with('detail_pengajuan',$detail_pengajuan);
+      $detail_pengajuan = DB::select('SELECT s.*, j.* FROM main.sapi s left join main.jenis_sapi j on s.id_jenis_sapi = j.id_jenis_sapi  WHERE id_pengajuan = \''.$id.'\';');
+      $pengajuan = DB::select('SELECT * from main.pengajuan WHERE id_pengajuan = \''.$id.'\';');
+      return view("inti.v_detail_pengajuan_peternak")->with('detail_pengajuan',$detail_pengajuan)->with('pengajuan',$pengajuan);
 
 }
 
@@ -111,27 +113,43 @@ public function hapus_detailPengajuanPeternak($id){
 }
 
 public function edit_detailPengajuanPeternak($id){
+    $jenis_sapi= DB::select('SELECT * FROM main.jenis_sapi');
     $tampiledit = m_sapi::where('id_sapi', $id)->first();
-    return view('inti.edit_detail_pengajuan_peternak')->with('tampiledit', $tampiledit);
+    return view('inti.edit_detail_pengajuan_peternak')->with('tampiledit', $tampiledit)->with('jenis_sapi', $jenis_sapi);
 }
 
 public function proses_update_detailPengajuanPeternak(Request $request, $id){
-
-
     $update = m_sapi::where('id_sapi', $id)->first();
+    $update2 = new m_jenis_sapi();
 
     $update->berat_awal = $request['berat_awal'];
     $update->berat_saat_ini = $request['berat_saat_ini'];
     $update->jenis_kelamin = $request['jenis_kelamin'];
-    $update->jenis_sapi = $request['jenis_sapi'];
+    //$update2->nama_jenis_sapi = $request['nama_jenis_sapi'];
     $idPengajuan =$request['id_pengajuan'];
 
+    if ($request['nama_jenis_sapi'] != null) {
+        $update2->nama_jenis_sapi = $request['nama_jenis_sapi'];
+        $update2->save();
+        $query = DB::select('select id_jenis_sapi from main.jenis_sapi where nama_jenis_sapi = \''.$request['nama_jenis_sapi'].'\';');
+        foreach ($query as $key) {
+            $update->id_jenis_sapi = $key->id_jenis_sapi;
+        }
+    } else {
+        $update->id_jenis_sapi = $request['jenis_sapi'];
+    }
+
     $update->update();
+
+
+    // $recordberat = new m_record_berat_sapi();
+    // $recordberat->id_sapi = $id;
+    // $recordberat->berat = $request['berat_saat_ini'];
+    // $recordberat->save();
+
     $pengajuan = DB::select('SELECT *
         FROM main.sapi WHERE id_pengajuan = \''.$idPengajuan.'\';');
     return redirect('detailPengajuanPeternak/'.$idPengajuan);
-   //     return redirect()->to('detailPengajuanPeternak/'$as );
-        // return view('inti.edit_detail_pengajuan_peternak')->with('id_pengajuan',$pengajuan);
 }
 
 public function berat_saat_ini($id){
@@ -169,6 +187,7 @@ public function tambah_detail_sapi($kk){
 
     $pengajuan = DB::select('SELECT *
         FROM main.pengajuan WHERE no_kk = \''.$kk.'\';');
+    $jenis_sapi= DB::select('SELECT * FROM main.jenis_sapi');
     $jsapi_input=0;
     foreach ($pengajuan as $x) {
         $jsapi_input =(int) $x->jumlah_sapi;
@@ -177,17 +196,28 @@ public function tambah_detail_sapi($kk){
     if ($jsapi_otomatis >= $jsapi_input) {
         return redirect('lihatPengajuan');
     }else{
-        return view('inti.tambah_detail_sapi')->with('no_sapi',$no_sapi)->with('pengajuan',$pengajuan);
+        return view('inti.tambah_detail_sapi')->with('no_sapi',$no_sapi)->with('pengajuan',$pengajuan)->with('jenis_sapi',$jenis_sapi);
     }
 }
 function proses_tambah_detail_sapi(Request $request){
     $tambah = new m_sapi();
+    $tambah2 = new m_jenis_sapi();
     $tambah->berat_awal = $request['berat_awal'];
     $tambah->id_pengajuan = $request['id_pengajuan'];
     $idPengajuan =$request['id_pengajuan'];
     $tambah->jenis_kelamin = $request['jenis_kelamin'];
-    $tambah->jenis_sapi = $request['jenis_sapi'];
 
+
+    if ($request['nama_jenis_sapi'] != null) {
+        $tambah2->nama_jenis_sapi = $request['nama_jenis_sapi'];
+        $tambah2->save();
+        $query = DB::select('select id_jenis_sapi from main.jenis_sapi where nama_jenis_sapi = \''.$request['nama_jenis_sapi'].'\';');
+        foreach ($query as $key) {
+            $tambah->id_jenis_sapi = $key->id_jenis_sapi;
+        }
+    } else {
+        $tambah->id_jenis_sapi = $request['jenis_sapi'];
+    }
     $tambah->save();
     $pengajuan = DB::select('SELECT *
         FROM main.pengajuan WHERE id_pengajuan = \''.$idPengajuan.'\';');
@@ -292,6 +322,14 @@ public function prosesUpdatePengajuan(Request $request , $id){
     }
 
     $update->update();
+
+    $user = User::where('nama',$request['nama_lama'])
+        ->where('no_telp',$request['no_lama'])->first();
+    $user->nama = $request['nama_peternak'];
+    $user->no_telp = $request['no_hp'];
+
+    $user->update();
+
     return redirect()->to('lihatPengajuan');
 
 }

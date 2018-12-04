@@ -15,8 +15,8 @@ class c_peternak extends Controller
 {
     function __construct(){
         $this->middleware(function ($request, $next) {
-            if(!session()->has('username')){
-                return redirect('/');
+            if(!session()->has('username') || session('jabatan') != "3"){
+                return redirect()->back();
             }
             return $next($request);
         });
